@@ -1,9 +1,9 @@
 # Copyright (c) 2009, 2010, Dmitry Vasiliev <dima@hlabs.org>
 # All rights reserved.
-# 
+#
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are met:
-# 
+#
 #  * Redistributions of source code must retain the above copyright notice,
 #    this list of conditions and the following disclaimer.
 #  * Redistributions in binary form must reproduce the above copyright notice,
@@ -11,8 +11,8 @@
 #    and/or other materials provided with the distribution.
 #  * Neither the name of the copyright holders nor the names of its
 #    contributors may be used to endorse or promote products derived from this
-#    software without specific prior written permission. 
-# 
+#    software without specific prior written permission.
+#
 # THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
 # AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
 # IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
@@ -27,15 +27,14 @@
 
 """Erlang port protocol."""
 
-__author__ = "Dmitry Vasiliev <dima@hlabs.org>"
-
 import os
 import sys
 import errno
 import traceback
 from struct import pack, unpack
-
-from erlport.erlterms import Atom, encode, decode
+from erlport.erlterms import Atom
+from erlport.erldecode_bin import decode
+from erlport.erlencode_bin import encode
 
 
 class Protocol(object):
@@ -48,12 +47,12 @@ class Protocol(object):
                 message = port.read()
             except EOFError:
                 break
-            self.handle(port, message)
+            port.write(self.handle(message))
 
-    def handle(self, port, message):
+    def handle(self, message):
         """Handle incoming message."""
-        if not (isinstance(message, Atom)
-                or isinstance(message, tuple) and len(message) > 0):
+        if not (isinstance(message, Atom) or
+                isinstance(message, tuple) and len(message) > 0):
             response = Atom("error"), Atom("badarg")
         else:
             if isinstance(message, Atom):
@@ -73,7 +72,7 @@ class Protocol(object):
                         response = handler(*args)
                     except:
                         response = self._handle_error(sys.exc_info())
-        port.write(response)
+        return response
 
     def _handle_error(self, exception):
         t, val, tb = exception
@@ -93,7 +92,7 @@ class Port(object):
         }
 
     def __init__(self, packet=1, use_stdio=False, compressed=False,
-            descriptors=None):
+                 descriptors=None):
         self._format = self._formats.get(packet)
         if self._format is None:
             raise ValueError("invalid packet size value: %s" % packet)
