@@ -56,7 +56,6 @@ setup(
 
     packages=find_packages("src", exclude=["*.tests"]),
     package_dir={"": "src"},
-    install_requires=['cython', ],
     ext_modules=[erldecode, erlencode],
     cmdclass={'build_ext': _build_ext},
     zip_safe=True,
