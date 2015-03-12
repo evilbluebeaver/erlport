@@ -26,11 +26,21 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
-from setuptools import setup, find_packages
+from setuptools import setup, find_packages, Extension
 
-def build_ext(v):
-    from Cython.Build import cythonize
-    return cythonize(v)
+have_cython = False
+try:
+    from Cython.Distutils import build_ext as _build_ext
+    have_cython = True
+except ImportError:
+    from distutils.command.build_ext import build_ext as _build_ext
+
+if have_cython:
+        erldecode = Extension('erldecode', ['src/erlport/erldecode.pyx'])
+        erlencode = Extension('erlencode', ['src/erlport/erlencode.pyx'])
+else:
+        erldecode = Extension('erldecode', ['src/erlport/erldecode.c'])
+        erlencode = Extension('erlencode', ['src/erlport/erlencode.c'])
 
 setup(
     name="erlport",
@@ -47,7 +57,8 @@ setup(
     packages=find_packages("src", exclude=["*.tests"]),
     package_dir={"": "src"},
     install_requires=['cython', ],
-    ext_modules=build_ext("src/erlport/*.pyx"),
+    ext_modules=[erldecode, erlencode],
+    cmdclass={'build_ext': _build_ext},
     zip_safe=True,
     test_suite="erlport.tests.test_suite",
     classifiers=[
