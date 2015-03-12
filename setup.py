@@ -53,7 +53,6 @@ setup(
     license="BSD",
     platforms="any",
     keywords="Python Erlang",
-
     packages=find_packages("src", exclude=["*.tests"]),
     package_dir={"": "src"},
     ext_modules=[erldecode, erlencode],
