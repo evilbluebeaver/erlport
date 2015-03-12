@@ -27,7 +27,10 @@
 # POSSIBILITY OF SUCH DAMAGE.
 
 from setuptools import setup, find_packages
-from Cython.Build import cythonize
+
+def build_ext(v):
+    from Cython.Build import cythonize
+    return cythonize(v)
 
 setup(
     name="erlport",
@@ -44,7 +47,7 @@ setup(
     packages=find_packages("src", exclude=["*.tests"]),
     package_dir={"": "src"},
     install_requires=['cython', ],
-    ext_modules=cythonize("src/erlport/*.pyx"),
+    ext_modules=build_ext("src/erlport/*.pyx"),
     zip_safe=True,
     test_suite="erlport.tests.test_suite",
     classifiers=[
