@@ -33,8 +33,8 @@ import errno
 import traceback
 from struct import pack, unpack
 from erlport.erlterms import Atom
-from erlport.erldecode_bin import decode
-from erlport.erlencode_bin import encode
+from erlport.erldecode import decode
+from erlport.erlencode import encode
 
 
 class Protocol(object):
