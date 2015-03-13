@@ -242,8 +242,8 @@ class __Pyx_FakeReference {
 #define _USE_MATH_DEFINES
 #endif
 #include <math.h>
-#define __PYX_HAVE__erlport
-#define __PYX_HAVE_API__erlport
+#define __PYX_HAVE__erlport__erldecode
+#define __PYX_HAVE_API__erlport__erldecode
 #ifdef _OPENMP
 #include <omp.h>
 #endif /* _OPENMP */
@@ -426,7 +426,7 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "ldecode.pyx",
+  "erlport/erldecode.pyx",
 };
 
 /*--- Type declarations ---*/
@@ -667,27 +667,27 @@ static int __Pyx_check_binary_version(void);
 static int __Pyx_InitStrings(__Pyx_StringTabEntry *t);
 
 
-/* Module declarations from 'erlport' */
-#define __Pyx_MODULE_NAME "erlport"
-int __pyx_module_is_main_erlport = 0;
+/* Module declarations from 'erlport.erldecode' */
+#define __Pyx_MODULE_NAME "erlport.erldecode"
+int __pyx_module_is_main_erlport__erldecode = 0;
 
-/* Implementation of 'erlport' */
+/* Implementation of 'erlport.erldecode' */
 static PyObject *__pyx_builtin_ValueError;
 static PyObject *__pyx_builtin_ord;
-static PyObject *__pyx_pf_7erlport_decode_small_int(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_tag, PyObject *__pyx_v_string, PyObject *__pyx_v_pos); /* proto */
-static PyObject *__pyx_pf_7erlport_2decode_int(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_tag, PyObject *__pyx_v_string, PyObject *__pyx_v_pos); /* proto */
-static PyObject *__pyx_pf_7erlport_4decode_nil(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_tag, CYTHON_UNUSED PyObject *__pyx_v_string, PyObject *__pyx_v_pos); /* proto */
-static PyObject *__pyx_pf_7erlport_6decode_string(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_tag, PyObject *__pyx_v_string, PyObject *__pyx_v_pos); /* proto */
-static PyObject *__pyx_pf_7erlport_8decode_list(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_tag, PyObject *__pyx_v_string, PyObject *__pyx_v_pos); /* proto */
-static PyObject *__pyx_pf_7erlport_10decode_binary(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_tag, PyObject *__pyx_v_string, PyObject *__pyx_v_pos); /* proto */
-static PyObject *__pyx_pf_7erlport_12decode_atom(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_tag, PyObject *__pyx_v_string, PyObject *__pyx_v_pos); /* proto */
-static PyObject *__pyx_pf_7erlport_14decode_tuple(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_tag, PyObject *__pyx_v_string, PyObject *__pyx_v_pos); /* proto */
-static PyObject *__pyx_pf_7erlport_16decode_new_float(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_tag, PyObject *__pyx_v_string, PyObject *__pyx_v_pos); /* proto */
-static PyObject *__pyx_pf_7erlport_18decode_float(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_tag, PyObject *__pyx_v_string, PyObject *__pyx_v_pos); /* proto */
-static PyObject *__pyx_pf_7erlport_20decode_big(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_tag, PyObject *__pyx_v_string, PyObject *__pyx_v_pos); /* proto */
-static PyObject *__pyx_pf_7erlport_22decode_bit_binary(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_tag, PyObject *__pyx_v_string, PyObject *__pyx_v_pos); /* proto */
-static PyObject *__pyx_pf_7erlport_24decode(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_string); /* proto */
-static PyObject *__pyx_pf_7erlport_26decode_term(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_string, PyObject *__pyx_v_pos); /* proto */
+static PyObject *__pyx_pf_7erlport_9erldecode_decode_small_int(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_tag, PyObject *__pyx_v_string, PyObject *__pyx_v_pos); /* proto */
+static PyObject *__pyx_pf_7erlport_9erldecode_2decode_int(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_tag, PyObject *__pyx_v_string, PyObject *__pyx_v_pos); /* proto */
+static PyObject *__pyx_pf_7erlport_9erldecode_4decode_nil(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_tag, CYTHON_UNUSED PyObject *__pyx_v_string, PyObject *__pyx_v_pos); /* proto */
+static PyObject *__pyx_pf_7erlport_9erldecode_6decode_string(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_tag, PyObject *__pyx_v_string, PyObject *__pyx_v_pos); /* proto */
+static PyObject *__pyx_pf_7erlport_9erldecode_8decode_list(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_tag, PyObject *__pyx_v_string, PyObject *__pyx_v_pos); /* proto */
+static PyObject *__pyx_pf_7erlport_9erldecode_10decode_binary(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_tag, PyObject *__pyx_v_string, PyObject *__pyx_v_pos); /* proto */
+static PyObject *__pyx_pf_7erlport_9erldecode_12decode_atom(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_tag, PyObject *__pyx_v_string, PyObject *__pyx_v_pos); /* proto */
+static PyObject *__pyx_pf_7erlport_9erldecode_14decode_tuple(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_tag, PyObject *__pyx_v_string, PyObject *__pyx_v_pos); /* proto */
+static PyObject *__pyx_pf_7erlport_9erldecode_16decode_new_float(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_tag, PyObject *__pyx_v_string, PyObject *__pyx_v_pos); /* proto */
+static PyObject *__pyx_pf_7erlport_9erldecode_18decode_float(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_tag, PyObject *__pyx_v_string, PyObject *__pyx_v_pos); /* proto */
+static PyObject *__pyx_pf_7erlport_9erldecode_20decode_big(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_tag, PyObject *__pyx_v_string, PyObject *__pyx_v_pos); /* proto */
+static PyObject *__pyx_pf_7erlport_9erldecode_22decode_bit_binary(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_tag, PyObject *__pyx_v_string, PyObject *__pyx_v_pos); /* proto */
+static PyObject *__pyx_pf_7erlport_9erldecode_24decode(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_string); /* proto */
+static PyObject *__pyx_pf_7erlport_9erldecode_26decode_term(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_string, PyObject *__pyx_v_pos); /* proto */
 static char __pyx_k_[] = "\000";
 static char __pyx_k_B[] = "B";
 static char __pyx_k_H[] = ">H";
@@ -726,7 +726,6 @@ static char __pyx_k_length[] = "length";
 static char __pyx_k_string[] = "string";
 static char __pyx_k_struct[] = "struct";
 static char __pyx_k_unpack[] = "unpack";
-static char __pyx_k_erlport[] = "erlport";
 static char __pyx_k_ignored[] = "ignored";
 static char __pyx_k_version[] = "version";
 static char __pyx_k_erlterms[] = "erlterms";
@@ -751,6 +750,7 @@ static char __pyx_k_decompressobj[] = "decompressobj";
 static char __pyx_k_decode_new_float[] = "decode_new_float";
 static char __pyx_k_decode_small_int[] = "decode_small_int";
 static char __pyx_k_decode_bit_binary[] = "decode_bit_binary";
+static char __pyx_k_erlport_erldecode[] = "erlport.erldecode";
 static char __pyx_k_incomplete_data_r[] = "incomplete data: %r";
 static char __pyx_k_uncompressed_size[] = "uncompressed_size";
 static char __pyx_k_incomplete_daata_r[] = "incomplete daata: %r";
@@ -791,7 +791,7 @@ static PyObject *__pyx_n_s_decode_term;
 static PyObject *__pyx_n_s_decode_tuple;
 static PyObject *__pyx_n_s_decompress;
 static PyObject *__pyx_n_s_decompressobj;
-static PyObject *__pyx_n_s_erlport;
+static PyObject *__pyx_n_s_erlport_erldecode;
 static PyObject *__pyx_n_s_erlterms;
 static PyObject *__pyx_n_s_false;
 static PyObject *__pyx_n_s_flush;
@@ -886,7 +886,7 @@ static PyObject *__pyx_codeobj__30;
 static PyObject *__pyx_codeobj__32;
 static PyObject *__pyx_codeobj__34;
 
-/* "src/erlport/erldecode.pyx":35
+/* "erlport/erldecode.pyx":35
  * 
  * 
  * def decode_small_int(tag, string, pos):             # <<<<<<<<<<<<<<
@@ -895,9 +895,9 @@ static PyObject *__pyx_codeobj__34;
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7erlport_1decode_small_int(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_7erlport_1decode_small_int = {"decode_small_int", (PyCFunction)__pyx_pw_7erlport_1decode_small_int, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_7erlport_1decode_small_int(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_7erlport_9erldecode_1decode_small_int(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_7erlport_9erldecode_1decode_small_int = {"decode_small_int", (PyCFunction)__pyx_pw_7erlport_9erldecode_1decode_small_int, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_7erlport_9erldecode_1decode_small_int(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   CYTHON_UNUSED PyObject *__pyx_v_tag = 0;
   PyObject *__pyx_v_string = 0;
   PyObject *__pyx_v_pos = 0;
@@ -954,18 +954,18 @@ static PyObject *__pyx_pw_7erlport_1decode_small_int(PyObject *__pyx_self, PyObj
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("decode_small_int", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 35; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("erlport.decode_small_int", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("erlport.erldecode.decode_small_int", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_7erlport_decode_small_int(__pyx_self, __pyx_v_tag, __pyx_v_string, __pyx_v_pos);
+  __pyx_r = __pyx_pf_7erlport_9erldecode_decode_small_int(__pyx_self, __pyx_v_tag, __pyx_v_string, __pyx_v_pos);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7erlport_decode_small_int(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_tag, PyObject *__pyx_v_string, PyObject *__pyx_v_pos) {
+static PyObject *__pyx_pf_7erlport_9erldecode_decode_small_int(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_tag, PyObject *__pyx_v_string, PyObject *__pyx_v_pos) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   Py_ssize_t __pyx_t_1;
@@ -979,7 +979,7 @@ static PyObject *__pyx_pf_7erlport_decode_small_int(CYTHON_UNUSED PyObject *__py
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("decode_small_int", 0);
 
-  /* "src/erlport/erldecode.pyx":36
+  /* "erlport/erldecode.pyx":36
  * 
  * def decode_small_int(tag, string, pos):
  *     if not (len(string) - pos):             # <<<<<<<<<<<<<<
@@ -997,7 +997,7 @@ static PyObject *__pyx_pf_7erlport_decode_small_int(CYTHON_UNUSED PyObject *__py
   __pyx_t_5 = ((!__pyx_t_4) != 0);
   if (__pyx_t_5) {
 
-    /* "src/erlport/erldecode.pyx":37
+    /* "erlport/erldecode.pyx":37
  * def decode_small_int(tag, string, pos):
  *     if not (len(string) - pos):
  *         raise ValueError("incomplete data: %r" % string)             # <<<<<<<<<<<<<<
@@ -1019,7 +1019,7 @@ static PyObject *__pyx_pf_7erlport_decode_small_int(CYTHON_UNUSED PyObject *__py
     {__pyx_filename = __pyx_f[0]; __pyx_lineno = 37; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
 
-  /* "src/erlport/erldecode.pyx":38
+  /* "erlport/erldecode.pyx":38
  *     if not (len(string) - pos):
  *         raise ValueError("incomplete data: %r" % string)
  *     return ord(string[pos]), pos + 1             # <<<<<<<<<<<<<<
@@ -1051,7 +1051,7 @@ static PyObject *__pyx_pf_7erlport_decode_small_int(CYTHON_UNUSED PyObject *__py
   __pyx_t_6 = 0;
   goto __pyx_L0;
 
-  /* "src/erlport/erldecode.pyx":35
+  /* "erlport/erldecode.pyx":35
  * 
  * 
  * def decode_small_int(tag, string, pos):             # <<<<<<<<<<<<<<
@@ -1064,7 +1064,7 @@ static PyObject *__pyx_pf_7erlport_decode_small_int(CYTHON_UNUSED PyObject *__py
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_AddTraceback("erlport.decode_small_int", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("erlport.erldecode.decode_small_int", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -1072,7 +1072,7 @@ static PyObject *__pyx_pf_7erlport_decode_small_int(CYTHON_UNUSED PyObject *__py
   return __pyx_r;
 }
 
-/* "src/erlport/erldecode.pyx":41
+/* "erlport/erldecode.pyx":41
  * 
  * 
  * def decode_int(tag, string, pos):             # <<<<<<<<<<<<<<
@@ -1081,9 +1081,9 @@ static PyObject *__pyx_pf_7erlport_decode_small_int(CYTHON_UNUSED PyObject *__py
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7erlport_3decode_int(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_7erlport_3decode_int = {"decode_int", (PyCFunction)__pyx_pw_7erlport_3decode_int, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_7erlport_3decode_int(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_7erlport_9erldecode_3decode_int(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_7erlport_9erldecode_3decode_int = {"decode_int", (PyCFunction)__pyx_pw_7erlport_9erldecode_3decode_int, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_7erlport_9erldecode_3decode_int(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   CYTHON_UNUSED PyObject *__pyx_v_tag = 0;
   PyObject *__pyx_v_string = 0;
   PyObject *__pyx_v_pos = 0;
@@ -1140,18 +1140,18 @@ static PyObject *__pyx_pw_7erlport_3decode_int(PyObject *__pyx_self, PyObject *_
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("decode_int", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 41; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("erlport.decode_int", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("erlport.erldecode.decode_int", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_7erlport_2decode_int(__pyx_self, __pyx_v_tag, __pyx_v_string, __pyx_v_pos);
+  __pyx_r = __pyx_pf_7erlport_9erldecode_2decode_int(__pyx_self, __pyx_v_tag, __pyx_v_string, __pyx_v_pos);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7erlport_2decode_int(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_tag, PyObject *__pyx_v_string, PyObject *__pyx_v_pos) {
+static PyObject *__pyx_pf_7erlport_9erldecode_2decode_int(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_tag, PyObject *__pyx_v_string, PyObject *__pyx_v_pos) {
   PyObject *__pyx_v_i = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -1168,7 +1168,7 @@ static PyObject *__pyx_pf_7erlport_2decode_int(CYTHON_UNUSED PyObject *__pyx_sel
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("decode_int", 0);
 
-  /* "src/erlport/erldecode.pyx":42
+  /* "erlport/erldecode.pyx":42
  * 
  * def decode_int(tag, string, pos):
  *     if len(string) - pos < 4:             # <<<<<<<<<<<<<<
@@ -1187,7 +1187,7 @@ static PyObject *__pyx_pf_7erlport_2decode_int(CYTHON_UNUSED PyObject *__pyx_sel
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (__pyx_t_4) {
 
-    /* "src/erlport/erldecode.pyx":43
+    /* "erlport/erldecode.pyx":43
  * def decode_int(tag, string, pos):
  *     if len(string) - pos < 4:
  *         raise ValueError("incomplete data: %r" % string)             # <<<<<<<<<<<<<<
@@ -1209,7 +1209,7 @@ static PyObject *__pyx_pf_7erlport_2decode_int(CYTHON_UNUSED PyObject *__pyx_sel
     {__pyx_filename = __pyx_f[0]; __pyx_lineno = 43; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
 
-  /* "src/erlport/erldecode.pyx":44
+  /* "erlport/erldecode.pyx":44
  *     if len(string) - pos < 4:
  *         raise ValueError("incomplete data: %r" % string)
  *     i, = unpack(">i", string[pos:4 + pos])             # <<<<<<<<<<<<<<
@@ -1296,7 +1296,7 @@ static PyObject *__pyx_pf_7erlport_2decode_int(CYTHON_UNUSED PyObject *__pyx_sel
   __pyx_v_i = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "src/erlport/erldecode.pyx":45
+  /* "erlport/erldecode.pyx":45
  *         raise ValueError("incomplete data: %r" % string)
  *     i, = unpack(">i", string[pos:4 + pos])
  *     return i, pos + 4             # <<<<<<<<<<<<<<
@@ -1318,7 +1318,7 @@ static PyObject *__pyx_pf_7erlport_2decode_int(CYTHON_UNUSED PyObject *__pyx_sel
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "src/erlport/erldecode.pyx":41
+  /* "erlport/erldecode.pyx":41
  * 
  * 
  * def decode_int(tag, string, pos):             # <<<<<<<<<<<<<<
@@ -1333,7 +1333,7 @@ static PyObject *__pyx_pf_7erlport_2decode_int(CYTHON_UNUSED PyObject *__pyx_sel
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("erlport.decode_int", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("erlport.erldecode.decode_int", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_i);
@@ -1342,7 +1342,7 @@ static PyObject *__pyx_pf_7erlport_2decode_int(CYTHON_UNUSED PyObject *__pyx_sel
   return __pyx_r;
 }
 
-/* "src/erlport/erldecode.pyx":48
+/* "erlport/erldecode.pyx":48
  * 
  * 
  * def decode_nil(tag, string, pos):             # <<<<<<<<<<<<<<
@@ -1351,9 +1351,9 @@ static PyObject *__pyx_pf_7erlport_2decode_int(CYTHON_UNUSED PyObject *__pyx_sel
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7erlport_5decode_nil(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_7erlport_5decode_nil = {"decode_nil", (PyCFunction)__pyx_pw_7erlport_5decode_nil, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_7erlport_5decode_nil(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_7erlport_9erldecode_5decode_nil(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_7erlport_9erldecode_5decode_nil = {"decode_nil", (PyCFunction)__pyx_pw_7erlport_9erldecode_5decode_nil, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_7erlport_9erldecode_5decode_nil(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   CYTHON_UNUSED PyObject *__pyx_v_tag = 0;
   CYTHON_UNUSED PyObject *__pyx_v_string = 0;
   PyObject *__pyx_v_pos = 0;
@@ -1410,18 +1410,18 @@ static PyObject *__pyx_pw_7erlport_5decode_nil(PyObject *__pyx_self, PyObject *_
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("decode_nil", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 48; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("erlport.decode_nil", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("erlport.erldecode.decode_nil", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_7erlport_4decode_nil(__pyx_self, __pyx_v_tag, __pyx_v_string, __pyx_v_pos);
+  __pyx_r = __pyx_pf_7erlport_9erldecode_4decode_nil(__pyx_self, __pyx_v_tag, __pyx_v_string, __pyx_v_pos);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7erlport_4decode_nil(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_tag, CYTHON_UNUSED PyObject *__pyx_v_string, PyObject *__pyx_v_pos) {
+static PyObject *__pyx_pf_7erlport_9erldecode_4decode_nil(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_tag, CYTHON_UNUSED PyObject *__pyx_v_string, PyObject *__pyx_v_pos) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -1431,7 +1431,7 @@ static PyObject *__pyx_pf_7erlport_4decode_nil(CYTHON_UNUSED PyObject *__pyx_sel
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("decode_nil", 0);
 
-  /* "src/erlport/erldecode.pyx":49
+  /* "erlport/erldecode.pyx":49
  * 
  * def decode_nil(tag, string, pos):
  *     return [], pos             # <<<<<<<<<<<<<<
@@ -1453,7 +1453,7 @@ static PyObject *__pyx_pf_7erlport_4decode_nil(CYTHON_UNUSED PyObject *__pyx_sel
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "src/erlport/erldecode.pyx":48
+  /* "erlport/erldecode.pyx":48
  * 
  * 
  * def decode_nil(tag, string, pos):             # <<<<<<<<<<<<<<
@@ -1465,7 +1465,7 @@ static PyObject *__pyx_pf_7erlport_4decode_nil(CYTHON_UNUSED PyObject *__pyx_sel
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("erlport.decode_nil", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("erlport.erldecode.decode_nil", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -1473,7 +1473,7 @@ static PyObject *__pyx_pf_7erlport_4decode_nil(CYTHON_UNUSED PyObject *__pyx_sel
   return __pyx_r;
 }
 
-/* "src/erlport/erldecode.pyx":52
+/* "erlport/erldecode.pyx":52
  * 
  * 
  * def decode_string(tag, string, pos):             # <<<<<<<<<<<<<<
@@ -1482,9 +1482,9 @@ static PyObject *__pyx_pf_7erlport_4decode_nil(CYTHON_UNUSED PyObject *__pyx_sel
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7erlport_7decode_string(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_7erlport_7decode_string = {"decode_string", (PyCFunction)__pyx_pw_7erlport_7decode_string, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_7erlport_7decode_string(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_7erlport_9erldecode_7decode_string(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_7erlport_9erldecode_7decode_string = {"decode_string", (PyCFunction)__pyx_pw_7erlport_9erldecode_7decode_string, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_7erlport_9erldecode_7decode_string(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   CYTHON_UNUSED PyObject *__pyx_v_tag = 0;
   PyObject *__pyx_v_string = 0;
   PyObject *__pyx_v_pos = 0;
@@ -1541,18 +1541,18 @@ static PyObject *__pyx_pw_7erlport_7decode_string(PyObject *__pyx_self, PyObject
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("decode_string", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 52; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("erlport.decode_string", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("erlport.erldecode.decode_string", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_7erlport_6decode_string(__pyx_self, __pyx_v_tag, __pyx_v_string, __pyx_v_pos);
+  __pyx_r = __pyx_pf_7erlport_9erldecode_6decode_string(__pyx_self, __pyx_v_tag, __pyx_v_string, __pyx_v_pos);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7erlport_6decode_string(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_tag, PyObject *__pyx_v_string, PyObject *__pyx_v_pos) {
+static PyObject *__pyx_pf_7erlport_9erldecode_6decode_string(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_tag, PyObject *__pyx_v_string, PyObject *__pyx_v_pos) {
   PyObject *__pyx_v_length = NULL;
   PyObject *__pyx_v_i = NULL;
   PyObject *__pyx_r = NULL;
@@ -1572,7 +1572,7 @@ static PyObject *__pyx_pf_7erlport_6decode_string(CYTHON_UNUSED PyObject *__pyx_
   __Pyx_RefNannySetupContext("decode_string", 0);
   __Pyx_INCREF(__pyx_v_pos);
 
-  /* "src/erlport/erldecode.pyx":53
+  /* "erlport/erldecode.pyx":53
  * 
  * def decode_string(tag, string, pos):
  *     if len(string) - pos < 2:             # <<<<<<<<<<<<<<
@@ -1591,7 +1591,7 @@ static PyObject *__pyx_pf_7erlport_6decode_string(CYTHON_UNUSED PyObject *__pyx_
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (__pyx_t_4) {
 
-    /* "src/erlport/erldecode.pyx":54
+    /* "erlport/erldecode.pyx":54
  * def decode_string(tag, string, pos):
  *     if len(string) - pos < 2:
  *         raise ValueError("incomplete data: %r" % string)             # <<<<<<<<<<<<<<
@@ -1613,7 +1613,7 @@ static PyObject *__pyx_pf_7erlport_6decode_string(CYTHON_UNUSED PyObject *__pyx_
     {__pyx_filename = __pyx_f[0]; __pyx_lineno = 54; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
 
-  /* "src/erlport/erldecode.pyx":55
+  /* "erlport/erldecode.pyx":55
  *     if len(string) - pos < 2:
  *         raise ValueError("incomplete data: %r" % string)
  *     length, = unpack(">H", string[pos:pos+2])             # <<<<<<<<<<<<<<
@@ -1700,7 +1700,7 @@ static PyObject *__pyx_pf_7erlport_6decode_string(CYTHON_UNUSED PyObject *__pyx_
   __pyx_v_length = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "src/erlport/erldecode.pyx":56
+  /* "erlport/erldecode.pyx":56
  *         raise ValueError("incomplete data: %r" % string)
  *     length, = unpack(">H", string[pos:pos+2])
  *     pos += 2             # <<<<<<<<<<<<<<
@@ -1712,7 +1712,7 @@ static PyObject *__pyx_pf_7erlport_6decode_string(CYTHON_UNUSED PyObject *__pyx_
   __Pyx_DECREF_SET(__pyx_v_pos, __pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "src/erlport/erldecode.pyx":57
+  /* "erlport/erldecode.pyx":57
  *     length, = unpack(">H", string[pos:pos+2])
  *     pos += 2
  *     if len(string) - pos < length:             # <<<<<<<<<<<<<<
@@ -1731,7 +1731,7 @@ static PyObject *__pyx_pf_7erlport_6decode_string(CYTHON_UNUSED PyObject *__pyx_
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (__pyx_t_4) {
 
-    /* "src/erlport/erldecode.pyx":58
+    /* "erlport/erldecode.pyx":58
  *     pos += 2
  *     if len(string) - pos < length:
  *         raise ValueError("incomplete data: %r" % string)             # <<<<<<<<<<<<<<
@@ -1753,7 +1753,7 @@ static PyObject *__pyx_pf_7erlport_6decode_string(CYTHON_UNUSED PyObject *__pyx_
     {__pyx_filename = __pyx_f[0]; __pyx_lineno = 58; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
 
-  /* "src/erlport/erldecode.pyx":59
+  /* "erlport/erldecode.pyx":59
  *     if len(string) - pos < length:
  *         raise ValueError("incomplete data: %r" % string)
  *     return [ord(i) for i in string[pos:pos+length]], pos + length             # <<<<<<<<<<<<<<
@@ -1834,7 +1834,7 @@ static PyObject *__pyx_pf_7erlport_6decode_string(CYTHON_UNUSED PyObject *__pyx_
   __pyx_t_6 = 0;
   goto __pyx_L0;
 
-  /* "src/erlport/erldecode.pyx":52
+  /* "erlport/erldecode.pyx":52
  * 
  * 
  * def decode_string(tag, string, pos):             # <<<<<<<<<<<<<<
@@ -1849,7 +1849,7 @@ static PyObject *__pyx_pf_7erlport_6decode_string(CYTHON_UNUSED PyObject *__pyx_
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("erlport.decode_string", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("erlport.erldecode.decode_string", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_length);
@@ -1860,7 +1860,7 @@ static PyObject *__pyx_pf_7erlport_6decode_string(CYTHON_UNUSED PyObject *__pyx_
   return __pyx_r;
 }
 
-/* "src/erlport/erldecode.pyx":62
+/* "erlport/erldecode.pyx":62
  * 
  * 
  * def decode_list(tag, string, pos):             # <<<<<<<<<<<<<<
@@ -1869,9 +1869,9 @@ static PyObject *__pyx_pf_7erlport_6decode_string(CYTHON_UNUSED PyObject *__pyx_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7erlport_9decode_list(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_7erlport_9decode_list = {"decode_list", (PyCFunction)__pyx_pw_7erlport_9decode_list, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_7erlport_9decode_list(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_7erlport_9erldecode_9decode_list(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_7erlport_9erldecode_9decode_list = {"decode_list", (PyCFunction)__pyx_pw_7erlport_9erldecode_9decode_list, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_7erlport_9erldecode_9decode_list(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   CYTHON_UNUSED PyObject *__pyx_v_tag = 0;
   PyObject *__pyx_v_string = 0;
   PyObject *__pyx_v_pos = 0;
@@ -1928,18 +1928,18 @@ static PyObject *__pyx_pw_7erlport_9decode_list(PyObject *__pyx_self, PyObject *
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("decode_list", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 62; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("erlport.decode_list", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("erlport.erldecode.decode_list", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_7erlport_8decode_list(__pyx_self, __pyx_v_tag, __pyx_v_string, __pyx_v_pos);
+  __pyx_r = __pyx_pf_7erlport_9erldecode_8decode_list(__pyx_self, __pyx_v_tag, __pyx_v_string, __pyx_v_pos);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7erlport_8decode_list(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_tag, PyObject *__pyx_v_string, PyObject *__pyx_v_pos) {
+static PyObject *__pyx_pf_7erlport_9erldecode_8decode_list(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_tag, PyObject *__pyx_v_string, PyObject *__pyx_v_pos) {
   PyObject *__pyx_v_length = NULL;
   PyObject *__pyx_v_lst = NULL;
   PyObject *__pyx_v_term = NULL;
@@ -1961,7 +1961,7 @@ static PyObject *__pyx_pf_7erlport_8decode_list(CYTHON_UNUSED PyObject *__pyx_se
   __Pyx_RefNannySetupContext("decode_list", 0);
   __Pyx_INCREF(__pyx_v_pos);
 
-  /* "src/erlport/erldecode.pyx":63
+  /* "erlport/erldecode.pyx":63
  * 
  * def decode_list(tag, string, pos):
  *     if len(string) - pos < 4:             # <<<<<<<<<<<<<<
@@ -1980,7 +1980,7 @@ static PyObject *__pyx_pf_7erlport_8decode_list(CYTHON_UNUSED PyObject *__pyx_se
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (__pyx_t_4) {
 
-    /* "src/erlport/erldecode.pyx":64
+    /* "erlport/erldecode.pyx":64
  * def decode_list(tag, string, pos):
  *     if len(string) - pos < 4:
  *         raise ValueError("incomplete data: %r" % string)             # <<<<<<<<<<<<<<
@@ -2002,7 +2002,7 @@ static PyObject *__pyx_pf_7erlport_8decode_list(CYTHON_UNUSED PyObject *__pyx_se
     {__pyx_filename = __pyx_f[0]; __pyx_lineno = 64; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
 
-  /* "src/erlport/erldecode.pyx":65
+  /* "erlport/erldecode.pyx":65
  *     if len(string) - pos < 4:
  *         raise ValueError("incomplete data: %r" % string)
  *     length, = unpack(">I", string[pos:pos + 4])             # <<<<<<<<<<<<<<
@@ -2089,7 +2089,7 @@ static PyObject *__pyx_pf_7erlport_8decode_list(CYTHON_UNUSED PyObject *__pyx_se
   __pyx_v_length = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "src/erlport/erldecode.pyx":66
+  /* "erlport/erldecode.pyx":66
  *         raise ValueError("incomplete data: %r" % string)
  *     length, = unpack(">I", string[pos:pos + 4])
  *     pos += 4             # <<<<<<<<<<<<<<
@@ -2101,7 +2101,7 @@ static PyObject *__pyx_pf_7erlport_8decode_list(CYTHON_UNUSED PyObject *__pyx_se
   __Pyx_DECREF_SET(__pyx_v_pos, __pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "src/erlport/erldecode.pyx":67
+  /* "erlport/erldecode.pyx":67
  *     length, = unpack(">I", string[pos:pos + 4])
  *     pos += 4
  *     lst = []             # <<<<<<<<<<<<<<
@@ -2113,7 +2113,7 @@ static PyObject *__pyx_pf_7erlport_8decode_list(CYTHON_UNUSED PyObject *__pyx_se
   __pyx_v_lst = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "src/erlport/erldecode.pyx":68
+  /* "erlport/erldecode.pyx":68
  *     pos += 4
  *     lst = []
  *     while length > 0:             # <<<<<<<<<<<<<<
@@ -2126,7 +2126,7 @@ static PyObject *__pyx_pf_7erlport_8decode_list(CYTHON_UNUSED PyObject *__pyx_se
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     if (!__pyx_t_4) break;
 
-    /* "src/erlport/erldecode.pyx":69
+    /* "erlport/erldecode.pyx":69
  *     lst = []
  *     while length > 0:
  *         term, pos = decode_term(string, pos)             # <<<<<<<<<<<<<<
@@ -2217,7 +2217,7 @@ static PyObject *__pyx_pf_7erlport_8decode_list(CYTHON_UNUSED PyObject *__pyx_se
     __Pyx_DECREF_SET(__pyx_v_pos, __pyx_t_6);
     __pyx_t_6 = 0;
 
-    /* "src/erlport/erldecode.pyx":70
+    /* "erlport/erldecode.pyx":70
  *     while length > 0:
  *         term, pos = decode_term(string, pos)
  *         lst.append(term)             # <<<<<<<<<<<<<<
@@ -2226,7 +2226,7 @@ static PyObject *__pyx_pf_7erlport_8decode_list(CYTHON_UNUSED PyObject *__pyx_se
  */
     __pyx_t_9 = __Pyx_PyList_Append(__pyx_v_lst, __pyx_v_term); if (unlikely(__pyx_t_9 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 70; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-    /* "src/erlport/erldecode.pyx":71
+    /* "erlport/erldecode.pyx":71
  *         term, pos = decode_term(string, pos)
  *         lst.append(term)
  *         length -= 1             # <<<<<<<<<<<<<<
@@ -2239,7 +2239,7 @@ static PyObject *__pyx_pf_7erlport_8decode_list(CYTHON_UNUSED PyObject *__pyx_se
     __pyx_t_2 = 0;
   }
 
-  /* "src/erlport/erldecode.pyx":72
+  /* "erlport/erldecode.pyx":72
  *         lst.append(term)
  *         length -= 1
  *     ignored, pos = decode_term(string, pos)             # <<<<<<<<<<<<<<
@@ -2330,7 +2330,7 @@ static PyObject *__pyx_pf_7erlport_8decode_list(CYTHON_UNUSED PyObject *__pyx_se
   __Pyx_DECREF_SET(__pyx_v_pos, __pyx_t_7);
   __pyx_t_7 = 0;
 
-  /* "src/erlport/erldecode.pyx":73
+  /* "erlport/erldecode.pyx":73
  *         length -= 1
  *     ignored, pos = decode_term(string, pos)
  *     return lst, pos             # <<<<<<<<<<<<<<
@@ -2350,7 +2350,7 @@ static PyObject *__pyx_pf_7erlport_8decode_list(CYTHON_UNUSED PyObject *__pyx_se
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "src/erlport/erldecode.pyx":62
+  /* "erlport/erldecode.pyx":62
  * 
  * 
  * def decode_list(tag, string, pos):             # <<<<<<<<<<<<<<
@@ -2365,7 +2365,7 @@ static PyObject *__pyx_pf_7erlport_8decode_list(CYTHON_UNUSED PyObject *__pyx_se
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("erlport.decode_list", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("erlport.erldecode.decode_list", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_length);
@@ -2378,7 +2378,7 @@ static PyObject *__pyx_pf_7erlport_8decode_list(CYTHON_UNUSED PyObject *__pyx_se
   return __pyx_r;
 }
 
-/* "src/erlport/erldecode.pyx":76
+/* "erlport/erldecode.pyx":76
  * 
  * 
  * def decode_binary(tag, string, pos):             # <<<<<<<<<<<<<<
@@ -2387,9 +2387,9 @@ static PyObject *__pyx_pf_7erlport_8decode_list(CYTHON_UNUSED PyObject *__pyx_se
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7erlport_11decode_binary(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_7erlport_11decode_binary = {"decode_binary", (PyCFunction)__pyx_pw_7erlport_11decode_binary, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_7erlport_11decode_binary(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_7erlport_9erldecode_11decode_binary(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_7erlport_9erldecode_11decode_binary = {"decode_binary", (PyCFunction)__pyx_pw_7erlport_9erldecode_11decode_binary, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_7erlport_9erldecode_11decode_binary(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   CYTHON_UNUSED PyObject *__pyx_v_tag = 0;
   PyObject *__pyx_v_string = 0;
   PyObject *__pyx_v_pos = 0;
@@ -2446,18 +2446,18 @@ static PyObject *__pyx_pw_7erlport_11decode_binary(PyObject *__pyx_self, PyObjec
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("decode_binary", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 76; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("erlport.decode_binary", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("erlport.erldecode.decode_binary", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_7erlport_10decode_binary(__pyx_self, __pyx_v_tag, __pyx_v_string, __pyx_v_pos);
+  __pyx_r = __pyx_pf_7erlport_9erldecode_10decode_binary(__pyx_self, __pyx_v_tag, __pyx_v_string, __pyx_v_pos);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7erlport_10decode_binary(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_tag, PyObject *__pyx_v_string, PyObject *__pyx_v_pos) {
+static PyObject *__pyx_pf_7erlport_9erldecode_10decode_binary(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_tag, PyObject *__pyx_v_string, PyObject *__pyx_v_pos) {
   PyObject *__pyx_v_length = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -2475,7 +2475,7 @@ static PyObject *__pyx_pf_7erlport_10decode_binary(CYTHON_UNUSED PyObject *__pyx
   __Pyx_RefNannySetupContext("decode_binary", 0);
   __Pyx_INCREF(__pyx_v_pos);
 
-  /* "src/erlport/erldecode.pyx":77
+  /* "erlport/erldecode.pyx":77
  * 
  * def decode_binary(tag, string, pos):
  *     if len(string) - pos < 4:             # <<<<<<<<<<<<<<
@@ -2494,7 +2494,7 @@ static PyObject *__pyx_pf_7erlport_10decode_binary(CYTHON_UNUSED PyObject *__pyx
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (__pyx_t_4) {
 
-    /* "src/erlport/erldecode.pyx":78
+    /* "erlport/erldecode.pyx":78
  * def decode_binary(tag, string, pos):
  *     if len(string) - pos < 4:
  *         raise ValueError("incomplete data: %r" % string)             # <<<<<<<<<<<<<<
@@ -2516,7 +2516,7 @@ static PyObject *__pyx_pf_7erlport_10decode_binary(CYTHON_UNUSED PyObject *__pyx
     {__pyx_filename = __pyx_f[0]; __pyx_lineno = 78; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
 
-  /* "src/erlport/erldecode.pyx":79
+  /* "erlport/erldecode.pyx":79
  *     if len(string) - pos < 4:
  *         raise ValueError("incomplete data: %r" % string)
  *     length, = unpack(">I", string[pos:pos + 4])             # <<<<<<<<<<<<<<
@@ -2603,7 +2603,7 @@ static PyObject *__pyx_pf_7erlport_10decode_binary(CYTHON_UNUSED PyObject *__pyx
   __pyx_v_length = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "src/erlport/erldecode.pyx":80
+  /* "erlport/erldecode.pyx":80
  *         raise ValueError("incomplete data: %r" % string)
  *     length, = unpack(">I", string[pos:pos + 4])
  *     pos += 4             # <<<<<<<<<<<<<<
@@ -2615,7 +2615,7 @@ static PyObject *__pyx_pf_7erlport_10decode_binary(CYTHON_UNUSED PyObject *__pyx
   __Pyx_DECREF_SET(__pyx_v_pos, __pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "src/erlport/erldecode.pyx":81
+  /* "erlport/erldecode.pyx":81
  *     length, = unpack(">I", string[pos:pos + 4])
  *     pos += 4
  *     if len(string) - pos < length:             # <<<<<<<<<<<<<<
@@ -2634,7 +2634,7 @@ static PyObject *__pyx_pf_7erlport_10decode_binary(CYTHON_UNUSED PyObject *__pyx
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (__pyx_t_4) {
 
-    /* "src/erlport/erldecode.pyx":82
+    /* "erlport/erldecode.pyx":82
  *     pos += 4
  *     if len(string) - pos < length:
  *         raise ValueError("incomplete data: %r" % string)             # <<<<<<<<<<<<<<
@@ -2656,7 +2656,7 @@ static PyObject *__pyx_pf_7erlport_10decode_binary(CYTHON_UNUSED PyObject *__pyx
     {__pyx_filename = __pyx_f[0]; __pyx_lineno = 82; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
 
-  /* "src/erlport/erldecode.pyx":83
+  /* "erlport/erldecode.pyx":83
  *     if len(string) - pos < length:
  *         raise ValueError("incomplete data: %r" % string)
  *     return string[pos:pos+length], pos + length             # <<<<<<<<<<<<<<
@@ -2683,7 +2683,7 @@ static PyObject *__pyx_pf_7erlport_10decode_binary(CYTHON_UNUSED PyObject *__pyx
   __pyx_t_7 = 0;
   goto __pyx_L0;
 
-  /* "src/erlport/erldecode.pyx":76
+  /* "erlport/erldecode.pyx":76
  * 
  * 
  * def decode_binary(tag, string, pos):             # <<<<<<<<<<<<<<
@@ -2698,7 +2698,7 @@ static PyObject *__pyx_pf_7erlport_10decode_binary(CYTHON_UNUSED PyObject *__pyx
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("erlport.decode_binary", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("erlport.erldecode.decode_binary", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_length);
@@ -2708,7 +2708,7 @@ static PyObject *__pyx_pf_7erlport_10decode_binary(CYTHON_UNUSED PyObject *__pyx
   return __pyx_r;
 }
 
-/* "src/erlport/erldecode.pyx":86
+/* "erlport/erldecode.pyx":86
  * 
  * 
  * def decode_atom(tag, string, pos):             # <<<<<<<<<<<<<<
@@ -2717,9 +2717,9 @@ static PyObject *__pyx_pf_7erlport_10decode_binary(CYTHON_UNUSED PyObject *__pyx
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7erlport_13decode_atom(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_7erlport_13decode_atom = {"decode_atom", (PyCFunction)__pyx_pw_7erlport_13decode_atom, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_7erlport_13decode_atom(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_7erlport_9erldecode_13decode_atom(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_7erlport_9erldecode_13decode_atom = {"decode_atom", (PyCFunction)__pyx_pw_7erlport_9erldecode_13decode_atom, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_7erlport_9erldecode_13decode_atom(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   CYTHON_UNUSED PyObject *__pyx_v_tag = 0;
   PyObject *__pyx_v_string = 0;
   PyObject *__pyx_v_pos = 0;
@@ -2776,18 +2776,18 @@ static PyObject *__pyx_pw_7erlport_13decode_atom(PyObject *__pyx_self, PyObject 
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("decode_atom", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 86; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("erlport.decode_atom", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("erlport.erldecode.decode_atom", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_7erlport_12decode_atom(__pyx_self, __pyx_v_tag, __pyx_v_string, __pyx_v_pos);
+  __pyx_r = __pyx_pf_7erlport_9erldecode_12decode_atom(__pyx_self, __pyx_v_tag, __pyx_v_string, __pyx_v_pos);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7erlport_12decode_atom(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_tag, PyObject *__pyx_v_string, PyObject *__pyx_v_pos) {
+static PyObject *__pyx_pf_7erlport_9erldecode_12decode_atom(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_tag, PyObject *__pyx_v_string, PyObject *__pyx_v_pos) {
   PyObject *__pyx_v_length = NULL;
   PyObject *__pyx_v_name = NULL;
   PyObject *__pyx_r = NULL;
@@ -2806,7 +2806,7 @@ static PyObject *__pyx_pf_7erlport_12decode_atom(CYTHON_UNUSED PyObject *__pyx_s
   __Pyx_RefNannySetupContext("decode_atom", 0);
   __Pyx_INCREF(__pyx_v_pos);
 
-  /* "src/erlport/erldecode.pyx":87
+  /* "erlport/erldecode.pyx":87
  * 
  * def decode_atom(tag, string, pos):
  *     if len(string) - pos < 2:             # <<<<<<<<<<<<<<
@@ -2825,7 +2825,7 @@ static PyObject *__pyx_pf_7erlport_12decode_atom(CYTHON_UNUSED PyObject *__pyx_s
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (__pyx_t_4) {
 
-    /* "src/erlport/erldecode.pyx":88
+    /* "erlport/erldecode.pyx":88
  * def decode_atom(tag, string, pos):
  *     if len(string) - pos < 2:
  *         raise ValueError("incomplete data: %r" % string)             # <<<<<<<<<<<<<<
@@ -2847,7 +2847,7 @@ static PyObject *__pyx_pf_7erlport_12decode_atom(CYTHON_UNUSED PyObject *__pyx_s
     {__pyx_filename = __pyx_f[0]; __pyx_lineno = 88; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
 
-  /* "src/erlport/erldecode.pyx":89
+  /* "erlport/erldecode.pyx":89
  *     if len(string) - pos < 2:
  *         raise ValueError("incomplete data: %r" % string)
  *     length, = unpack(">H", string[pos:pos+2])             # <<<<<<<<<<<<<<
@@ -2934,7 +2934,7 @@ static PyObject *__pyx_pf_7erlport_12decode_atom(CYTHON_UNUSED PyObject *__pyx_s
   __pyx_v_length = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "src/erlport/erldecode.pyx":90
+  /* "erlport/erldecode.pyx":90
  *         raise ValueError("incomplete data: %r" % string)
  *     length, = unpack(">H", string[pos:pos+2])
  *     pos += 2             # <<<<<<<<<<<<<<
@@ -2946,7 +2946,7 @@ static PyObject *__pyx_pf_7erlport_12decode_atom(CYTHON_UNUSED PyObject *__pyx_s
   __Pyx_DECREF_SET(__pyx_v_pos, __pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "src/erlport/erldecode.pyx":91
+  /* "erlport/erldecode.pyx":91
  *     length, = unpack(">H", string[pos:pos+2])
  *     pos += 2
  *     if len(string) - pos < length:             # <<<<<<<<<<<<<<
@@ -2965,7 +2965,7 @@ static PyObject *__pyx_pf_7erlport_12decode_atom(CYTHON_UNUSED PyObject *__pyx_s
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (__pyx_t_4) {
 
-    /* "src/erlport/erldecode.pyx":92
+    /* "erlport/erldecode.pyx":92
  *     pos += 2
  *     if len(string) - pos < length:
  *         raise ValueError("incomplete data: %r" % string)             # <<<<<<<<<<<<<<
@@ -2987,7 +2987,7 @@ static PyObject *__pyx_pf_7erlport_12decode_atom(CYTHON_UNUSED PyObject *__pyx_s
     {__pyx_filename = __pyx_f[0]; __pyx_lineno = 92; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
 
-  /* "src/erlport/erldecode.pyx":93
+  /* "erlport/erldecode.pyx":93
  *     if len(string) - pos < length:
  *         raise ValueError("incomplete data: %r" % string)
  *     name = string[pos:pos+length]             # <<<<<<<<<<<<<<
@@ -3002,7 +3002,7 @@ static PyObject *__pyx_pf_7erlport_12decode_atom(CYTHON_UNUSED PyObject *__pyx_s
   __pyx_v_name = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "src/erlport/erldecode.pyx":94
+  /* "erlport/erldecode.pyx":94
  *         raise ValueError("incomplete data: %r" % string)
  *     name = string[pos:pos+length]
  *     pos += length             # <<<<<<<<<<<<<<
@@ -3014,7 +3014,7 @@ static PyObject *__pyx_pf_7erlport_12decode_atom(CYTHON_UNUSED PyObject *__pyx_s
   __Pyx_DECREF_SET(__pyx_v_pos, __pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "src/erlport/erldecode.pyx":95
+  /* "erlport/erldecode.pyx":95
  *     name = string[pos:pos+length]
  *     pos += length
  *     if name == "true":             # <<<<<<<<<<<<<<
@@ -3024,7 +3024,7 @@ static PyObject *__pyx_pf_7erlport_12decode_atom(CYTHON_UNUSED PyObject *__pyx_s
   __pyx_t_4 = (__Pyx_PyString_Equals(__pyx_v_name, __pyx_n_s_true, Py_EQ)); if (unlikely(__pyx_t_4 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 95; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   if (__pyx_t_4) {
 
-    /* "src/erlport/erldecode.pyx":96
+    /* "erlport/erldecode.pyx":96
  *     pos += length
  *     if name == "true":
  *         return True, pos             # <<<<<<<<<<<<<<
@@ -3045,7 +3045,7 @@ static PyObject *__pyx_pf_7erlport_12decode_atom(CYTHON_UNUSED PyObject *__pyx_s
     goto __pyx_L0;
   }
 
-  /* "src/erlport/erldecode.pyx":97
+  /* "erlport/erldecode.pyx":97
  *     if name == "true":
  *         return True, pos
  *     elif name == "false":             # <<<<<<<<<<<<<<
@@ -3055,7 +3055,7 @@ static PyObject *__pyx_pf_7erlport_12decode_atom(CYTHON_UNUSED PyObject *__pyx_s
   __pyx_t_4 = (__Pyx_PyString_Equals(__pyx_v_name, __pyx_n_s_false, Py_EQ)); if (unlikely(__pyx_t_4 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 97; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   if (__pyx_t_4) {
 
-    /* "src/erlport/erldecode.pyx":98
+    /* "erlport/erldecode.pyx":98
  *         return True, pos
  *     elif name == "false":
  *         return False, pos             # <<<<<<<<<<<<<<
@@ -3076,7 +3076,7 @@ static PyObject *__pyx_pf_7erlport_12decode_atom(CYTHON_UNUSED PyObject *__pyx_s
     goto __pyx_L0;
   }
 
-  /* "src/erlport/erldecode.pyx":99
+  /* "erlport/erldecode.pyx":99
  *     elif name == "false":
  *         return False, pos
  *     elif name == "none":             # <<<<<<<<<<<<<<
@@ -3086,7 +3086,7 @@ static PyObject *__pyx_pf_7erlport_12decode_atom(CYTHON_UNUSED PyObject *__pyx_s
   __pyx_t_4 = (__Pyx_PyString_Equals(__pyx_v_name, __pyx_n_s_none, Py_EQ)); if (unlikely(__pyx_t_4 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 99; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   if (__pyx_t_4) {
 
-    /* "src/erlport/erldecode.pyx":100
+    /* "erlport/erldecode.pyx":100
  *         return False, pos
  *     elif name == "none":
  *         return None, pos             # <<<<<<<<<<<<<<
@@ -3107,7 +3107,7 @@ static PyObject *__pyx_pf_7erlport_12decode_atom(CYTHON_UNUSED PyObject *__pyx_s
     goto __pyx_L0;
   }
 
-  /* "src/erlport/erldecode.pyx":101
+  /* "erlport/erldecode.pyx":101
  *     elif name == "none":
  *         return None, pos
  *     return Atom(name), pos             # <<<<<<<<<<<<<<
@@ -3154,7 +3154,7 @@ static PyObject *__pyx_pf_7erlport_12decode_atom(CYTHON_UNUSED PyObject *__pyx_s
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "src/erlport/erldecode.pyx":86
+  /* "erlport/erldecode.pyx":86
  * 
  * 
  * def decode_atom(tag, string, pos):             # <<<<<<<<<<<<<<
@@ -3169,7 +3169,7 @@ static PyObject *__pyx_pf_7erlport_12decode_atom(CYTHON_UNUSED PyObject *__pyx_s
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("erlport.decode_atom", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("erlport.erldecode.decode_atom", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_length);
@@ -3180,7 +3180,7 @@ static PyObject *__pyx_pf_7erlport_12decode_atom(CYTHON_UNUSED PyObject *__pyx_s
   return __pyx_r;
 }
 
-/* "src/erlport/erldecode.pyx":104
+/* "erlport/erldecode.pyx":104
  * 
  * 
  * def decode_tuple(tag, string, pos):             # <<<<<<<<<<<<<<
@@ -3189,9 +3189,9 @@ static PyObject *__pyx_pf_7erlport_12decode_atom(CYTHON_UNUSED PyObject *__pyx_s
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7erlport_15decode_tuple(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_7erlport_15decode_tuple = {"decode_tuple", (PyCFunction)__pyx_pw_7erlport_15decode_tuple, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_7erlport_15decode_tuple(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_7erlport_9erldecode_15decode_tuple(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_7erlport_9erldecode_15decode_tuple = {"decode_tuple", (PyCFunction)__pyx_pw_7erlport_9erldecode_15decode_tuple, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_7erlport_9erldecode_15decode_tuple(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_tag = 0;
   PyObject *__pyx_v_string = 0;
   PyObject *__pyx_v_pos = 0;
@@ -3248,18 +3248,18 @@ static PyObject *__pyx_pw_7erlport_15decode_tuple(PyObject *__pyx_self, PyObject
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("decode_tuple", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 104; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("erlport.decode_tuple", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("erlport.erldecode.decode_tuple", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_7erlport_14decode_tuple(__pyx_self, __pyx_v_tag, __pyx_v_string, __pyx_v_pos);
+  __pyx_r = __pyx_pf_7erlport_9erldecode_14decode_tuple(__pyx_self, __pyx_v_tag, __pyx_v_string, __pyx_v_pos);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7erlport_14decode_tuple(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_tag, PyObject *__pyx_v_string, PyObject *__pyx_v_pos) {
+static PyObject *__pyx_pf_7erlport_9erldecode_14decode_tuple(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_tag, PyObject *__pyx_v_string, PyObject *__pyx_v_pos) {
   PyObject *__pyx_v_arity = NULL;
   PyObject *__pyx_v_lst = NULL;
   PyObject *__pyx_v_term = NULL;
@@ -3281,7 +3281,7 @@ static PyObject *__pyx_pf_7erlport_14decode_tuple(CYTHON_UNUSED PyObject *__pyx_
   __Pyx_RefNannySetupContext("decode_tuple", 0);
   __Pyx_INCREF(__pyx_v_pos);
 
-  /* "src/erlport/erldecode.pyx":105
+  /* "erlport/erldecode.pyx":105
  * 
  * def decode_tuple(tag, string, pos):
  *     if tag == 104:             # <<<<<<<<<<<<<<
@@ -3293,7 +3293,7 @@ static PyObject *__pyx_pf_7erlport_14decode_tuple(CYTHON_UNUSED PyObject *__pyx_
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_2) {
 
-    /* "src/erlport/erldecode.pyx":106
+    /* "erlport/erldecode.pyx":106
  * def decode_tuple(tag, string, pos):
  *     if tag == 104:
  *         if not (len(string) - pos):             # <<<<<<<<<<<<<<
@@ -3311,7 +3311,7 @@ static PyObject *__pyx_pf_7erlport_14decode_tuple(CYTHON_UNUSED PyObject *__pyx_
     __pyx_t_5 = ((!__pyx_t_2) != 0);
     if (__pyx_t_5) {
 
-      /* "src/erlport/erldecode.pyx":107
+      /* "erlport/erldecode.pyx":107
  *     if tag == 104:
  *         if not (len(string) - pos):
  *             raise ValueError("incomplete data: %r" % string)             # <<<<<<<<<<<<<<
@@ -3333,7 +3333,7 @@ static PyObject *__pyx_pf_7erlport_14decode_tuple(CYTHON_UNUSED PyObject *__pyx_
       {__pyx_filename = __pyx_f[0]; __pyx_lineno = 107; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     }
 
-    /* "src/erlport/erldecode.pyx":108
+    /* "erlport/erldecode.pyx":108
  *         if not (len(string) - pos):
  *             raise ValueError("incomplete data: %r" % string)
  *         arity = ord(string[pos])             # <<<<<<<<<<<<<<
@@ -3353,7 +3353,7 @@ static PyObject *__pyx_pf_7erlport_14decode_tuple(CYTHON_UNUSED PyObject *__pyx_
     __pyx_v_arity = __pyx_t_4;
     __pyx_t_4 = 0;
 
-    /* "src/erlport/erldecode.pyx":109
+    /* "erlport/erldecode.pyx":109
  *             raise ValueError("incomplete data: %r" % string)
  *         arity = ord(string[pos])
  *         pos += 1             # <<<<<<<<<<<<<<
@@ -3368,7 +3368,7 @@ static PyObject *__pyx_pf_7erlport_14decode_tuple(CYTHON_UNUSED PyObject *__pyx_
   }
   /*else*/ {
 
-    /* "src/erlport/erldecode.pyx":111
+    /* "erlport/erldecode.pyx":111
  *         pos += 1
  *     else:
  *         if len(string) - pos < 4:             # <<<<<<<<<<<<<<
@@ -3387,7 +3387,7 @@ static PyObject *__pyx_pf_7erlport_14decode_tuple(CYTHON_UNUSED PyObject *__pyx_
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     if (__pyx_t_5) {
 
-      /* "src/erlport/erldecode.pyx":112
+      /* "erlport/erldecode.pyx":112
  *     else:
  *         if len(string) - pos < 4:
  *             raise ValueError("incomplete data: %r" % string)             # <<<<<<<<<<<<<<
@@ -3409,7 +3409,7 @@ static PyObject *__pyx_pf_7erlport_14decode_tuple(CYTHON_UNUSED PyObject *__pyx_
       {__pyx_filename = __pyx_f[0]; __pyx_lineno = 112; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     }
 
-    /* "src/erlport/erldecode.pyx":113
+    /* "erlport/erldecode.pyx":113
  *         if len(string) - pos < 4:
  *             raise ValueError("incomplete data: %r" % string)
  *         arity, = unpack(">I", string[pos:pos + 4])             # <<<<<<<<<<<<<<
@@ -3496,7 +3496,7 @@ static PyObject *__pyx_pf_7erlport_14decode_tuple(CYTHON_UNUSED PyObject *__pyx_
     __pyx_v_arity = __pyx_t_1;
     __pyx_t_1 = 0;
 
-    /* "src/erlport/erldecode.pyx":114
+    /* "erlport/erldecode.pyx":114
  *             raise ValueError("incomplete data: %r" % string)
  *         arity, = unpack(">I", string[pos:pos + 4])
  *         pos += 4             # <<<<<<<<<<<<<<
@@ -3510,7 +3510,7 @@ static PyObject *__pyx_pf_7erlport_14decode_tuple(CYTHON_UNUSED PyObject *__pyx_
   }
   __pyx_L3:;
 
-  /* "src/erlport/erldecode.pyx":115
+  /* "erlport/erldecode.pyx":115
  *         arity, = unpack(">I", string[pos:pos + 4])
  *         pos += 4
  *     lst = []             # <<<<<<<<<<<<<<
@@ -3522,7 +3522,7 @@ static PyObject *__pyx_pf_7erlport_14decode_tuple(CYTHON_UNUSED PyObject *__pyx_
   __pyx_v_lst = ((PyObject*)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "src/erlport/erldecode.pyx":116
+  /* "erlport/erldecode.pyx":116
  *         pos += 4
  *     lst = []
  *     while arity > 0:             # <<<<<<<<<<<<<<
@@ -3535,7 +3535,7 @@ static PyObject *__pyx_pf_7erlport_14decode_tuple(CYTHON_UNUSED PyObject *__pyx_
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     if (!__pyx_t_5) break;
 
-    /* "src/erlport/erldecode.pyx":117
+    /* "erlport/erldecode.pyx":117
  *     lst = []
  *     while arity > 0:
  *         term, pos = decode_term(string, pos)             # <<<<<<<<<<<<<<
@@ -3626,7 +3626,7 @@ static PyObject *__pyx_pf_7erlport_14decode_tuple(CYTHON_UNUSED PyObject *__pyx_
     __Pyx_DECREF_SET(__pyx_v_pos, __pyx_t_7);
     __pyx_t_7 = 0;
 
-    /* "src/erlport/erldecode.pyx":118
+    /* "erlport/erldecode.pyx":118
  *     while arity > 0:
  *         term, pos = decode_term(string, pos)
  *         lst.append(term)             # <<<<<<<<<<<<<<
@@ -3635,7 +3635,7 @@ static PyObject *__pyx_pf_7erlport_14decode_tuple(CYTHON_UNUSED PyObject *__pyx_
  */
     __pyx_t_10 = __Pyx_PyList_Append(__pyx_v_lst, __pyx_v_term); if (unlikely(__pyx_t_10 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 118; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-    /* "src/erlport/erldecode.pyx":119
+    /* "erlport/erldecode.pyx":119
  *         term, pos = decode_term(string, pos)
  *         lst.append(term)
  *         arity -= 1             # <<<<<<<<<<<<<<
@@ -3648,7 +3648,7 @@ static PyObject *__pyx_pf_7erlport_14decode_tuple(CYTHON_UNUSED PyObject *__pyx_
     __pyx_t_4 = 0;
   }
 
-  /* "src/erlport/erldecode.pyx":120
+  /* "erlport/erldecode.pyx":120
  *         lst.append(term)
  *         arity -= 1
  *     return tuple(lst), pos             # <<<<<<<<<<<<<<
@@ -3670,7 +3670,7 @@ static PyObject *__pyx_pf_7erlport_14decode_tuple(CYTHON_UNUSED PyObject *__pyx_
   __pyx_t_7 = 0;
   goto __pyx_L0;
 
-  /* "src/erlport/erldecode.pyx":104
+  /* "erlport/erldecode.pyx":104
  * 
  * 
  * def decode_tuple(tag, string, pos):             # <<<<<<<<<<<<<<
@@ -3685,7 +3685,7 @@ static PyObject *__pyx_pf_7erlport_14decode_tuple(CYTHON_UNUSED PyObject *__pyx_
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_8);
-  __Pyx_AddTraceback("erlport.decode_tuple", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("erlport.erldecode.decode_tuple", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_arity);
@@ -3697,7 +3697,7 @@ static PyObject *__pyx_pf_7erlport_14decode_tuple(CYTHON_UNUSED PyObject *__pyx_
   return __pyx_r;
 }
 
-/* "src/erlport/erldecode.pyx":123
+/* "erlport/erldecode.pyx":123
  * 
  * 
  * def decode_new_float(tag, string, pos):             # <<<<<<<<<<<<<<
@@ -3706,9 +3706,9 @@ static PyObject *__pyx_pf_7erlport_14decode_tuple(CYTHON_UNUSED PyObject *__pyx_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7erlport_17decode_new_float(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_7erlport_17decode_new_float = {"decode_new_float", (PyCFunction)__pyx_pw_7erlport_17decode_new_float, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_7erlport_17decode_new_float(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_7erlport_9erldecode_17decode_new_float(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_7erlport_9erldecode_17decode_new_float = {"decode_new_float", (PyCFunction)__pyx_pw_7erlport_9erldecode_17decode_new_float, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_7erlport_9erldecode_17decode_new_float(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   CYTHON_UNUSED PyObject *__pyx_v_tag = 0;
   PyObject *__pyx_v_string = 0;
   PyObject *__pyx_v_pos = 0;
@@ -3765,18 +3765,18 @@ static PyObject *__pyx_pw_7erlport_17decode_new_float(PyObject *__pyx_self, PyOb
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("decode_new_float", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 123; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("erlport.decode_new_float", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("erlport.erldecode.decode_new_float", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_7erlport_16decode_new_float(__pyx_self, __pyx_v_tag, __pyx_v_string, __pyx_v_pos);
+  __pyx_r = __pyx_pf_7erlport_9erldecode_16decode_new_float(__pyx_self, __pyx_v_tag, __pyx_v_string, __pyx_v_pos);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7erlport_16decode_new_float(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_tag, PyObject *__pyx_v_string, PyObject *__pyx_v_pos) {
+static PyObject *__pyx_pf_7erlport_9erldecode_16decode_new_float(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_tag, PyObject *__pyx_v_string, PyObject *__pyx_v_pos) {
   PyObject *__pyx_v_term = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -3792,7 +3792,7 @@ static PyObject *__pyx_pf_7erlport_16decode_new_float(CYTHON_UNUSED PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("decode_new_float", 0);
 
-  /* "src/erlport/erldecode.pyx":124
+  /* "erlport/erldecode.pyx":124
  * 
  * def decode_new_float(tag, string, pos):
  *     term, = unpack(">d", string[pos:pos+8])             # <<<<<<<<<<<<<<
@@ -3879,7 +3879,7 @@ static PyObject *__pyx_pf_7erlport_16decode_new_float(CYTHON_UNUSED PyObject *__
   __pyx_v_term = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/erlport/erldecode.pyx":125
+  /* "erlport/erldecode.pyx":125
  * def decode_new_float(tag, string, pos):
  *     term, = unpack(">d", string[pos:pos+8])
  *     return term, pos + 8             # <<<<<<<<<<<<<<
@@ -3901,7 +3901,7 @@ static PyObject *__pyx_pf_7erlport_16decode_new_float(CYTHON_UNUSED PyObject *__
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "src/erlport/erldecode.pyx":123
+  /* "erlport/erldecode.pyx":123
  * 
  * 
  * def decode_new_float(tag, string, pos):             # <<<<<<<<<<<<<<
@@ -3916,7 +3916,7 @@ static PyObject *__pyx_pf_7erlport_16decode_new_float(CYTHON_UNUSED PyObject *__
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_AddTraceback("erlport.decode_new_float", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("erlport.erldecode.decode_new_float", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_term);
@@ -3925,7 +3925,7 @@ static PyObject *__pyx_pf_7erlport_16decode_new_float(CYTHON_UNUSED PyObject *__
   return __pyx_r;
 }
 
-/* "src/erlport/erldecode.pyx":128
+/* "erlport/erldecode.pyx":128
  * 
  * 
  * def decode_float(tag, string, pos):             # <<<<<<<<<<<<<<
@@ -3934,9 +3934,9 @@ static PyObject *__pyx_pf_7erlport_16decode_new_float(CYTHON_UNUSED PyObject *__
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7erlport_19decode_float(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_7erlport_19decode_float = {"decode_float", (PyCFunction)__pyx_pw_7erlport_19decode_float, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_7erlport_19decode_float(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_7erlport_9erldecode_19decode_float(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_7erlport_9erldecode_19decode_float = {"decode_float", (PyCFunction)__pyx_pw_7erlport_9erldecode_19decode_float, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_7erlport_9erldecode_19decode_float(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   CYTHON_UNUSED PyObject *__pyx_v_tag = 0;
   PyObject *__pyx_v_string = 0;
   PyObject *__pyx_v_pos = 0;
@@ -3993,18 +3993,18 @@ static PyObject *__pyx_pw_7erlport_19decode_float(PyObject *__pyx_self, PyObject
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("decode_float", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 128; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("erlport.decode_float", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("erlport.erldecode.decode_float", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_7erlport_18decode_float(__pyx_self, __pyx_v_tag, __pyx_v_string, __pyx_v_pos);
+  __pyx_r = __pyx_pf_7erlport_9erldecode_18decode_float(__pyx_self, __pyx_v_tag, __pyx_v_string, __pyx_v_pos);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7erlport_18decode_float(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_tag, PyObject *__pyx_v_string, PyObject *__pyx_v_pos) {
+static PyObject *__pyx_pf_7erlport_9erldecode_18decode_float(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_tag, PyObject *__pyx_v_string, PyObject *__pyx_v_pos) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -4016,7 +4016,7 @@ static PyObject *__pyx_pf_7erlport_18decode_float(CYTHON_UNUSED PyObject *__pyx_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("decode_float", 0);
 
-  /* "src/erlport/erldecode.pyx":129
+  /* "erlport/erldecode.pyx":129
  * 
  * def decode_float(tag, string, pos):
  *     return float(string[pos:pos+31].split("\x00", 1)[0]), pos + 31             # <<<<<<<<<<<<<<
@@ -4056,7 +4056,7 @@ static PyObject *__pyx_pf_7erlport_18decode_float(CYTHON_UNUSED PyObject *__pyx_
   __pyx_t_4 = 0;
   goto __pyx_L0;
 
-  /* "src/erlport/erldecode.pyx":128
+  /* "erlport/erldecode.pyx":128
  * 
  * 
  * def decode_float(tag, string, pos):             # <<<<<<<<<<<<<<
@@ -4069,7 +4069,7 @@ static PyObject *__pyx_pf_7erlport_18decode_float(CYTHON_UNUSED PyObject *__pyx_
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("erlport.decode_float", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("erlport.erldecode.decode_float", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -4077,7 +4077,7 @@ static PyObject *__pyx_pf_7erlport_18decode_float(CYTHON_UNUSED PyObject *__pyx_
   return __pyx_r;
 }
 
-/* "src/erlport/erldecode.pyx":132
+/* "erlport/erldecode.pyx":132
  * 
  * 
  * def decode_big(tag, string, pos):             # <<<<<<<<<<<<<<
@@ -4086,9 +4086,9 @@ static PyObject *__pyx_pf_7erlport_18decode_float(CYTHON_UNUSED PyObject *__pyx_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7erlport_21decode_big(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_7erlport_21decode_big = {"decode_big", (PyCFunction)__pyx_pw_7erlport_21decode_big, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_7erlport_21decode_big(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_7erlport_9erldecode_21decode_big(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_7erlport_9erldecode_21decode_big = {"decode_big", (PyCFunction)__pyx_pw_7erlport_9erldecode_21decode_big, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_7erlport_9erldecode_21decode_big(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_tag = 0;
   PyObject *__pyx_v_string = 0;
   PyObject *__pyx_v_pos = 0;
@@ -4145,18 +4145,18 @@ static PyObject *__pyx_pw_7erlport_21decode_big(PyObject *__pyx_self, PyObject *
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("decode_big", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 132; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("erlport.decode_big", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("erlport.erldecode.decode_big", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_7erlport_20decode_big(__pyx_self, __pyx_v_tag, __pyx_v_string, __pyx_v_pos);
+  __pyx_r = __pyx_pf_7erlport_9erldecode_20decode_big(__pyx_self, __pyx_v_tag, __pyx_v_string, __pyx_v_pos);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7erlport_20decode_big(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_tag, PyObject *__pyx_v_string, PyObject *__pyx_v_pos) {
+static PyObject *__pyx_pf_7erlport_9erldecode_20decode_big(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_tag, PyObject *__pyx_v_string, PyObject *__pyx_v_pos) {
   PyObject *__pyx_v_length = NULL;
   PyObject *__pyx_v_sign = NULL;
   PyObject *__pyx_v_n = NULL;
@@ -4178,7 +4178,7 @@ static PyObject *__pyx_pf_7erlport_20decode_big(CYTHON_UNUSED PyObject *__pyx_se
   __Pyx_RefNannySetupContext("decode_big", 0);
   __Pyx_INCREF(__pyx_v_pos);
 
-  /* "src/erlport/erldecode.pyx":133
+  /* "erlport/erldecode.pyx":133
  * 
  * def decode_big(tag, string, pos):
  *     if tag == 110:             # <<<<<<<<<<<<<<
@@ -4190,7 +4190,7 @@ static PyObject *__pyx_pf_7erlport_20decode_big(CYTHON_UNUSED PyObject *__pyx_se
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_2) {
 
-    /* "src/erlport/erldecode.pyx":134
+    /* "erlport/erldecode.pyx":134
  * def decode_big(tag, string, pos):
  *     if tag == 110:
  *         if len(string) - pos < 2:             # <<<<<<<<<<<<<<
@@ -4209,7 +4209,7 @@ static PyObject *__pyx_pf_7erlport_20decode_big(CYTHON_UNUSED PyObject *__pyx_se
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (__pyx_t_2) {
 
-      /* "src/erlport/erldecode.pyx":135
+      /* "erlport/erldecode.pyx":135
  *     if tag == 110:
  *         if len(string) - pos < 2:
  *             raise ValueError("incomplete data: %r" % string)             # <<<<<<<<<<<<<<
@@ -4231,7 +4231,7 @@ static PyObject *__pyx_pf_7erlport_20decode_big(CYTHON_UNUSED PyObject *__pyx_se
       {__pyx_filename = __pyx_f[0]; __pyx_lineno = 135; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     }
 
-    /* "src/erlport/erldecode.pyx":136
+    /* "erlport/erldecode.pyx":136
  *         if len(string) - pos < 2:
  *             raise ValueError("incomplete data: %r" % string)
  *         length, sign = unpack(">BB", string[pos:pos+2])             # <<<<<<<<<<<<<<
@@ -4327,7 +4327,7 @@ static PyObject *__pyx_pf_7erlport_20decode_big(CYTHON_UNUSED PyObject *__pyx_se
     __pyx_v_sign = __pyx_t_7;
     __pyx_t_7 = 0;
 
-    /* "src/erlport/erldecode.pyx":137
+    /* "erlport/erldecode.pyx":137
  *             raise ValueError("incomplete data: %r" % string)
  *         length, sign = unpack(">BB", string[pos:pos+2])
  *         pos += 2             # <<<<<<<<<<<<<<
@@ -4342,7 +4342,7 @@ static PyObject *__pyx_pf_7erlport_20decode_big(CYTHON_UNUSED PyObject *__pyx_se
   }
   /*else*/ {
 
-    /* "src/erlport/erldecode.pyx":139
+    /* "erlport/erldecode.pyx":139
  *         pos += 2
  *     else:
  *         if len(string) - pos < 5:             # <<<<<<<<<<<<<<
@@ -4361,7 +4361,7 @@ static PyObject *__pyx_pf_7erlport_20decode_big(CYTHON_UNUSED PyObject *__pyx_se
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (__pyx_t_2) {
 
-      /* "src/erlport/erldecode.pyx":140
+      /* "erlport/erldecode.pyx":140
  *     else:
  *         if len(string) - pos < 5:
  *             raise ValueError("incomplete data: %r" % string)             # <<<<<<<<<<<<<<
@@ -4383,7 +4383,7 @@ static PyObject *__pyx_pf_7erlport_20decode_big(CYTHON_UNUSED PyObject *__pyx_se
       {__pyx_filename = __pyx_f[0]; __pyx_lineno = 140; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     }
 
-    /* "src/erlport/erldecode.pyx":141
+    /* "erlport/erldecode.pyx":141
  *         if len(string) - pos < 5:
  *             raise ValueError("incomplete data: %r" % string)
  *         length, sign = unpack(">IB", string[pos:pos+5])             # <<<<<<<<<<<<<<
@@ -4479,7 +4479,7 @@ static PyObject *__pyx_pf_7erlport_20decode_big(CYTHON_UNUSED PyObject *__pyx_se
     __pyx_v_sign = __pyx_t_5;
     __pyx_t_5 = 0;
 
-    /* "src/erlport/erldecode.pyx":142
+    /* "erlport/erldecode.pyx":142
  *             raise ValueError("incomplete data: %r" % string)
  *         length, sign = unpack(">IB", string[pos:pos+5])
  *         pos += 5             # <<<<<<<<<<<<<<
@@ -4493,7 +4493,7 @@ static PyObject *__pyx_pf_7erlport_20decode_big(CYTHON_UNUSED PyObject *__pyx_se
   }
   __pyx_L3:;
 
-  /* "src/erlport/erldecode.pyx":143
+  /* "erlport/erldecode.pyx":143
  *         length, sign = unpack(">IB", string[pos:pos+5])
  *         pos += 5
  *     if len(string) - pos < length:             # <<<<<<<<<<<<<<
@@ -4512,7 +4512,7 @@ static PyObject *__pyx_pf_7erlport_20decode_big(CYTHON_UNUSED PyObject *__pyx_se
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_2) {
 
-    /* "src/erlport/erldecode.pyx":144
+    /* "erlport/erldecode.pyx":144
  *         pos += 5
  *     if len(string) - pos < length:
  *         raise ValueError("incomplete data: %r" % string)             # <<<<<<<<<<<<<<
@@ -4534,7 +4534,7 @@ static PyObject *__pyx_pf_7erlport_20decode_big(CYTHON_UNUSED PyObject *__pyx_se
     {__pyx_filename = __pyx_f[0]; __pyx_lineno = 144; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
 
-  /* "src/erlport/erldecode.pyx":145
+  /* "erlport/erldecode.pyx":145
  *     if len(string) - pos < length:
  *         raise ValueError("incomplete data: %r" % string)
  *     n = 0             # <<<<<<<<<<<<<<
@@ -4544,7 +4544,7 @@ static PyObject *__pyx_pf_7erlport_20decode_big(CYTHON_UNUSED PyObject *__pyx_se
   __Pyx_INCREF(__pyx_int_0);
   __pyx_v_n = __pyx_int_0;
 
-  /* "src/erlport/erldecode.pyx":146
+  /* "erlport/erldecode.pyx":146
  *         raise ValueError("incomplete data: %r" % string)
  *     n = 0
  *     for i in array('B', string[pos+length-1:pos:-1]):             # <<<<<<<<<<<<<<
@@ -4632,7 +4632,7 @@ static PyObject *__pyx_pf_7erlport_20decode_big(CYTHON_UNUSED PyObject *__pyx_se
     __Pyx_XDECREF_SET(__pyx_v_i, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "src/erlport/erldecode.pyx":147
+    /* "erlport/erldecode.pyx":147
  *     n = 0
  *     for i in array('B', string[pos+length-1:pos:-1]):
  *         n = (n << 8) | i             # <<<<<<<<<<<<<<
@@ -4647,7 +4647,7 @@ static PyObject *__pyx_pf_7erlport_20decode_big(CYTHON_UNUSED PyObject *__pyx_se
     __Pyx_DECREF_SET(__pyx_v_n, __pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "src/erlport/erldecode.pyx":146
+    /* "erlport/erldecode.pyx":146
  *         raise ValueError("incomplete data: %r" % string)
  *     n = 0
  *     for i in array('B', string[pos+length-1:pos:-1]):             # <<<<<<<<<<<<<<
@@ -4657,7 +4657,7 @@ static PyObject *__pyx_pf_7erlport_20decode_big(CYTHON_UNUSED PyObject *__pyx_se
   }
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "src/erlport/erldecode.pyx":148
+  /* "erlport/erldecode.pyx":148
  *     for i in array('B', string[pos+length-1:pos:-1]):
  *         n = (n << 8) | i
  *     if sign:             # <<<<<<<<<<<<<<
@@ -4667,7 +4667,7 @@ static PyObject *__pyx_pf_7erlport_20decode_big(CYTHON_UNUSED PyObject *__pyx_se
   __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_v_sign); if (unlikely(__pyx_t_2 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 148; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   if (__pyx_t_2) {
 
-    /* "src/erlport/erldecode.pyx":149
+    /* "erlport/erldecode.pyx":149
  *         n = (n << 8) | i
  *     if sign:
  *         n = -n             # <<<<<<<<<<<<<<
@@ -4682,7 +4682,7 @@ static PyObject *__pyx_pf_7erlport_20decode_big(CYTHON_UNUSED PyObject *__pyx_se
   }
   __pyx_L13:;
 
-  /* "src/erlport/erldecode.pyx":150
+  /* "erlport/erldecode.pyx":150
  *     if sign:
  *         n = -n
  *     return n, pos + length             # <<<<<<<<<<<<<<
@@ -4704,7 +4704,7 @@ static PyObject *__pyx_pf_7erlport_20decode_big(CYTHON_UNUSED PyObject *__pyx_se
   __pyx_t_4 = 0;
   goto __pyx_L0;
 
-  /* "src/erlport/erldecode.pyx":132
+  /* "erlport/erldecode.pyx":132
  * 
  * 
  * def decode_big(tag, string, pos):             # <<<<<<<<<<<<<<
@@ -4719,7 +4719,7 @@ static PyObject *__pyx_pf_7erlport_20decode_big(CYTHON_UNUSED PyObject *__pyx_se
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("erlport.decode_big", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("erlport.erldecode.decode_big", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_length);
@@ -4732,7 +4732,7 @@ static PyObject *__pyx_pf_7erlport_20decode_big(CYTHON_UNUSED PyObject *__pyx_se
   return __pyx_r;
 }
 
-/* "src/erlport/erldecode.pyx":153
+/* "erlport/erldecode.pyx":153
  * 
  * 
  * def decode_bit_binary(tag, string, pos):             # <<<<<<<<<<<<<<
@@ -4741,9 +4741,9 @@ static PyObject *__pyx_pf_7erlport_20decode_big(CYTHON_UNUSED PyObject *__pyx_se
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7erlport_23decode_bit_binary(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_7erlport_23decode_bit_binary = {"decode_bit_binary", (PyCFunction)__pyx_pw_7erlport_23decode_bit_binary, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_7erlport_23decode_bit_binary(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_7erlport_9erldecode_23decode_bit_binary(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_7erlport_9erldecode_23decode_bit_binary = {"decode_bit_binary", (PyCFunction)__pyx_pw_7erlport_9erldecode_23decode_bit_binary, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_7erlport_9erldecode_23decode_bit_binary(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   CYTHON_UNUSED PyObject *__pyx_v_tag = 0;
   PyObject *__pyx_v_string = 0;
   PyObject *__pyx_v_pos = 0;
@@ -4800,18 +4800,18 @@ static PyObject *__pyx_pw_7erlport_23decode_bit_binary(PyObject *__pyx_self, PyO
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("decode_bit_binary", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 153; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("erlport.decode_bit_binary", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("erlport.erldecode.decode_bit_binary", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_7erlport_22decode_bit_binary(__pyx_self, __pyx_v_tag, __pyx_v_string, __pyx_v_pos);
+  __pyx_r = __pyx_pf_7erlport_9erldecode_22decode_bit_binary(__pyx_self, __pyx_v_tag, __pyx_v_string, __pyx_v_pos);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7erlport_22decode_bit_binary(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_tag, PyObject *__pyx_v_string, PyObject *__pyx_v_pos) {
+static PyObject *__pyx_pf_7erlport_9erldecode_22decode_bit_binary(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_tag, PyObject *__pyx_v_string, PyObject *__pyx_v_pos) {
   PyObject *__pyx_v_length = NULL;
   PyObject *__pyx_v_bits = NULL;
   PyObject *__pyx_r = NULL;
@@ -4830,7 +4830,7 @@ static PyObject *__pyx_pf_7erlport_22decode_bit_binary(CYTHON_UNUSED PyObject *_
   __Pyx_RefNannySetupContext("decode_bit_binary", 0);
   __Pyx_INCREF(__pyx_v_pos);
 
-  /* "src/erlport/erldecode.pyx":154
+  /* "erlport/erldecode.pyx":154
  * 
  * def decode_bit_binary(tag, string, pos):
  *     if len(string) - pos < 5:             # <<<<<<<<<<<<<<
@@ -4849,7 +4849,7 @@ static PyObject *__pyx_pf_7erlport_22decode_bit_binary(CYTHON_UNUSED PyObject *_
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (__pyx_t_4) {
 
-    /* "src/erlport/erldecode.pyx":155
+    /* "erlport/erldecode.pyx":155
  * def decode_bit_binary(tag, string, pos):
  *     if len(string) - pos < 5:
  *         raise ValueError("incomplete data: %r" % string)             # <<<<<<<<<<<<<<
@@ -4871,7 +4871,7 @@ static PyObject *__pyx_pf_7erlport_22decode_bit_binary(CYTHON_UNUSED PyObject *_
     {__pyx_filename = __pyx_f[0]; __pyx_lineno = 155; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
 
-  /* "src/erlport/erldecode.pyx":156
+  /* "erlport/erldecode.pyx":156
  *     if len(string) - pos < 5:
  *         raise ValueError("incomplete data: %r" % string)
  *     length, bits = unpack(">IB", string[pos:pos+5])             # <<<<<<<<<<<<<<
@@ -4967,7 +4967,7 @@ static PyObject *__pyx_pf_7erlport_22decode_bit_binary(CYTHON_UNUSED PyObject *_
   __pyx_v_bits = __pyx_t_7;
   __pyx_t_7 = 0;
 
-  /* "src/erlport/erldecode.pyx":157
+  /* "erlport/erldecode.pyx":157
  *         raise ValueError("incomplete data: %r" % string)
  *     length, bits = unpack(">IB", string[pos:pos+5])
  *     pos += 5             # <<<<<<<<<<<<<<
@@ -4979,7 +4979,7 @@ static PyObject *__pyx_pf_7erlport_22decode_bit_binary(CYTHON_UNUSED PyObject *_
   __Pyx_DECREF_SET(__pyx_v_pos, __pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "src/erlport/erldecode.pyx":158
+  /* "erlport/erldecode.pyx":158
  *     length, bits = unpack(">IB", string[pos:pos+5])
  *     pos += 5
  *     if len(string) - pos < length:             # <<<<<<<<<<<<<<
@@ -4998,7 +4998,7 @@ static PyObject *__pyx_pf_7erlport_22decode_bit_binary(CYTHON_UNUSED PyObject *_
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (__pyx_t_4) {
 
-    /* "src/erlport/erldecode.pyx":159
+    /* "erlport/erldecode.pyx":159
  *     pos += 5
  *     if len(string) - pos < length:
  *         raise ValueError("incomplete daata: %r" % string)             # <<<<<<<<<<<<<<
@@ -5020,7 +5020,7 @@ static PyObject *__pyx_pf_7erlport_22decode_bit_binary(CYTHON_UNUSED PyObject *_
     {__pyx_filename = __pyx_f[0]; __pyx_lineno = 159; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
 
-  /* "src/erlport/erldecode.pyx":160
+  /* "erlport/erldecode.pyx":160
  *     if len(string) - pos < length:
  *         raise ValueError("incomplete daata: %r" % string)
  *     return BitBinary(string[pos:pos+length], bits), pos + length             # <<<<<<<<<<<<<<
@@ -5076,7 +5076,7 @@ static PyObject *__pyx_pf_7erlport_22decode_bit_binary(CYTHON_UNUSED PyObject *_
   __pyx_t_5 = 0;
   goto __pyx_L0;
 
-  /* "src/erlport/erldecode.pyx":153
+  /* "erlport/erldecode.pyx":153
  * 
  * 
  * def decode_bit_binary(tag, string, pos):             # <<<<<<<<<<<<<<
@@ -5091,7 +5091,7 @@ static PyObject *__pyx_pf_7erlport_22decode_bit_binary(CYTHON_UNUSED PyObject *_
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("erlport.decode_bit_binary", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("erlport.erldecode.decode_bit_binary", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_length);
@@ -5102,7 +5102,7 @@ static PyObject *__pyx_pf_7erlport_22decode_bit_binary(CYTHON_UNUSED PyObject *_
   return __pyx_r;
 }
 
-/* "src/erlport/erldecode.pyx":181
+/* "erlport/erldecode.pyx":181
  * 
  * 
  * def decode(string):             # <<<<<<<<<<<<<<
@@ -5111,21 +5111,21 @@ static PyObject *__pyx_pf_7erlport_22decode_bit_binary(CYTHON_UNUSED PyObject *_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7erlport_25decode(PyObject *__pyx_self, PyObject *__pyx_v_string); /*proto*/
-static char __pyx_doc_7erlport_24decode[] = "Decode Erlang external term.";
-static PyMethodDef __pyx_mdef_7erlport_25decode = {"decode", (PyCFunction)__pyx_pw_7erlport_25decode, METH_O, __pyx_doc_7erlport_24decode};
-static PyObject *__pyx_pw_7erlport_25decode(PyObject *__pyx_self, PyObject *__pyx_v_string) {
+static PyObject *__pyx_pw_7erlport_9erldecode_25decode(PyObject *__pyx_self, PyObject *__pyx_v_string); /*proto*/
+static char __pyx_doc_7erlport_9erldecode_24decode[] = "Decode Erlang external term.";
+static PyMethodDef __pyx_mdef_7erlport_9erldecode_25decode = {"decode", (PyCFunction)__pyx_pw_7erlport_9erldecode_25decode, METH_O, __pyx_doc_7erlport_9erldecode_24decode};
+static PyObject *__pyx_pw_7erlport_9erldecode_25decode(PyObject *__pyx_self, PyObject *__pyx_v_string) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("decode (wrapper)", 0);
-  __pyx_r = __pyx_pf_7erlport_24decode(__pyx_self, ((PyObject *)__pyx_v_string));
+  __pyx_r = __pyx_pf_7erlport_9erldecode_24decode(__pyx_self, ((PyObject *)__pyx_v_string));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7erlport_24decode(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_string) {
+static PyObject *__pyx_pf_7erlport_9erldecode_24decode(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_string) {
   PyObject *__pyx_v_version = NULL;
   PyObject *__pyx_v_d = NULL;
   PyObject *__pyx_v_zlib_data = NULL;
@@ -5145,7 +5145,7 @@ static PyObject *__pyx_pf_7erlport_24decode(CYTHON_UNUSED PyObject *__pyx_self, 
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("decode", 0);
 
-  /* "src/erlport/erldecode.pyx":183
+  /* "erlport/erldecode.pyx":183
  * def decode(string):
  *     """Decode Erlang external term."""
  *     if len(string) < 1:             # <<<<<<<<<<<<<<
@@ -5156,7 +5156,7 @@ static PyObject *__pyx_pf_7erlport_24decode(CYTHON_UNUSED PyObject *__pyx_self, 
   __pyx_t_2 = ((__pyx_t_1 < 1) != 0);
   if (__pyx_t_2) {
 
-    /* "src/erlport/erldecode.pyx":184
+    /* "erlport/erldecode.pyx":184
  *     """Decode Erlang external term."""
  *     if len(string) < 1:
  *         raise ValueError("incomplete data: %r" % string)             # <<<<<<<<<<<<<<
@@ -5178,7 +5178,7 @@ static PyObject *__pyx_pf_7erlport_24decode(CYTHON_UNUSED PyObject *__pyx_self, 
     {__pyx_filename = __pyx_f[0]; __pyx_lineno = 184; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
 
-  /* "src/erlport/erldecode.pyx":185
+  /* "erlport/erldecode.pyx":185
  *     if len(string) < 1:
  *         raise ValueError("incomplete data: %r" % string)
  *     version = ord(string[0])             # <<<<<<<<<<<<<<
@@ -5198,7 +5198,7 @@ static PyObject *__pyx_pf_7erlport_24decode(CYTHON_UNUSED PyObject *__pyx_self, 
   __pyx_v_version = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "src/erlport/erldecode.pyx":186
+  /* "erlport/erldecode.pyx":186
  *         raise ValueError("incomplete data: %r" % string)
  *     version = ord(string[0])
  *     if version != 131:             # <<<<<<<<<<<<<<
@@ -5210,7 +5210,7 @@ static PyObject *__pyx_pf_7erlport_24decode(CYTHON_UNUSED PyObject *__pyx_self, 
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   if (__pyx_t_2) {
 
-    /* "src/erlport/erldecode.pyx":187
+    /* "erlport/erldecode.pyx":187
  *     version = ord(string[0])
  *     if version != 131:
  *         raise ValueError("unknown protocol version: %i" % version)             # <<<<<<<<<<<<<<
@@ -5232,7 +5232,7 @@ static PyObject *__pyx_pf_7erlport_24decode(CYTHON_UNUSED PyObject *__pyx_self, 
     {__pyx_filename = __pyx_f[0]; __pyx_lineno = 187; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
 
-  /* "src/erlport/erldecode.pyx":188
+  /* "erlport/erldecode.pyx":188
  *     if version != 131:
  *         raise ValueError("unknown protocol version: %i" % version)
  *     if string[1:2] == '\x50':             # <<<<<<<<<<<<<<
@@ -5245,7 +5245,7 @@ static PyObject *__pyx_pf_7erlport_24decode(CYTHON_UNUSED PyObject *__pyx_self, 
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   if (__pyx_t_2) {
 
-    /* "src/erlport/erldecode.pyx":190
+    /* "erlport/erldecode.pyx":190
  *     if string[1:2] == '\x50':
  *         # compressed term
  *         if len(string) < 6:             # <<<<<<<<<<<<<<
@@ -5256,7 +5256,7 @@ static PyObject *__pyx_pf_7erlport_24decode(CYTHON_UNUSED PyObject *__pyx_self, 
     __pyx_t_2 = ((__pyx_t_1 < 6) != 0);
     if (__pyx_t_2) {
 
-      /* "src/erlport/erldecode.pyx":191
+      /* "erlport/erldecode.pyx":191
  *         # compressed term
  *         if len(string) < 6:
  *             raise ValueError("incomplete data: %r" % string)             # <<<<<<<<<<<<<<
@@ -5278,7 +5278,7 @@ static PyObject *__pyx_pf_7erlport_24decode(CYTHON_UNUSED PyObject *__pyx_self, 
       {__pyx_filename = __pyx_f[0]; __pyx_lineno = 191; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     }
 
-    /* "src/erlport/erldecode.pyx":192
+    /* "erlport/erldecode.pyx":192
  *         if len(string) < 6:
  *             raise ValueError("incomplete data: %r" % string)
  *         d = decompressobj()             # <<<<<<<<<<<<<<
@@ -5308,7 +5308,7 @@ static PyObject *__pyx_pf_7erlport_24decode(CYTHON_UNUSED PyObject *__pyx_self, 
     __pyx_v_d = __pyx_t_3;
     __pyx_t_3 = 0;
 
-    /* "src/erlport/erldecode.pyx":193
+    /* "erlport/erldecode.pyx":193
  *             raise ValueError("incomplete data: %r" % string)
  *         d = decompressobj()
  *         zlib_data = string[6:]             # <<<<<<<<<<<<<<
@@ -5320,7 +5320,7 @@ static PyObject *__pyx_pf_7erlport_24decode(CYTHON_UNUSED PyObject *__pyx_self, 
     __pyx_v_zlib_data = __pyx_t_3;
     __pyx_t_3 = 0;
 
-    /* "src/erlport/erldecode.pyx":194
+    /* "erlport/erldecode.pyx":194
  *         d = decompressobj()
  *         zlib_data = string[6:]
  *         term_string = d.decompress(zlib_data) + d.flush()             # <<<<<<<<<<<<<<
@@ -5381,7 +5381,7 @@ static PyObject *__pyx_pf_7erlport_24decode(CYTHON_UNUSED PyObject *__pyx_self, 
     __pyx_v_term_string = __pyx_t_6;
     __pyx_t_6 = 0;
 
-    /* "src/erlport/erldecode.pyx":195
+    /* "erlport/erldecode.pyx":195
  *         zlib_data = string[6:]
  *         term_string = d.decompress(zlib_data) + d.flush()
  *         uncompressed_size = unpack('>I', string[2:6])[0]             # <<<<<<<<<<<<<<
@@ -5425,7 +5425,7 @@ static PyObject *__pyx_pf_7erlport_24decode(CYTHON_UNUSED PyObject *__pyx_self, 
     __pyx_v_uncompressed_size = __pyx_t_4;
     __pyx_t_4 = 0;
 
-    /* "src/erlport/erldecode.pyx":196
+    /* "erlport/erldecode.pyx":196
  *         term_string = d.decompress(zlib_data) + d.flush()
  *         uncompressed_size = unpack('>I', string[2:6])[0]
  *         if len(term_string) != uncompressed_size:             # <<<<<<<<<<<<<<
@@ -5441,7 +5441,7 @@ static PyObject *__pyx_pf_7erlport_24decode(CYTHON_UNUSED PyObject *__pyx_self, 
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     if (__pyx_t_2) {
 
-      /* "src/erlport/erldecode.pyx":199
+      /* "erlport/erldecode.pyx":199
  *             raise ValueError(
  *                 "invalid compressed tag, "
  *                 "%d bytes but got %d" % (uncompressed_size, len(term_string)))             # <<<<<<<<<<<<<<
@@ -5463,7 +5463,7 @@ static PyObject *__pyx_pf_7erlport_24decode(CYTHON_UNUSED PyObject *__pyx_self, 
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-      /* "src/erlport/erldecode.pyx":197
+      /* "erlport/erldecode.pyx":197
  *         uncompressed_size = unpack('>I', string[2:6])[0]
  *         if len(term_string) != uncompressed_size:
  *             raise ValueError(             # <<<<<<<<<<<<<<
@@ -5483,7 +5483,7 @@ static PyObject *__pyx_pf_7erlport_24decode(CYTHON_UNUSED PyObject *__pyx_self, 
       {__pyx_filename = __pyx_f[0]; __pyx_lineno = 197; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     }
 
-    /* "src/erlport/erldecode.pyx":200
+    /* "erlport/erldecode.pyx":200
  *                 "invalid compressed tag, "
  *                 "%d bytes but got %d" % (uncompressed_size, len(term_string)))
  *         return decode_term(term_string, 0)[0], d.unused_data             # <<<<<<<<<<<<<<
@@ -5538,7 +5538,7 @@ static PyObject *__pyx_pf_7erlport_24decode(CYTHON_UNUSED PyObject *__pyx_self, 
     goto __pyx_L0;
   }
 
-  /* "src/erlport/erldecode.pyx":201
+  /* "erlport/erldecode.pyx":201
  *                 "%d bytes but got %d" % (uncompressed_size, len(term_string)))
  *         return decode_term(term_string, 0)[0], d.unused_data
  *     return decode_term(string[1:], 0)[0]             # <<<<<<<<<<<<<<
@@ -5584,7 +5584,7 @@ static PyObject *__pyx_pf_7erlport_24decode(CYTHON_UNUSED PyObject *__pyx_self, 
   __pyx_t_6 = 0;
   goto __pyx_L0;
 
-  /* "src/erlport/erldecode.pyx":181
+  /* "erlport/erldecode.pyx":181
  * 
  * 
  * def decode(string):             # <<<<<<<<<<<<<<
@@ -5599,7 +5599,7 @@ static PyObject *__pyx_pf_7erlport_24decode(CYTHON_UNUSED PyObject *__pyx_self, 
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("erlport.decode", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("erlport.erldecode.decode", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_version);
@@ -5612,7 +5612,7 @@ static PyObject *__pyx_pf_7erlport_24decode(CYTHON_UNUSED PyObject *__pyx_self, 
   return __pyx_r;
 }
 
-/* "src/erlport/erldecode.pyx":204
+/* "erlport/erldecode.pyx":204
  * 
  * 
  * def decode_term(string, pos):             # <<<<<<<<<<<<<<
@@ -5621,9 +5621,9 @@ static PyObject *__pyx_pf_7erlport_24decode(CYTHON_UNUSED PyObject *__pyx_self, 
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7erlport_27decode_term(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_7erlport_27decode_term = {"decode_term", (PyCFunction)__pyx_pw_7erlport_27decode_term, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_7erlport_27decode_term(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_7erlport_9erldecode_27decode_term(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_7erlport_9erldecode_27decode_term = {"decode_term", (PyCFunction)__pyx_pw_7erlport_9erldecode_27decode_term, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_7erlport_9erldecode_27decode_term(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_string = 0;
   PyObject *__pyx_v_pos = 0;
   int __pyx_lineno = 0;
@@ -5671,18 +5671,18 @@ static PyObject *__pyx_pw_7erlport_27decode_term(PyObject *__pyx_self, PyObject 
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("decode_term", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 204; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("erlport.decode_term", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("erlport.erldecode.decode_term", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_7erlport_26decode_term(__pyx_self, __pyx_v_string, __pyx_v_pos);
+  __pyx_r = __pyx_pf_7erlport_9erldecode_26decode_term(__pyx_self, __pyx_v_string, __pyx_v_pos);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7erlport_26decode_term(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_string, PyObject *__pyx_v_pos) {
+static PyObject *__pyx_pf_7erlport_9erldecode_26decode_term(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_string, PyObject *__pyx_v_pos) {
   PyObject *__pyx_v_tag = NULL;
   PyObject *__pyx_v_fun = NULL;
   PyObject *__pyx_r = NULL;
@@ -5700,7 +5700,7 @@ static PyObject *__pyx_pf_7erlport_26decode_term(CYTHON_UNUSED PyObject *__pyx_s
   __Pyx_RefNannySetupContext("decode_term", 0);
   __Pyx_INCREF(__pyx_v_pos);
 
-  /* "src/erlport/erldecode.pyx":205
+  /* "erlport/erldecode.pyx":205
  * 
  * def decode_term(string, pos):
  *     if len(string) - pos < 1:             # <<<<<<<<<<<<<<
@@ -5719,7 +5719,7 @@ static PyObject *__pyx_pf_7erlport_26decode_term(CYTHON_UNUSED PyObject *__pyx_s
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (__pyx_t_4) {
 
-    /* "src/erlport/erldecode.pyx":206
+    /* "erlport/erldecode.pyx":206
  * def decode_term(string, pos):
  *     if len(string) - pos < 1:
  *         raise ValueError("incomplete data: %r" % string)             # <<<<<<<<<<<<<<
@@ -5741,7 +5741,7 @@ static PyObject *__pyx_pf_7erlport_26decode_term(CYTHON_UNUSED PyObject *__pyx_s
     {__pyx_filename = __pyx_f[0]; __pyx_lineno = 206; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
 
-  /* "src/erlport/erldecode.pyx":207
+  /* "erlport/erldecode.pyx":207
  *     if len(string) - pos < 1:
  *         raise ValueError("incomplete data: %r" % string)
  *     tag = ord(string[pos])             # <<<<<<<<<<<<<<
@@ -5761,7 +5761,7 @@ static PyObject *__pyx_pf_7erlport_26decode_term(CYTHON_UNUSED PyObject *__pyx_s
   __pyx_v_tag = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/erlport/erldecode.pyx":208
+  /* "erlport/erldecode.pyx":208
  *         raise ValueError("incomplete data: %r" % string)
  *     tag = ord(string[pos])
  *     pos += 1             # <<<<<<<<<<<<<<
@@ -5773,7 +5773,7 @@ static PyObject *__pyx_pf_7erlport_26decode_term(CYTHON_UNUSED PyObject *__pyx_s
   __Pyx_DECREF_SET(__pyx_v_pos, __pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "src/erlport/erldecode.pyx":209
+  /* "erlport/erldecode.pyx":209
  *     tag = ord(string[pos])
  *     pos += 1
  *     fun = DECODE_MAP[tag]             # <<<<<<<<<<<<<<
@@ -5788,7 +5788,7 @@ static PyObject *__pyx_pf_7erlport_26decode_term(CYTHON_UNUSED PyObject *__pyx_s
   __pyx_v_fun = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "src/erlport/erldecode.pyx":210
+  /* "erlport/erldecode.pyx":210
  *     pos += 1
  *     fun = DECODE_MAP[tag]
  *     if not fun:             # <<<<<<<<<<<<<<
@@ -5799,7 +5799,7 @@ static PyObject *__pyx_pf_7erlport_26decode_term(CYTHON_UNUSED PyObject *__pyx_s
   __pyx_t_5 = ((!__pyx_t_4) != 0);
   if (__pyx_t_5) {
 
-    /* "src/erlport/erldecode.pyx":211
+    /* "erlport/erldecode.pyx":211
  *     fun = DECODE_MAP[tag]
  *     if not fun:
  *         raise ValueError("unsupported data tag: %i" % tag)             # <<<<<<<<<<<<<<
@@ -5820,7 +5820,7 @@ static PyObject *__pyx_pf_7erlport_26decode_term(CYTHON_UNUSED PyObject *__pyx_s
     {__pyx_filename = __pyx_f[0]; __pyx_lineno = 211; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
 
-  /* "src/erlport/erldecode.pyx":212
+  /* "erlport/erldecode.pyx":212
  *     if not fun:
  *         raise ValueError("unsupported data tag: %i" % tag)
  *     return fun(tag, string, pos)             # <<<<<<<<<<<<<<
@@ -5861,7 +5861,7 @@ static PyObject *__pyx_pf_7erlport_26decode_term(CYTHON_UNUSED PyObject *__pyx_s
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "src/erlport/erldecode.pyx":204
+  /* "erlport/erldecode.pyx":204
  * 
  * 
  * def decode_term(string, pos):             # <<<<<<<<<<<<<<
@@ -5875,7 +5875,7 @@ static PyObject *__pyx_pf_7erlport_26decode_term(CYTHON_UNUSED PyObject *__pyx_s
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("erlport.decode_term", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("erlport.erldecode.decode_term", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_tag);
@@ -5897,7 +5897,7 @@ static struct PyModuleDef __pyx_moduledef = {
   #else
     PyModuleDef_HEAD_INIT,
   #endif
-    "erlport",
+    "erldecode",
     0, /* m_doc */
     -1, /* m_size */
     __pyx_methods /* m_methods */,
@@ -5942,7 +5942,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_decode_tuple, __pyx_k_decode_tuple, sizeof(__pyx_k_decode_tuple), 0, 0, 1, 1},
   {&__pyx_n_s_decompress, __pyx_k_decompress, sizeof(__pyx_k_decompress), 0, 0, 1, 1},
   {&__pyx_n_s_decompressobj, __pyx_k_decompressobj, sizeof(__pyx_k_decompressobj), 0, 0, 1, 1},
-  {&__pyx_n_s_erlport, __pyx_k_erlport, sizeof(__pyx_k_erlport), 0, 0, 1, 1},
+  {&__pyx_n_s_erlport_erldecode, __pyx_k_erlport_erldecode, sizeof(__pyx_k_erlport_erldecode), 0, 0, 1, 1},
   {&__pyx_n_s_erlterms, __pyx_k_erlterms, sizeof(__pyx_k_erlterms), 0, 0, 1, 1},
   {&__pyx_n_s_false, __pyx_k_false, sizeof(__pyx_k_false), 0, 0, 1, 1},
   {&__pyx_n_s_flush, __pyx_k_flush, sizeof(__pyx_k_flush), 0, 0, 1, 1},
@@ -5993,7 +5993,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "src/erlport/erldecode.pyx":129
+  /* "erlport/erldecode.pyx":129
  * 
  * def decode_float(tag, string, pos):
  *     return float(string[pos:pos+31].split("\x00", 1)[0]), pos + 31             # <<<<<<<<<<<<<<
@@ -6004,7 +6004,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__2);
   __Pyx_GIVEREF(__pyx_tuple__2);
 
-  /* "src/erlport/erldecode.pyx":188
+  /* "erlport/erldecode.pyx":188
  *     if version != 131:
  *         raise ValueError("unknown protocol version: %i" % version)
  *     if string[1:2] == '\x50':             # <<<<<<<<<<<<<<
@@ -6015,7 +6015,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__3);
   __Pyx_GIVEREF(__pyx_slice__3);
 
-  /* "src/erlport/erldecode.pyx":193
+  /* "erlport/erldecode.pyx":193
  *             raise ValueError("incomplete data: %r" % string)
  *         d = decompressobj()
  *         zlib_data = string[6:]             # <<<<<<<<<<<<<<
@@ -6026,7 +6026,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__4);
   __Pyx_GIVEREF(__pyx_slice__4);
 
-  /* "src/erlport/erldecode.pyx":195
+  /* "erlport/erldecode.pyx":195
  *         zlib_data = string[6:]
  *         term_string = d.decompress(zlib_data) + d.flush()
  *         uncompressed_size = unpack('>I', string[2:6])[0]             # <<<<<<<<<<<<<<
@@ -6037,7 +6037,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__5);
   __Pyx_GIVEREF(__pyx_slice__5);
 
-  /* "src/erlport/erldecode.pyx":201
+  /* "erlport/erldecode.pyx":201
  *                 "%d bytes but got %d" % (uncompressed_size, len(term_string)))
  *         return decode_term(term_string, 0)[0], d.unused_data
  *     return decode_term(string[1:], 0)[0]             # <<<<<<<<<<<<<<
@@ -6048,7 +6048,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__6);
   __Pyx_GIVEREF(__pyx_slice__6);
 
-  /* "src/erlport/erldecode.pyx":35
+  /* "erlport/erldecode.pyx":35
  * 
  * 
  * def decode_small_int(tag, string, pos):             # <<<<<<<<<<<<<<
@@ -6060,7 +6060,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__7);
   __pyx_codeobj__8 = (PyObject*)__Pyx_PyCode_New(3, 0, 3, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__7, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_beaver_Documents_erlport, __pyx_n_s_decode_small_int, 35, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 35; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "src/erlport/erldecode.pyx":41
+  /* "erlport/erldecode.pyx":41
  * 
  * 
  * def decode_int(tag, string, pos):             # <<<<<<<<<<<<<<
@@ -6072,7 +6072,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__9);
   __pyx_codeobj__10 = (PyObject*)__Pyx_PyCode_New(3, 0, 4, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__9, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_beaver_Documents_erlport, __pyx_n_s_decode_int, 41, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__10)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 41; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "src/erlport/erldecode.pyx":48
+  /* "erlport/erldecode.pyx":48
  * 
  * 
  * def decode_nil(tag, string, pos):             # <<<<<<<<<<<<<<
@@ -6084,7 +6084,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__11);
   __pyx_codeobj__12 = (PyObject*)__Pyx_PyCode_New(3, 0, 3, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__11, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_beaver_Documents_erlport, __pyx_n_s_decode_nil, 48, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__12)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 48; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "src/erlport/erldecode.pyx":52
+  /* "erlport/erldecode.pyx":52
  * 
  * 
  * def decode_string(tag, string, pos):             # <<<<<<<<<<<<<<
@@ -6096,7 +6096,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__13);
   __pyx_codeobj__14 = (PyObject*)__Pyx_PyCode_New(3, 0, 5, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__13, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_beaver_Documents_erlport, __pyx_n_s_decode_string, 52, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__14)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 52; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "src/erlport/erldecode.pyx":62
+  /* "erlport/erldecode.pyx":62
  * 
  * 
  * def decode_list(tag, string, pos):             # <<<<<<<<<<<<<<
@@ -6108,7 +6108,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__15);
   __pyx_codeobj__16 = (PyObject*)__Pyx_PyCode_New(3, 0, 7, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__15, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_beaver_Documents_erlport, __pyx_n_s_decode_list, 62, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__16)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 62; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "src/erlport/erldecode.pyx":76
+  /* "erlport/erldecode.pyx":76
  * 
  * 
  * def decode_binary(tag, string, pos):             # <<<<<<<<<<<<<<
@@ -6120,7 +6120,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__17);
   __pyx_codeobj__18 = (PyObject*)__Pyx_PyCode_New(3, 0, 4, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__17, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_beaver_Documents_erlport, __pyx_n_s_decode_binary, 76, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__18)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 76; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "src/erlport/erldecode.pyx":86
+  /* "erlport/erldecode.pyx":86
  * 
  * 
  * def decode_atom(tag, string, pos):             # <<<<<<<<<<<<<<
@@ -6132,7 +6132,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__19);
   __pyx_codeobj__20 = (PyObject*)__Pyx_PyCode_New(3, 0, 5, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__19, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_beaver_Documents_erlport, __pyx_n_s_decode_atom, 86, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__20)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 86; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "src/erlport/erldecode.pyx":104
+  /* "erlport/erldecode.pyx":104
  * 
  * 
  * def decode_tuple(tag, string, pos):             # <<<<<<<<<<<<<<
@@ -6144,7 +6144,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__21);
   __pyx_codeobj__22 = (PyObject*)__Pyx_PyCode_New(3, 0, 6, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__21, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_beaver_Documents_erlport, __pyx_n_s_decode_tuple, 104, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__22)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 104; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "src/erlport/erldecode.pyx":123
+  /* "erlport/erldecode.pyx":123
  * 
  * 
  * def decode_new_float(tag, string, pos):             # <<<<<<<<<<<<<<
@@ -6156,7 +6156,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__23);
   __pyx_codeobj__24 = (PyObject*)__Pyx_PyCode_New(3, 0, 4, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__23, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_beaver_Documents_erlport, __pyx_n_s_decode_new_float, 123, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__24)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 123; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "src/erlport/erldecode.pyx":128
+  /* "erlport/erldecode.pyx":128
  * 
  * 
  * def decode_float(tag, string, pos):             # <<<<<<<<<<<<<<
@@ -6168,7 +6168,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__25);
   __pyx_codeobj__26 = (PyObject*)__Pyx_PyCode_New(3, 0, 3, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__25, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_beaver_Documents_erlport, __pyx_n_s_decode_float, 128, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__26)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 128; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "src/erlport/erldecode.pyx":132
+  /* "erlport/erldecode.pyx":132
  * 
  * 
  * def decode_big(tag, string, pos):             # <<<<<<<<<<<<<<
@@ -6180,7 +6180,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__27);
   __pyx_codeobj__28 = (PyObject*)__Pyx_PyCode_New(3, 0, 7, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__27, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_beaver_Documents_erlport, __pyx_n_s_decode_big, 132, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__28)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 132; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "src/erlport/erldecode.pyx":153
+  /* "erlport/erldecode.pyx":153
  * 
  * 
  * def decode_bit_binary(tag, string, pos):             # <<<<<<<<<<<<<<
@@ -6192,7 +6192,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__29);
   __pyx_codeobj__30 = (PyObject*)__Pyx_PyCode_New(3, 0, 5, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__29, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_beaver_Documents_erlport, __pyx_n_s_decode_bit_binary, 153, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__30)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 153; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "src/erlport/erldecode.pyx":181
+  /* "erlport/erldecode.pyx":181
  * 
  * 
  * def decode(string):             # <<<<<<<<<<<<<<
@@ -6204,7 +6204,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__31);
   __pyx_codeobj__32 = (PyObject*)__Pyx_PyCode_New(1, 0, 6, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__31, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_beaver_Documents_erlport, __pyx_n_s_decode, 181, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__32)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 181; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "src/erlport/erldecode.pyx":204
+  /* "erlport/erldecode.pyx":204
  * 
  * 
  * def decode_term(string, pos):             # <<<<<<<<<<<<<<
@@ -6254,11 +6254,11 @@ static int __Pyx_InitGlobals(void) {
 }
 
 #if PY_MAJOR_VERSION < 3
-PyMODINIT_FUNC initerlport(void); /*proto*/
-PyMODINIT_FUNC initerlport(void)
+PyMODINIT_FUNC initerldecode(void); /*proto*/
+PyMODINIT_FUNC initerldecode(void)
 #else
-PyMODINIT_FUNC PyInit_erlport(void); /*proto*/
-PyMODINIT_FUNC PyInit_erlport(void)
+PyMODINIT_FUNC PyInit_erldecode(void); /*proto*/
+PyMODINIT_FUNC PyInit_erldecode(void)
 #endif
 {
   PyObject *__pyx_t_1 = NULL;
@@ -6276,7 +6276,7 @@ PyMODINIT_FUNC PyInit_erlport(void)
           Py_FatalError("failed to import 'refnanny' module");
   }
   #endif
-  __Pyx_RefNannySetupContext("PyMODINIT_FUNC PyInit_erlport(void)", 0);
+  __Pyx_RefNannySetupContext("PyMODINIT_FUNC PyInit_erldecode(void)", 0);
   if ( __Pyx_check_binary_version() < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_empty_tuple = PyTuple_New(0); if (unlikely(!__pyx_empty_tuple)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_empty_bytes = PyBytes_FromStringAndSize("", 0); if (unlikely(!__pyx_empty_bytes)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -6298,7 +6298,7 @@ PyMODINIT_FUNC PyInit_erlport(void)
   #endif
   /*--- Module creation code ---*/
   #if PY_MAJOR_VERSION < 3
-  __pyx_m = Py_InitModule4("erlport", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
+  __pyx_m = Py_InitModule4("erldecode", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
   #else
   __pyx_m = PyModule_Create(&__pyx_moduledef);
   #endif
@@ -6315,14 +6315,14 @@ PyMODINIT_FUNC PyInit_erlport(void)
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   #endif
-  if (__pyx_module_is_main_erlport) {
+  if (__pyx_module_is_main_erlport__erldecode) {
     if (PyObject_SetAttrString(__pyx_m, "__name__", __pyx_n_s_main) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    if (!PyDict_GetItemString(modules, "erlport")) {
-      if (unlikely(PyDict_SetItemString(modules, "erlport", __pyx_m) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    if (!PyDict_GetItemString(modules, "erlport.erldecode")) {
+      if (unlikely(PyDict_SetItemString(modules, "erlport.erldecode", __pyx_m) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     }
   }
   #endif
@@ -6339,7 +6339,7 @@ PyMODINIT_FUNC PyInit_erlport(void)
   /*--- Function import code ---*/
   /*--- Execution code ---*/
 
-  /* "src/erlport/erldecode.pyx":29
+  /* "erlport/erldecode.pyx":29
  * 
  * 
  * from erlterms import Atom, BitBinary             # <<<<<<<<<<<<<<
@@ -6367,7 +6367,7 @@ PyMODINIT_FUNC PyInit_erlport(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/erlport/erldecode.pyx":30
+  /* "erlport/erldecode.pyx":30
  * 
  * from erlterms import Atom, BitBinary
  * from struct import unpack             # <<<<<<<<<<<<<<
@@ -6388,7 +6388,7 @@ PyMODINIT_FUNC PyInit_erlport(void)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/erlport/erldecode.pyx":31
+  /* "erlport/erldecode.pyx":31
  * from erlterms import Atom, BitBinary
  * from struct import unpack
  * from array import array             # <<<<<<<<<<<<<<
@@ -6409,7 +6409,7 @@ PyMODINIT_FUNC PyInit_erlport(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/erlport/erldecode.pyx":32
+  /* "erlport/erldecode.pyx":32
  * from struct import unpack
  * from array import array
  * from zlib import decompressobj             # <<<<<<<<<<<<<<
@@ -6430,151 +6430,151 @@ PyMODINIT_FUNC PyInit_erlport(void)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/erlport/erldecode.pyx":35
+  /* "erlport/erldecode.pyx":35
  * 
  * 
  * def decode_small_int(tag, string, pos):             # <<<<<<<<<<<<<<
  *     if not (len(string) - pos):
  *         raise ValueError("incomplete data: %r" % string)
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7erlport_1decode_small_int, NULL, __pyx_n_s_erlport); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 35; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7erlport_9erldecode_1decode_small_int, NULL, __pyx_n_s_erlport_erldecode); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 35; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_decode_small_int, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 35; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/erlport/erldecode.pyx":41
+  /* "erlport/erldecode.pyx":41
  * 
  * 
  * def decode_int(tag, string, pos):             # <<<<<<<<<<<<<<
  *     if len(string) - pos < 4:
  *         raise ValueError("incomplete data: %r" % string)
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7erlport_3decode_int, NULL, __pyx_n_s_erlport); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 41; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7erlport_9erldecode_3decode_int, NULL, __pyx_n_s_erlport_erldecode); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 41; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_decode_int, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 41; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/erlport/erldecode.pyx":48
+  /* "erlport/erldecode.pyx":48
  * 
  * 
  * def decode_nil(tag, string, pos):             # <<<<<<<<<<<<<<
  *     return [], pos
  * 
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7erlport_5decode_nil, NULL, __pyx_n_s_erlport); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 48; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7erlport_9erldecode_5decode_nil, NULL, __pyx_n_s_erlport_erldecode); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 48; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_decode_nil, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 48; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/erlport/erldecode.pyx":52
+  /* "erlport/erldecode.pyx":52
  * 
  * 
  * def decode_string(tag, string, pos):             # <<<<<<<<<<<<<<
  *     if len(string) - pos < 2:
  *         raise ValueError("incomplete data: %r" % string)
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7erlport_7decode_string, NULL, __pyx_n_s_erlport); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 52; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7erlport_9erldecode_7decode_string, NULL, __pyx_n_s_erlport_erldecode); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 52; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_decode_string, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 52; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/erlport/erldecode.pyx":62
+  /* "erlport/erldecode.pyx":62
  * 
  * 
  * def decode_list(tag, string, pos):             # <<<<<<<<<<<<<<
  *     if len(string) - pos < 4:
  *         raise ValueError("incomplete data: %r" % string)
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7erlport_9decode_list, NULL, __pyx_n_s_erlport); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 62; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7erlport_9erldecode_9decode_list, NULL, __pyx_n_s_erlport_erldecode); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 62; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_decode_list, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 62; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/erlport/erldecode.pyx":76
+  /* "erlport/erldecode.pyx":76
  * 
  * 
  * def decode_binary(tag, string, pos):             # <<<<<<<<<<<<<<
  *     if len(string) - pos < 4:
  *         raise ValueError("incomplete data: %r" % string)
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7erlport_11decode_binary, NULL, __pyx_n_s_erlport); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 76; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7erlport_9erldecode_11decode_binary, NULL, __pyx_n_s_erlport_erldecode); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 76; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_decode_binary, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 76; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/erlport/erldecode.pyx":86
+  /* "erlport/erldecode.pyx":86
  * 
  * 
  * def decode_atom(tag, string, pos):             # <<<<<<<<<<<<<<
  *     if len(string) - pos < 2:
  *         raise ValueError("incomplete data: %r" % string)
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7erlport_13decode_atom, NULL, __pyx_n_s_erlport); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 86; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7erlport_9erldecode_13decode_atom, NULL, __pyx_n_s_erlport_erldecode); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 86; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_decode_atom, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 86; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/erlport/erldecode.pyx":104
+  /* "erlport/erldecode.pyx":104
  * 
  * 
  * def decode_tuple(tag, string, pos):             # <<<<<<<<<<<<<<
  *     if tag == 104:
  *         if not (len(string) - pos):
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7erlport_15decode_tuple, NULL, __pyx_n_s_erlport); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 104; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7erlport_9erldecode_15decode_tuple, NULL, __pyx_n_s_erlport_erldecode); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 104; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_decode_tuple, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 104; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/erlport/erldecode.pyx":123
+  /* "erlport/erldecode.pyx":123
  * 
  * 
  * def decode_new_float(tag, string, pos):             # <<<<<<<<<<<<<<
  *     term, = unpack(">d", string[pos:pos+8])
  *     return term, pos + 8
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7erlport_17decode_new_float, NULL, __pyx_n_s_erlport); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 123; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7erlport_9erldecode_17decode_new_float, NULL, __pyx_n_s_erlport_erldecode); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 123; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_decode_new_float, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 123; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/erlport/erldecode.pyx":128
+  /* "erlport/erldecode.pyx":128
  * 
  * 
  * def decode_float(tag, string, pos):             # <<<<<<<<<<<<<<
  *     return float(string[pos:pos+31].split("\x00", 1)[0]), pos + 31
  * 
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7erlport_19decode_float, NULL, __pyx_n_s_erlport); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 128; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7erlport_9erldecode_19decode_float, NULL, __pyx_n_s_erlport_erldecode); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 128; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_decode_float, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 128; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/erlport/erldecode.pyx":132
+  /* "erlport/erldecode.pyx":132
  * 
  * 
  * def decode_big(tag, string, pos):             # <<<<<<<<<<<<<<
  *     if tag == 110:
  *         if len(string) - pos < 2:
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7erlport_21decode_big, NULL, __pyx_n_s_erlport); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 132; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7erlport_9erldecode_21decode_big, NULL, __pyx_n_s_erlport_erldecode); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 132; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_decode_big, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 132; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/erlport/erldecode.pyx":153
+  /* "erlport/erldecode.pyx":153
  * 
  * 
  * def decode_bit_binary(tag, string, pos):             # <<<<<<<<<<<<<<
  *     if len(string) - pos < 5:
  *         raise ValueError("incomplete data: %r" % string)
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7erlport_23decode_bit_binary, NULL, __pyx_n_s_erlport); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 153; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7erlport_9erldecode_23decode_bit_binary, NULL, __pyx_n_s_erlport_erldecode); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 153; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_decode_bit_binary, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 153; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/erlport/erldecode.pyx":163
+  /* "erlport/erldecode.pyx":163
  * 
  * 
  * DECODE_MAP = {             # <<<<<<<<<<<<<<
@@ -6584,7 +6584,7 @@ PyMODINIT_FUNC PyInit_erlport(void)
   __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 163; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
 
-  /* "src/erlport/erldecode.pyx":164
+  /* "erlport/erldecode.pyx":164
  * 
  * DECODE_MAP = {
  *     97:  decode_small_int,             # <<<<<<<<<<<<<<
@@ -6596,7 +6596,7 @@ PyMODINIT_FUNC PyInit_erlport(void)
   if (PyDict_SetItem(__pyx_t_1, __pyx_int_97, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 163; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/erlport/erldecode.pyx":165
+  /* "erlport/erldecode.pyx":165
  * DECODE_MAP = {
  *     97:  decode_small_int,
  *     98:  decode_int,             # <<<<<<<<<<<<<<
@@ -6608,7 +6608,7 @@ PyMODINIT_FUNC PyInit_erlport(void)
   if (PyDict_SetItem(__pyx_t_1, __pyx_int_98, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 163; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/erlport/erldecode.pyx":166
+  /* "erlport/erldecode.pyx":166
  *     97:  decode_small_int,
  *     98:  decode_int,
  *     106: decode_nil,             # <<<<<<<<<<<<<<
@@ -6620,7 +6620,7 @@ PyMODINIT_FUNC PyInit_erlport(void)
   if (PyDict_SetItem(__pyx_t_1, __pyx_int_106, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 163; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/erlport/erldecode.pyx":167
+  /* "erlport/erldecode.pyx":167
  *     98:  decode_int,
  *     106: decode_nil,
  *     107: decode_string,             # <<<<<<<<<<<<<<
@@ -6632,7 +6632,7 @@ PyMODINIT_FUNC PyInit_erlport(void)
   if (PyDict_SetItem(__pyx_t_1, __pyx_int_107, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 163; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/erlport/erldecode.pyx":168
+  /* "erlport/erldecode.pyx":168
  *     106: decode_nil,
  *     107: decode_string,
  *     108: decode_list,             # <<<<<<<<<<<<<<
@@ -6644,7 +6644,7 @@ PyMODINIT_FUNC PyInit_erlport(void)
   if (PyDict_SetItem(__pyx_t_1, __pyx_int_108, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 163; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/erlport/erldecode.pyx":169
+  /* "erlport/erldecode.pyx":169
  *     107: decode_string,
  *     108: decode_list,
  *     109: decode_binary,             # <<<<<<<<<<<<<<
@@ -6656,7 +6656,7 @@ PyMODINIT_FUNC PyInit_erlport(void)
   if (PyDict_SetItem(__pyx_t_1, __pyx_int_109, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 163; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/erlport/erldecode.pyx":170
+  /* "erlport/erldecode.pyx":170
  *     108: decode_list,
  *     109: decode_binary,
  *     100: decode_atom,             # <<<<<<<<<<<<<<
@@ -6668,7 +6668,7 @@ PyMODINIT_FUNC PyInit_erlport(void)
   if (PyDict_SetItem(__pyx_t_1, __pyx_int_100, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 163; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/erlport/erldecode.pyx":171
+  /* "erlport/erldecode.pyx":171
  *     109: decode_binary,
  *     100: decode_atom,
  *     104: decode_tuple,             # <<<<<<<<<<<<<<
@@ -6680,7 +6680,7 @@ PyMODINIT_FUNC PyInit_erlport(void)
   if (PyDict_SetItem(__pyx_t_1, __pyx_int_104, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 163; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/erlport/erldecode.pyx":172
+  /* "erlport/erldecode.pyx":172
  *     100: decode_atom,
  *     104: decode_tuple,
  *     105: decode_tuple,             # <<<<<<<<<<<<<<
@@ -6692,7 +6692,7 @@ PyMODINIT_FUNC PyInit_erlport(void)
   if (PyDict_SetItem(__pyx_t_1, __pyx_int_105, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 163; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/erlport/erldecode.pyx":173
+  /* "erlport/erldecode.pyx":173
  *     104: decode_tuple,
  *     105: decode_tuple,
  *     70:  decode_float,             # <<<<<<<<<<<<<<
@@ -6704,7 +6704,7 @@ PyMODINIT_FUNC PyInit_erlport(void)
   if (PyDict_SetItem(__pyx_t_1, __pyx_int_70, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 163; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/erlport/erldecode.pyx":174
+  /* "erlport/erldecode.pyx":174
  *     105: decode_tuple,
  *     70:  decode_float,
  *     99:  decode_new_float,             # <<<<<<<<<<<<<<
@@ -6716,7 +6716,7 @@ PyMODINIT_FUNC PyInit_erlport(void)
   if (PyDict_SetItem(__pyx_t_1, __pyx_int_99, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 163; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/erlport/erldecode.pyx":175
+  /* "erlport/erldecode.pyx":175
  *     70:  decode_float,
  *     99:  decode_new_float,
  *     110: decode_big,             # <<<<<<<<<<<<<<
@@ -6728,7 +6728,7 @@ PyMODINIT_FUNC PyInit_erlport(void)
   if (PyDict_SetItem(__pyx_t_1, __pyx_int_110, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 163; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/erlport/erldecode.pyx":176
+  /* "erlport/erldecode.pyx":176
  *     99:  decode_new_float,
  *     110: decode_big,
  *     111: decode_big,             # <<<<<<<<<<<<<<
@@ -6740,7 +6740,7 @@ PyMODINIT_FUNC PyInit_erlport(void)
   if (PyDict_SetItem(__pyx_t_1, __pyx_int_111, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 163; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/erlport/erldecode.pyx":178
+  /* "erlport/erldecode.pyx":178
  *     111: decode_big,
  *     77:  decode_bit_binary
  * }             # <<<<<<<<<<<<<<
@@ -6754,31 +6754,31 @@ PyMODINIT_FUNC PyInit_erlport(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_DECODE_MAP, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 163; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/erlport/erldecode.pyx":181
+  /* "erlport/erldecode.pyx":181
  * 
  * 
  * def decode(string):             # <<<<<<<<<<<<<<
  *     """Decode Erlang external term."""
  *     if len(string) < 1:
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7erlport_25decode, NULL, __pyx_n_s_erlport); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 181; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7erlport_9erldecode_25decode, NULL, __pyx_n_s_erlport_erldecode); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 181; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_decode, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 181; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/erlport/erldecode.pyx":204
+  /* "erlport/erldecode.pyx":204
  * 
  * 
  * def decode_term(string, pos):             # <<<<<<<<<<<<<<
  *     if len(string) - pos < 1:
  *         raise ValueError("incomplete data: %r" % string)
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7erlport_27decode_term, NULL, __pyx_n_s_erlport); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 204; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7erlport_9erldecode_27decode_term, NULL, __pyx_n_s_erlport_erldecode); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 204; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_decode_term, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 204; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/erlport/erldecode.pyx":1
+  /* "erlport/erldecode.pyx":1
  * # Copyright (c) 2009, 2010, Dmitry Vasiliev <dima@hlabs.org>             # <<<<<<<<<<<<<<
  * # All rights reserved.
  * #
@@ -6796,11 +6796,11 @@ PyMODINIT_FUNC PyInit_erlport(void)
   __Pyx_XDECREF(__pyx_t_2);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init erlport", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init erlport.erldecode", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     Py_DECREF(__pyx_m); __pyx_m = 0;
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init erlport");
+    PyErr_SetString(PyExc_ImportError, "init erlport.erldecode");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();

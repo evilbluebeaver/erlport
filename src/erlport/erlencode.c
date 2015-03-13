@@ -242,8 +242,8 @@ class __Pyx_FakeReference {
 #define _USE_MATH_DEFINES
 #endif
 #include <math.h>
-#define __PYX_HAVE__erlport
-#define __PYX_HAVE_API__erlport
+#define __PYX_HAVE__erlport__erlencode
+#define __PYX_HAVE_API__erlport__erlencode
 #ifdef _OPENMP
 #include <omp.h>
 #endif /* _OPENMP */
@@ -426,39 +426,39 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "lencode.pyx",
+  "erlport/erlencode.pyx",
 };
 
 /*--- Type declarations ---*/
-struct __pyx_obj_7erlport___pyx_scope_struct__encode_tuple;
-struct __pyx_obj_7erlport___pyx_scope_struct_1_genexpr;
-struct __pyx_obj_7erlport___pyx_scope_struct_2_encode_list;
-struct __pyx_obj_7erlport___pyx_scope_struct_3_genexpr;
+struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct__encode_tuple;
+struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_1_genexpr;
+struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_2_encode_list;
+struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_3_genexpr;
 
-/* "src/erlport/erlencode.pyx":36
+/* "erlport/erlencode.pyx":36
  * 
  * 
  * def encode_tuple(term):             # <<<<<<<<<<<<<<
  *     arity = len(term)
  *     if arity <= 255:
  */
-struct __pyx_obj_7erlport___pyx_scope_struct__encode_tuple {
+struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct__encode_tuple {
   PyObject_HEAD
   PyObject *__pyx_v__encode_term;
   PyObject *__pyx_v_term;
 };
 
 
-/* "src/erlport/erlencode.pyx":45
+/* "erlport/erlencode.pyx":45
  *         raise ValueError("invalid tuple arity")
  *     _encode_term = encode_term
  *     return header + "".join(_encode_term(t) for t in term)             # <<<<<<<<<<<<<<
  * 
  * 
  */
-struct __pyx_obj_7erlport___pyx_scope_struct_1_genexpr {
+struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_1_genexpr {
   PyObject_HEAD
-  struct __pyx_obj_7erlport___pyx_scope_struct__encode_tuple *__pyx_outer_scope;
+  struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct__encode_tuple *__pyx_outer_scope;
   PyObject *__pyx_v_t;
   PyObject *__pyx_t_0;
   Py_ssize_t __pyx_t_1;
@@ -466,30 +466,30 @@ struct __pyx_obj_7erlport___pyx_scope_struct_1_genexpr {
 };
 
 
-/* "src/erlport/erlencode.pyx":48
+/* "erlport/erlencode.pyx":48
  * 
  * 
  * def encode_list(term):             # <<<<<<<<<<<<<<
  *     if not term:
  *         return "j"
  */
-struct __pyx_obj_7erlport___pyx_scope_struct_2_encode_list {
+struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_2_encode_list {
   PyObject_HEAD
   PyObject *__pyx_v__encode_term;
   PyObject *__pyx_v_term;
 };
 
 
-/* "src/erlport/erlencode.pyx":68
+/* "erlport/erlencode.pyx":68
  *     header = pack(">BI", 108, length)
  *     _encode_term = encode_term
  *     return header + "".join(_encode_term(t) for t in term) + "j"             # <<<<<<<<<<<<<<
  * 
  * 
  */
-struct __pyx_obj_7erlport___pyx_scope_struct_3_genexpr {
+struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_3_genexpr {
   PyObject_HEAD
-  struct __pyx_obj_7erlport___pyx_scope_struct_2_encode_list *__pyx_outer_scope;
+  struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_2_encode_list *__pyx_outer_scope;
   PyObject *__pyx_v_t;
   PyObject *__pyx_t_0;
   Py_ssize_t __pyx_t_1;
@@ -736,40 +736,40 @@ static int __Pyx_check_binary_version(void);
 static int __Pyx_InitStrings(__Pyx_StringTabEntry *t);
 
 
-/* Module declarations from 'erlport' */
-static PyTypeObject *__pyx_ptype_7erlport___pyx_scope_struct__encode_tuple = 0;
-static PyTypeObject *__pyx_ptype_7erlport___pyx_scope_struct_1_genexpr = 0;
-static PyTypeObject *__pyx_ptype_7erlport___pyx_scope_struct_2_encode_list = 0;
-static PyTypeObject *__pyx_ptype_7erlport___pyx_scope_struct_3_genexpr = 0;
-#define __Pyx_MODULE_NAME "erlport"
-int __pyx_module_is_main_erlport = 0;
+/* Module declarations from 'erlport.erlencode' */
+static PyTypeObject *__pyx_ptype_7erlport_9erlencode___pyx_scope_struct__encode_tuple = 0;
+static PyTypeObject *__pyx_ptype_7erlport_9erlencode___pyx_scope_struct_1_genexpr = 0;
+static PyTypeObject *__pyx_ptype_7erlport_9erlencode___pyx_scope_struct_2_encode_list = 0;
+static PyTypeObject *__pyx_ptype_7erlport_9erlencode___pyx_scope_struct_3_genexpr = 0;
+#define __Pyx_MODULE_NAME "erlport.erlencode"
+int __pyx_module_is_main_erlport__erlencode = 0;
 
-/* Implementation of 'erlport' */
+/* Implementation of 'erlport.erlencode' */
 static PyObject *__pyx_builtin_ValueError;
 static PyObject *__pyx_builtin_TypeError;
 static PyObject *__pyx_builtin_OverflowError;
 static PyObject *__pyx_builtin_UnicodeEncodeError;
 static PyObject *__pyx_builtin_ord;
-static PyObject *__pyx_pf_7erlport_12encode_tuple_genexpr(PyObject *__pyx_self); /* proto */
-static PyObject *__pyx_pf_7erlport_encode_tuple(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term); /* proto */
-static PyObject *__pyx_pf_7erlport_11encode_list_genexpr(PyObject *__pyx_self); /* proto */
-static PyObject *__pyx_pf_7erlport_2encode_list(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term); /* proto */
-static PyObject *__pyx_pf_7erlport_4encode_unicode(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term); /* proto */
-static PyObject *__pyx_pf_7erlport_6encode_atom(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term); /* proto */
-static PyObject *__pyx_pf_7erlport_8encode_bit_binary(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term); /* proto */
-static PyObject *__pyx_pf_7erlport_10encode_str(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term); /* proto */
-static PyObject *__pyx_pf_7erlport_12encode_bool(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term); /* proto */
-static PyObject *__pyx_pf_7erlport_14encode_int(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term); /* proto */
-static PyObject *__pyx_pf_7erlport_16encode_float(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term); /* proto */
-static PyObject *__pyx_pf_7erlport_18encode_dict(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term); /* proto */
-static PyObject *__pyx_pf_7erlport_20encode_none(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_term); /* proto */
-static PyObject *__pyx_pf_7erlport_22encode_datetime(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term); /* proto */
-static PyObject *__pyx_pf_7erlport_24encode(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term, PyObject *__pyx_v_compressed); /* proto */
-static PyObject *__pyx_pf_7erlport_26encode_term(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term); /* proto */
-static PyObject *__pyx_tp_new_7erlport___pyx_scope_struct__encode_tuple(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
-static PyObject *__pyx_tp_new_7erlport___pyx_scope_struct_1_genexpr(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
-static PyObject *__pyx_tp_new_7erlport___pyx_scope_struct_2_encode_list(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
-static PyObject *__pyx_tp_new_7erlport___pyx_scope_struct_3_genexpr(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+static PyObject *__pyx_pf_7erlport_9erlencode_12encode_tuple_genexpr(PyObject *__pyx_self); /* proto */
+static PyObject *__pyx_pf_7erlport_9erlencode_encode_tuple(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term); /* proto */
+static PyObject *__pyx_pf_7erlport_9erlencode_11encode_list_genexpr(PyObject *__pyx_self); /* proto */
+static PyObject *__pyx_pf_7erlport_9erlencode_2encode_list(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term); /* proto */
+static PyObject *__pyx_pf_7erlport_9erlencode_4encode_unicode(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term); /* proto */
+static PyObject *__pyx_pf_7erlport_9erlencode_6encode_atom(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term); /* proto */
+static PyObject *__pyx_pf_7erlport_9erlencode_8encode_bit_binary(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term); /* proto */
+static PyObject *__pyx_pf_7erlport_9erlencode_10encode_str(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term); /* proto */
+static PyObject *__pyx_pf_7erlport_9erlencode_12encode_bool(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term); /* proto */
+static PyObject *__pyx_pf_7erlport_9erlencode_14encode_int(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term); /* proto */
+static PyObject *__pyx_pf_7erlport_9erlencode_16encode_float(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term); /* proto */
+static PyObject *__pyx_pf_7erlport_9erlencode_18encode_dict(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term); /* proto */
+static PyObject *__pyx_pf_7erlport_9erlencode_20encode_none(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_term); /* proto */
+static PyObject *__pyx_pf_7erlport_9erlencode_22encode_datetime(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term); /* proto */
+static PyObject *__pyx_pf_7erlport_9erlencode_24encode(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term, PyObject *__pyx_v_compressed); /* proto */
+static PyObject *__pyx_pf_7erlport_9erlencode_26encode_term(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term); /* proto */
+static PyObject *__pyx_tp_new_7erlport_9erlencode___pyx_scope_struct__encode_tuple(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+static PyObject *__pyx_tp_new_7erlport_9erlencode___pyx_scope_struct_1_genexpr(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+static PyObject *__pyx_tp_new_7erlport_9erlencode___pyx_scope_struct_2_encode_list(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+static PyObject *__pyx_tp_new_7erlport_9erlencode___pyx_scope_struct_3_genexpr(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static char __pyx_k_B[] = "B";
 static char __pyx_k_I[] = ">I";
 #if PY_MAJOR_VERSION >= 3
@@ -830,7 +830,6 @@ static char __pyx_k_length[] = "length";
 static char __pyx_k_minute[] = "minute";
 static char __pyx_k_second[] = "second";
 static char __pyx_k_struct[] = "struct";
-static char __pyx_k_erlport[] = "erlport";
 static char __pyx_k_genexpr[] = "genexpr";
 static char __pyx_k_compress[] = "compress";
 static char __pyx_k_datetime[] = "datetime";
@@ -859,6 +858,7 @@ static char __pyx_k_encode_term_2[] = "_encode_term";
 static char __pyx_k_encode_unicode[] = "encode_unicode";
 static char __pyx_k_encode_datetime[] = "encode_datetime";
 static char __pyx_k_encode_bit_binary[] = "encode_bit_binary";
+static char __pyx_k_erlport_erlencode[] = "erlport.erlencode";
 static char __pyx_k_UnicodeEncodeError[] = "UnicodeEncodeError";
 static char __pyx_k_invalid_list_length[] = "invalid list length";
 static char __pyx_k_invalid_tuple_arity[] = "invalid tuple arity";
@@ -917,7 +917,7 @@ static PyObject *__pyx_n_s_encode_tuple;
 static PyObject *__pyx_n_s_encode_tuple_locals_genexpr;
 static PyObject *__pyx_n_s_encode_unicode;
 static PyObject *__pyx_n_s_encoded_term;
-static PyObject *__pyx_n_s_erlport;
+static PyObject *__pyx_n_s_erlport_erlencode;
 static PyObject *__pyx_n_s_erlterms;
 static PyObject *__pyx_n_s_false;
 static PyObject *__pyx_n_s_fun;
@@ -1010,7 +1010,7 @@ static PyObject *__pyx_codeobj__34;
 static PyObject *__pyx_codeobj__36;
 static PyObject *__pyx_codeobj__38;
 
-/* "src/erlport/erlencode.pyx":36
+/* "erlport/erlencode.pyx":36
  * 
  * 
  * def encode_tuple(term):             # <<<<<<<<<<<<<<
@@ -1019,21 +1019,21 @@ static PyObject *__pyx_codeobj__38;
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7erlport_1encode_tuple(PyObject *__pyx_self, PyObject *__pyx_v_term); /*proto*/
-static PyMethodDef __pyx_mdef_7erlport_1encode_tuple = {"encode_tuple", (PyCFunction)__pyx_pw_7erlport_1encode_tuple, METH_O, 0};
-static PyObject *__pyx_pw_7erlport_1encode_tuple(PyObject *__pyx_self, PyObject *__pyx_v_term) {
+static PyObject *__pyx_pw_7erlport_9erlencode_1encode_tuple(PyObject *__pyx_self, PyObject *__pyx_v_term); /*proto*/
+static PyMethodDef __pyx_mdef_7erlport_9erlencode_1encode_tuple = {"encode_tuple", (PyCFunction)__pyx_pw_7erlport_9erlencode_1encode_tuple, METH_O, 0};
+static PyObject *__pyx_pw_7erlport_9erlencode_1encode_tuple(PyObject *__pyx_self, PyObject *__pyx_v_term) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("encode_tuple (wrapper)", 0);
-  __pyx_r = __pyx_pf_7erlport_encode_tuple(__pyx_self, ((PyObject *)__pyx_v_term));
+  __pyx_r = __pyx_pf_7erlport_9erlencode_encode_tuple(__pyx_self, ((PyObject *)__pyx_v_term));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
-static PyObject *__pyx_gb_7erlport_12encode_tuple_2generator(__pyx_GeneratorObject *__pyx_generator, PyObject *__pyx_sent_value); /* proto */
+static PyObject *__pyx_gb_7erlport_9erlencode_12encode_tuple_2generator(__pyx_GeneratorObject *__pyx_generator, PyObject *__pyx_sent_value); /* proto */
 
-/* "src/erlport/erlencode.pyx":45
+/* "erlport/erlencode.pyx":45
  *         raise ValueError("invalid tuple arity")
  *     _encode_term = encode_term
  *     return header + "".join(_encode_term(t) for t in term)             # <<<<<<<<<<<<<<
@@ -1041,25 +1041,25 @@ static PyObject *__pyx_gb_7erlport_12encode_tuple_2generator(__pyx_GeneratorObje
  * 
  */
 
-static PyObject *__pyx_pf_7erlport_12encode_tuple_genexpr(PyObject *__pyx_self) {
-  struct __pyx_obj_7erlport___pyx_scope_struct_1_genexpr *__pyx_cur_scope;
+static PyObject *__pyx_pf_7erlport_9erlencode_12encode_tuple_genexpr(PyObject *__pyx_self) {
+  struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_1_genexpr *__pyx_cur_scope;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("genexpr", 0);
-  __pyx_cur_scope = (struct __pyx_obj_7erlport___pyx_scope_struct_1_genexpr *)__pyx_tp_new_7erlport___pyx_scope_struct_1_genexpr(__pyx_ptype_7erlport___pyx_scope_struct_1_genexpr, __pyx_empty_tuple, NULL);
+  __pyx_cur_scope = (struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_1_genexpr *)__pyx_tp_new_7erlport_9erlencode___pyx_scope_struct_1_genexpr(__pyx_ptype_7erlport_9erlencode___pyx_scope_struct_1_genexpr, __pyx_empty_tuple, NULL);
   if (unlikely(!__pyx_cur_scope)) {
     __Pyx_RefNannyFinishContext();
     return NULL;
   }
   __Pyx_GOTREF(__pyx_cur_scope);
-  __pyx_cur_scope->__pyx_outer_scope = (struct __pyx_obj_7erlport___pyx_scope_struct__encode_tuple *) __pyx_self;
+  __pyx_cur_scope->__pyx_outer_scope = (struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct__encode_tuple *) __pyx_self;
   __Pyx_INCREF(((PyObject *)__pyx_cur_scope->__pyx_outer_scope));
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_outer_scope);
   {
-    __pyx_GeneratorObject *gen = __Pyx_Generator_New((__pyx_generator_body_t) __pyx_gb_7erlport_12encode_tuple_2generator, (PyObject *) __pyx_cur_scope, __pyx_n_s_genexpr, __pyx_n_s_encode_tuple_locals_genexpr); if (unlikely(!gen)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 45; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_GeneratorObject *gen = __Pyx_Generator_New((__pyx_generator_body_t) __pyx_gb_7erlport_9erlencode_12encode_tuple_2generator, (PyObject *) __pyx_cur_scope, __pyx_n_s_genexpr, __pyx_n_s_encode_tuple_locals_genexpr); if (unlikely(!gen)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 45; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_cur_scope);
     __Pyx_RefNannyFinishContext();
     return (PyObject *) gen;
@@ -1067,7 +1067,7 @@ static PyObject *__pyx_pf_7erlport_12encode_tuple_genexpr(PyObject *__pyx_self) 
 
   /* function exit code */
   __pyx_L1_error:;
-  __Pyx_AddTraceback("erlport.encode_tuple.genexpr", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("erlport.erlencode.encode_tuple.genexpr", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __Pyx_DECREF(((PyObject *)__pyx_cur_scope));
   __Pyx_XGIVEREF(__pyx_r);
@@ -1075,9 +1075,9 @@ static PyObject *__pyx_pf_7erlport_12encode_tuple_genexpr(PyObject *__pyx_self) 
   return __pyx_r;
 }
 
-static PyObject *__pyx_gb_7erlport_12encode_tuple_2generator(__pyx_GeneratorObject *__pyx_generator, PyObject *__pyx_sent_value) /* generator body */
+static PyObject *__pyx_gb_7erlport_9erlencode_12encode_tuple_2generator(__pyx_GeneratorObject *__pyx_generator, PyObject *__pyx_sent_value) /* generator body */
 {
-  struct __pyx_obj_7erlport___pyx_scope_struct_1_genexpr *__pyx_cur_scope = ((struct __pyx_obj_7erlport___pyx_scope_struct_1_genexpr *)__pyx_generator->closure);
+  struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_1_genexpr *__pyx_cur_scope = ((struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_1_genexpr *)__pyx_generator->closure);
   PyObject *__pyx_r = NULL;
   PyObject *__pyx_t_1 = NULL;
   Py_ssize_t __pyx_t_2;
@@ -1208,7 +1208,7 @@ static PyObject *__pyx_gb_7erlport_12encode_tuple_2generator(__pyx_GeneratorObje
   return NULL;
 }
 
-/* "src/erlport/erlencode.pyx":36
+/* "erlport/erlencode.pyx":36
  * 
  * 
  * def encode_tuple(term):             # <<<<<<<<<<<<<<
@@ -1216,8 +1216,8 @@ static PyObject *__pyx_gb_7erlport_12encode_tuple_2generator(__pyx_GeneratorObje
  *     if arity <= 255:
  */
 
-static PyObject *__pyx_pf_7erlport_encode_tuple(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term) {
-  struct __pyx_obj_7erlport___pyx_scope_struct__encode_tuple *__pyx_cur_scope;
+static PyObject *__pyx_pf_7erlport_9erlencode_encode_tuple(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term) {
+  struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct__encode_tuple *__pyx_cur_scope;
   PyObject *__pyx_v_arity = NULL;
   PyObject *__pyx_v_header = NULL;
   PyObject *__pyx_r = NULL;
@@ -1232,7 +1232,7 @@ static PyObject *__pyx_pf_7erlport_encode_tuple(CYTHON_UNUSED PyObject *__pyx_se
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("encode_tuple", 0);
-  __pyx_cur_scope = (struct __pyx_obj_7erlport___pyx_scope_struct__encode_tuple *)__pyx_tp_new_7erlport___pyx_scope_struct__encode_tuple(__pyx_ptype_7erlport___pyx_scope_struct__encode_tuple, __pyx_empty_tuple, NULL);
+  __pyx_cur_scope = (struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct__encode_tuple *)__pyx_tp_new_7erlport_9erlencode___pyx_scope_struct__encode_tuple(__pyx_ptype_7erlport_9erlencode___pyx_scope_struct__encode_tuple, __pyx_empty_tuple, NULL);
   if (unlikely(!__pyx_cur_scope)) {
     __Pyx_RefNannyFinishContext();
     return NULL;
@@ -1242,7 +1242,7 @@ static PyObject *__pyx_pf_7erlport_encode_tuple(CYTHON_UNUSED PyObject *__pyx_se
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_term);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_term);
 
-  /* "src/erlport/erlencode.pyx":37
+  /* "erlport/erlencode.pyx":37
  * 
  * def encode_tuple(term):
  *     arity = len(term)             # <<<<<<<<<<<<<<
@@ -1258,7 +1258,7 @@ static PyObject *__pyx_pf_7erlport_encode_tuple(CYTHON_UNUSED PyObject *__pyx_se
   __pyx_v_arity = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/erlport/erlencode.pyx":38
+  /* "erlport/erlencode.pyx":38
  * def encode_tuple(term):
  *     arity = len(term)
  *     if arity <= 255:             # <<<<<<<<<<<<<<
@@ -1270,7 +1270,7 @@ static PyObject *__pyx_pf_7erlport_encode_tuple(CYTHON_UNUSED PyObject *__pyx_se
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_3) {
 
-    /* "src/erlport/erlencode.pyx":39
+    /* "erlport/erlencode.pyx":39
  *     arity = len(term)
  *     if arity <= 255:
  *         header = 'h%c' % arity             # <<<<<<<<<<<<<<
@@ -1284,7 +1284,7 @@ static PyObject *__pyx_pf_7erlport_encode_tuple(CYTHON_UNUSED PyObject *__pyx_se
     goto __pyx_L3;
   }
 
-  /* "src/erlport/erlencode.pyx":40
+  /* "erlport/erlencode.pyx":40
  *     if arity <= 255:
  *         header = 'h%c' % arity
  *     elif arity <= 4294967295:             # <<<<<<<<<<<<<<
@@ -1296,7 +1296,7 @@ static PyObject *__pyx_pf_7erlport_encode_tuple(CYTHON_UNUSED PyObject *__pyx_se
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_3) {
 
-    /* "src/erlport/erlencode.pyx":41
+    /* "erlport/erlencode.pyx":41
  *         header = 'h%c' % arity
  *     elif arity <= 4294967295:
  *         header = pack(">BI", 105, arity)             # <<<<<<<<<<<<<<
@@ -1341,7 +1341,7 @@ static PyObject *__pyx_pf_7erlport_encode_tuple(CYTHON_UNUSED PyObject *__pyx_se
   }
   /*else*/ {
 
-    /* "src/erlport/erlencode.pyx":43
+    /* "erlport/erlencode.pyx":43
  *         header = pack(">BI", 105, arity)
  *     else:
  *         raise ValueError("invalid tuple arity")             # <<<<<<<<<<<<<<
@@ -1356,7 +1356,7 @@ static PyObject *__pyx_pf_7erlport_encode_tuple(CYTHON_UNUSED PyObject *__pyx_se
   }
   __pyx_L3:;
 
-  /* "src/erlport/erlencode.pyx":44
+  /* "erlport/erlencode.pyx":44
  *     else:
  *         raise ValueError("invalid tuple arity")
  *     _encode_term = encode_term             # <<<<<<<<<<<<<<
@@ -1369,7 +1369,7 @@ static PyObject *__pyx_pf_7erlport_encode_tuple(CYTHON_UNUSED PyObject *__pyx_se
   __pyx_cur_scope->__pyx_v__encode_term = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/erlport/erlencode.pyx":45
+  /* "erlport/erlencode.pyx":45
  *         raise ValueError("invalid tuple arity")
  *     _encode_term = encode_term
  *     return header + "".join(_encode_term(t) for t in term)             # <<<<<<<<<<<<<<
@@ -1377,7 +1377,7 @@ static PyObject *__pyx_pf_7erlport_encode_tuple(CYTHON_UNUSED PyObject *__pyx_se
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_pf_7erlport_12encode_tuple_genexpr(((PyObject*)__pyx_cur_scope)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 45; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_pf_7erlport_9erlencode_12encode_tuple_genexpr(((PyObject*)__pyx_cur_scope)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 45; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_4 = __Pyx_PyString_Join(__pyx_kp_s__2, __pyx_t_1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 45; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
@@ -1389,7 +1389,7 @@ static PyObject *__pyx_pf_7erlport_encode_tuple(CYTHON_UNUSED PyObject *__pyx_se
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "src/erlport/erlencode.pyx":36
+  /* "erlport/erlencode.pyx":36
  * 
  * 
  * def encode_tuple(term):             # <<<<<<<<<<<<<<
@@ -1403,7 +1403,7 @@ static PyObject *__pyx_pf_7erlport_encode_tuple(CYTHON_UNUSED PyObject *__pyx_se
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_AddTraceback("erlport.encode_tuple", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("erlport.erlencode.encode_tuple", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_arity);
@@ -1414,7 +1414,7 @@ static PyObject *__pyx_pf_7erlport_encode_tuple(CYTHON_UNUSED PyObject *__pyx_se
   return __pyx_r;
 }
 
-/* "src/erlport/erlencode.pyx":48
+/* "erlport/erlencode.pyx":48
  * 
  * 
  * def encode_list(term):             # <<<<<<<<<<<<<<
@@ -1423,21 +1423,21 @@ static PyObject *__pyx_pf_7erlport_encode_tuple(CYTHON_UNUSED PyObject *__pyx_se
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7erlport_3encode_list(PyObject *__pyx_self, PyObject *__pyx_v_term); /*proto*/
-static PyMethodDef __pyx_mdef_7erlport_3encode_list = {"encode_list", (PyCFunction)__pyx_pw_7erlport_3encode_list, METH_O, 0};
-static PyObject *__pyx_pw_7erlport_3encode_list(PyObject *__pyx_self, PyObject *__pyx_v_term) {
+static PyObject *__pyx_pw_7erlport_9erlencode_3encode_list(PyObject *__pyx_self, PyObject *__pyx_v_term); /*proto*/
+static PyMethodDef __pyx_mdef_7erlport_9erlencode_3encode_list = {"encode_list", (PyCFunction)__pyx_pw_7erlport_9erlencode_3encode_list, METH_O, 0};
+static PyObject *__pyx_pw_7erlport_9erlencode_3encode_list(PyObject *__pyx_self, PyObject *__pyx_v_term) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("encode_list (wrapper)", 0);
-  __pyx_r = __pyx_pf_7erlport_2encode_list(__pyx_self, ((PyObject *)__pyx_v_term));
+  __pyx_r = __pyx_pf_7erlport_9erlencode_2encode_list(__pyx_self, ((PyObject *)__pyx_v_term));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
-static PyObject *__pyx_gb_7erlport_11encode_list_2generator1(__pyx_GeneratorObject *__pyx_generator, PyObject *__pyx_sent_value); /* proto */
+static PyObject *__pyx_gb_7erlport_9erlencode_11encode_list_2generator1(__pyx_GeneratorObject *__pyx_generator, PyObject *__pyx_sent_value); /* proto */
 
-/* "src/erlport/erlencode.pyx":68
+/* "erlport/erlencode.pyx":68
  *     header = pack(">BI", 108, length)
  *     _encode_term = encode_term
  *     return header + "".join(_encode_term(t) for t in term) + "j"             # <<<<<<<<<<<<<<
@@ -1445,25 +1445,25 @@ static PyObject *__pyx_gb_7erlport_11encode_list_2generator1(__pyx_GeneratorObje
  * 
  */
 
-static PyObject *__pyx_pf_7erlport_11encode_list_genexpr(PyObject *__pyx_self) {
-  struct __pyx_obj_7erlport___pyx_scope_struct_3_genexpr *__pyx_cur_scope;
+static PyObject *__pyx_pf_7erlport_9erlencode_11encode_list_genexpr(PyObject *__pyx_self) {
+  struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_3_genexpr *__pyx_cur_scope;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("genexpr", 0);
-  __pyx_cur_scope = (struct __pyx_obj_7erlport___pyx_scope_struct_3_genexpr *)__pyx_tp_new_7erlport___pyx_scope_struct_3_genexpr(__pyx_ptype_7erlport___pyx_scope_struct_3_genexpr, __pyx_empty_tuple, NULL);
+  __pyx_cur_scope = (struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_3_genexpr *)__pyx_tp_new_7erlport_9erlencode___pyx_scope_struct_3_genexpr(__pyx_ptype_7erlport_9erlencode___pyx_scope_struct_3_genexpr, __pyx_empty_tuple, NULL);
   if (unlikely(!__pyx_cur_scope)) {
     __Pyx_RefNannyFinishContext();
     return NULL;
   }
   __Pyx_GOTREF(__pyx_cur_scope);
-  __pyx_cur_scope->__pyx_outer_scope = (struct __pyx_obj_7erlport___pyx_scope_struct_2_encode_list *) __pyx_self;
+  __pyx_cur_scope->__pyx_outer_scope = (struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_2_encode_list *) __pyx_self;
   __Pyx_INCREF(((PyObject *)__pyx_cur_scope->__pyx_outer_scope));
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_outer_scope);
   {
-    __pyx_GeneratorObject *gen = __Pyx_Generator_New((__pyx_generator_body_t) __pyx_gb_7erlport_11encode_list_2generator1, (PyObject *) __pyx_cur_scope, __pyx_n_s_genexpr, __pyx_n_s_encode_list_locals_genexpr); if (unlikely(!gen)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 68; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_GeneratorObject *gen = __Pyx_Generator_New((__pyx_generator_body_t) __pyx_gb_7erlport_9erlencode_11encode_list_2generator1, (PyObject *) __pyx_cur_scope, __pyx_n_s_genexpr, __pyx_n_s_encode_list_locals_genexpr); if (unlikely(!gen)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 68; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_cur_scope);
     __Pyx_RefNannyFinishContext();
     return (PyObject *) gen;
@@ -1471,7 +1471,7 @@ static PyObject *__pyx_pf_7erlport_11encode_list_genexpr(PyObject *__pyx_self) {
 
   /* function exit code */
   __pyx_L1_error:;
-  __Pyx_AddTraceback("erlport.encode_list.genexpr", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("erlport.erlencode.encode_list.genexpr", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __Pyx_DECREF(((PyObject *)__pyx_cur_scope));
   __Pyx_XGIVEREF(__pyx_r);
@@ -1479,9 +1479,9 @@ static PyObject *__pyx_pf_7erlport_11encode_list_genexpr(PyObject *__pyx_self) {
   return __pyx_r;
 }
 
-static PyObject *__pyx_gb_7erlport_11encode_list_2generator1(__pyx_GeneratorObject *__pyx_generator, PyObject *__pyx_sent_value) /* generator body */
+static PyObject *__pyx_gb_7erlport_9erlencode_11encode_list_2generator1(__pyx_GeneratorObject *__pyx_generator, PyObject *__pyx_sent_value) /* generator body */
 {
-  struct __pyx_obj_7erlport___pyx_scope_struct_3_genexpr *__pyx_cur_scope = ((struct __pyx_obj_7erlport___pyx_scope_struct_3_genexpr *)__pyx_generator->closure);
+  struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_3_genexpr *__pyx_cur_scope = ((struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_3_genexpr *)__pyx_generator->closure);
   PyObject *__pyx_r = NULL;
   PyObject *__pyx_t_1 = NULL;
   Py_ssize_t __pyx_t_2;
@@ -1612,7 +1612,7 @@ static PyObject *__pyx_gb_7erlport_11encode_list_2generator1(__pyx_GeneratorObje
   return NULL;
 }
 
-/* "src/erlport/erlencode.pyx":48
+/* "erlport/erlencode.pyx":48
  * 
  * 
  * def encode_list(term):             # <<<<<<<<<<<<<<
@@ -1620,8 +1620,8 @@ static PyObject *__pyx_gb_7erlport_11encode_list_2generator1(__pyx_GeneratorObje
  *         return "j"
  */
 
-static PyObject *__pyx_pf_7erlport_2encode_list(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term) {
-  struct __pyx_obj_7erlport___pyx_scope_struct_2_encode_list *__pyx_cur_scope;
+static PyObject *__pyx_pf_7erlport_9erlencode_2encode_list(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term) {
+  struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_2_encode_list *__pyx_cur_scope;
   Py_ssize_t __pyx_v_length;
   PyObject *__pyx_v_t = NULL;
   PyObject *__pyx_v_bytes = NULL;
@@ -1646,7 +1646,7 @@ static PyObject *__pyx_pf_7erlport_2encode_list(CYTHON_UNUSED PyObject *__pyx_se
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("encode_list", 0);
-  __pyx_cur_scope = (struct __pyx_obj_7erlport___pyx_scope_struct_2_encode_list *)__pyx_tp_new_7erlport___pyx_scope_struct_2_encode_list(__pyx_ptype_7erlport___pyx_scope_struct_2_encode_list, __pyx_empty_tuple, NULL);
+  __pyx_cur_scope = (struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_2_encode_list *)__pyx_tp_new_7erlport_9erlencode___pyx_scope_struct_2_encode_list(__pyx_ptype_7erlport_9erlencode___pyx_scope_struct_2_encode_list, __pyx_empty_tuple, NULL);
   if (unlikely(!__pyx_cur_scope)) {
     __Pyx_RefNannyFinishContext();
     return NULL;
@@ -1656,7 +1656,7 @@ static PyObject *__pyx_pf_7erlport_2encode_list(CYTHON_UNUSED PyObject *__pyx_se
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_term);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_term);
 
-  /* "src/erlport/erlencode.pyx":49
+  /* "erlport/erlencode.pyx":49
  * 
  * def encode_list(term):
  *     if not term:             # <<<<<<<<<<<<<<
@@ -1667,7 +1667,7 @@ static PyObject *__pyx_pf_7erlport_2encode_list(CYTHON_UNUSED PyObject *__pyx_se
   __pyx_t_2 = ((!__pyx_t_1) != 0);
   if (__pyx_t_2) {
 
-    /* "src/erlport/erlencode.pyx":50
+    /* "erlport/erlencode.pyx":50
  * def encode_list(term):
  *     if not term:
  *         return "j"             # <<<<<<<<<<<<<<
@@ -1680,7 +1680,7 @@ static PyObject *__pyx_pf_7erlport_2encode_list(CYTHON_UNUSED PyObject *__pyx_se
     goto __pyx_L0;
   }
 
-  /* "src/erlport/erlencode.pyx":51
+  /* "erlport/erlencode.pyx":51
  *     if not term:
  *         return "j"
  *     length = len(term)             # <<<<<<<<<<<<<<
@@ -1693,7 +1693,7 @@ static PyObject *__pyx_pf_7erlport_2encode_list(CYTHON_UNUSED PyObject *__pyx_se
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_v_length = __pyx_t_4;
 
-  /* "src/erlport/erlencode.pyx":52
+  /* "erlport/erlencode.pyx":52
  *         return "j"
  *     length = len(term)
  *     if length <= 65535:             # <<<<<<<<<<<<<<
@@ -1703,7 +1703,7 @@ static PyObject *__pyx_pf_7erlport_2encode_list(CYTHON_UNUSED PyObject *__pyx_se
   __pyx_t_2 = ((__pyx_v_length <= 65535) != 0);
   if (__pyx_t_2) {
 
-    /* "src/erlport/erlencode.pyx":53
+    /* "erlport/erlencode.pyx":53
  *     length = len(term)
  *     if length <= 65535:
  *         try:             # <<<<<<<<<<<<<<
@@ -1717,7 +1717,7 @@ static PyObject *__pyx_pf_7erlport_2encode_list(CYTHON_UNUSED PyObject *__pyx_se
       __Pyx_XGOTREF(__pyx_t_7);
       /*try:*/ {
 
-        /* "src/erlport/erlencode.pyx":55
+        /* "erlport/erlencode.pyx":55
  *         try:
  *             # array coersion will allow floats as a deprecated feature
  *             for t in term:             # <<<<<<<<<<<<<<
@@ -1764,7 +1764,7 @@ static PyObject *__pyx_pf_7erlport_2encode_list(CYTHON_UNUSED PyObject *__pyx_se
           __Pyx_XDECREF_SET(__pyx_v_t, __pyx_t_9);
           __pyx_t_9 = 0;
 
-          /* "src/erlport/erlencode.pyx":56
+          /* "erlport/erlencode.pyx":56
  *             # array coersion will allow floats as a deprecated feature
  *             for t in term:
  *                 if not isinstance(t, (int, long)):             # <<<<<<<<<<<<<<
@@ -1785,7 +1785,7 @@ static PyObject *__pyx_pf_7erlport_2encode_list(CYTHON_UNUSED PyObject *__pyx_se
           __pyx_t_1 = ((!(__pyx_t_2 != 0)) != 0);
           if (__pyx_t_1) {
 
-            /* "src/erlport/erlencode.pyx":57
+            /* "erlport/erlencode.pyx":57
  *             for t in term:
  *                 if not isinstance(t, (int, long)):
  *                     raise TypeError             # <<<<<<<<<<<<<<
@@ -1796,7 +1796,7 @@ static PyObject *__pyx_pf_7erlport_2encode_list(CYTHON_UNUSED PyObject *__pyx_se
             {__pyx_filename = __pyx_f[0]; __pyx_lineno = 57; __pyx_clineno = __LINE__; goto __pyx_L5_error;}
           }
 
-          /* "src/erlport/erlencode.pyx":55
+          /* "erlport/erlencode.pyx":55
  *         try:
  *             # array coersion will allow floats as a deprecated feature
  *             for t in term:             # <<<<<<<<<<<<<<
@@ -1806,7 +1806,7 @@ static PyObject *__pyx_pf_7erlport_2encode_list(CYTHON_UNUSED PyObject *__pyx_se
         }
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-        /* "src/erlport/erlencode.pyx":58
+        /* "erlport/erlencode.pyx":58
  *                 if not isinstance(t, (int, long)):
  *                     raise TypeError
  *             bytes = array('B', term).tostring()             # <<<<<<<<<<<<<<
@@ -1868,7 +1868,7 @@ static PyObject *__pyx_pf_7erlport_2encode_list(CYTHON_UNUSED PyObject *__pyx_se
       }
       /*else:*/ {
 
-        /* "src/erlport/erlencode.pyx":62
+        /* "erlport/erlencode.pyx":62
  *             pass
  *         else:
  *             if len(bytes) == length:             # <<<<<<<<<<<<<<
@@ -1879,7 +1879,7 @@ static PyObject *__pyx_pf_7erlport_2encode_list(CYTHON_UNUSED PyObject *__pyx_se
         __pyx_t_1 = ((__pyx_t_4 == __pyx_v_length) != 0);
         if (__pyx_t_1) {
 
-          /* "src/erlport/erlencode.pyx":63
+          /* "erlport/erlencode.pyx":63
  *         else:
  *             if len(bytes) == length:
  *                 return pack(">BH", 107, length) + bytes             # <<<<<<<<<<<<<<
@@ -1940,7 +1940,7 @@ static PyObject *__pyx_pf_7erlport_2encode_list(CYTHON_UNUSED PyObject *__pyx_se
       __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-      /* "src/erlport/erlencode.pyx":59
+      /* "erlport/erlencode.pyx":59
  *                     raise TypeError
  *             bytes = array('B', term).tostring()
  *         except(TypeError, OverflowError):             # <<<<<<<<<<<<<<
@@ -1975,7 +1975,7 @@ static PyObject *__pyx_pf_7erlport_2encode_list(CYTHON_UNUSED PyObject *__pyx_se
     goto __pyx_L4;
   }
 
-  /* "src/erlport/erlencode.pyx":64
+  /* "erlport/erlencode.pyx":64
  *             if len(bytes) == length:
  *                 return pack(">BH", 107, length) + bytes
  *     elif length > 4294967295:             # <<<<<<<<<<<<<<
@@ -1990,7 +1990,7 @@ static PyObject *__pyx_pf_7erlport_2encode_list(CYTHON_UNUSED PyObject *__pyx_se
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   if (__pyx_t_1) {
 
-    /* "src/erlport/erlencode.pyx":65
+    /* "erlport/erlencode.pyx":65
  *                 return pack(">BH", 107, length) + bytes
  *     elif length > 4294967295:
  *         raise ValueError("invalid list length")             # <<<<<<<<<<<<<<
@@ -2005,7 +2005,7 @@ static PyObject *__pyx_pf_7erlport_2encode_list(CYTHON_UNUSED PyObject *__pyx_se
   }
   __pyx_L4:;
 
-  /* "src/erlport/erlencode.pyx":66
+  /* "erlport/erlencode.pyx":66
  *     elif length > 4294967295:
  *         raise ValueError("invalid list length")
  *     header = pack(">BI", 108, length)             # <<<<<<<<<<<<<<
@@ -2049,7 +2049,7 @@ static PyObject *__pyx_pf_7erlport_2encode_list(CYTHON_UNUSED PyObject *__pyx_se
   __pyx_v_header = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "src/erlport/erlencode.pyx":67
+  /* "erlport/erlencode.pyx":67
  *         raise ValueError("invalid list length")
  *     header = pack(">BI", 108, length)
  *     _encode_term = encode_term             # <<<<<<<<<<<<<<
@@ -2062,7 +2062,7 @@ static PyObject *__pyx_pf_7erlport_2encode_list(CYTHON_UNUSED PyObject *__pyx_se
   __pyx_cur_scope->__pyx_v__encode_term = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "src/erlport/erlencode.pyx":68
+  /* "erlport/erlencode.pyx":68
  *     header = pack(">BI", 108, length)
  *     _encode_term = encode_term
  *     return header + "".join(_encode_term(t) for t in term) + "j"             # <<<<<<<<<<<<<<
@@ -2070,7 +2070,7 @@ static PyObject *__pyx_pf_7erlport_2encode_list(CYTHON_UNUSED PyObject *__pyx_se
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_3 = __pyx_pf_7erlport_11encode_list_genexpr(((PyObject*)__pyx_cur_scope)); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 68; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __pyx_pf_7erlport_9erlencode_11encode_list_genexpr(((PyObject*)__pyx_cur_scope)); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 68; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_11 = __Pyx_PyString_Join(__pyx_kp_s__2, __pyx_t_3); if (unlikely(!__pyx_t_11)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 68; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_11);
@@ -2085,7 +2085,7 @@ static PyObject *__pyx_pf_7erlport_2encode_list(CYTHON_UNUSED PyObject *__pyx_se
   __pyx_t_11 = 0;
   goto __pyx_L0;
 
-  /* "src/erlport/erlencode.pyx":48
+  /* "erlport/erlencode.pyx":48
  * 
  * 
  * def encode_list(term):             # <<<<<<<<<<<<<<
@@ -2100,7 +2100,7 @@ static PyObject *__pyx_pf_7erlport_2encode_list(CYTHON_UNUSED PyObject *__pyx_se
   __Pyx_XDECREF(__pyx_t_11);
   __Pyx_XDECREF(__pyx_t_12);
   __Pyx_XDECREF(__pyx_t_13);
-  __Pyx_AddTraceback("erlport.encode_list", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("erlport.erlencode.encode_list", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_t);
@@ -2112,7 +2112,7 @@ static PyObject *__pyx_pf_7erlport_2encode_list(CYTHON_UNUSED PyObject *__pyx_se
   return __pyx_r;
 }
 
-/* "src/erlport/erlencode.pyx":71
+/* "erlport/erlencode.pyx":71
  * 
  * 
  * def encode_unicode(term):             # <<<<<<<<<<<<<<
@@ -2121,20 +2121,20 @@ static PyObject *__pyx_pf_7erlport_2encode_list(CYTHON_UNUSED PyObject *__pyx_se
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7erlport_5encode_unicode(PyObject *__pyx_self, PyObject *__pyx_v_term); /*proto*/
-static PyMethodDef __pyx_mdef_7erlport_5encode_unicode = {"encode_unicode", (PyCFunction)__pyx_pw_7erlport_5encode_unicode, METH_O, 0};
-static PyObject *__pyx_pw_7erlport_5encode_unicode(PyObject *__pyx_self, PyObject *__pyx_v_term) {
+static PyObject *__pyx_pw_7erlport_9erlencode_5encode_unicode(PyObject *__pyx_self, PyObject *__pyx_v_term); /*proto*/
+static PyMethodDef __pyx_mdef_7erlport_9erlencode_5encode_unicode = {"encode_unicode", (PyCFunction)__pyx_pw_7erlport_9erlencode_5encode_unicode, METH_O, 0};
+static PyObject *__pyx_pw_7erlport_9erlencode_5encode_unicode(PyObject *__pyx_self, PyObject *__pyx_v_term) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("encode_unicode (wrapper)", 0);
-  __pyx_r = __pyx_pf_7erlport_4encode_unicode(__pyx_self, ((PyObject *)__pyx_v_term));
+  __pyx_r = __pyx_pf_7erlport_9erlencode_4encode_unicode(__pyx_self, ((PyObject *)__pyx_v_term));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7erlport_4encode_unicode(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term) {
+static PyObject *__pyx_pf_7erlport_9erlencode_4encode_unicode(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term) {
   Py_ssize_t __pyx_v_length;
   PyObject *__pyx_v_bytes = NULL;
   PyObject *__pyx_v_i = NULL;
@@ -2159,7 +2159,7 @@ static PyObject *__pyx_pf_7erlport_4encode_unicode(CYTHON_UNUSED PyObject *__pyx
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("encode_unicode", 0);
 
-  /* "src/erlport/erlencode.pyx":72
+  /* "erlport/erlencode.pyx":72
  * 
  * def encode_unicode(term):
  *     if not term:             # <<<<<<<<<<<<<<
@@ -2170,7 +2170,7 @@ static PyObject *__pyx_pf_7erlport_4encode_unicode(CYTHON_UNUSED PyObject *__pyx
   __pyx_t_2 = ((!__pyx_t_1) != 0);
   if (__pyx_t_2) {
 
-    /* "src/erlport/erlencode.pyx":73
+    /* "erlport/erlencode.pyx":73
  * def encode_unicode(term):
  *     if not term:
  *         return "j"             # <<<<<<<<<<<<<<
@@ -2183,7 +2183,7 @@ static PyObject *__pyx_pf_7erlport_4encode_unicode(CYTHON_UNUSED PyObject *__pyx
     goto __pyx_L0;
   }
 
-  /* "src/erlport/erlencode.pyx":74
+  /* "erlport/erlencode.pyx":74
  *     if not term:
  *         return "j"
  *     length = len(term)             # <<<<<<<<<<<<<<
@@ -2193,7 +2193,7 @@ static PyObject *__pyx_pf_7erlport_4encode_unicode(CYTHON_UNUSED PyObject *__pyx
   __pyx_t_3 = PyObject_Length(__pyx_v_term); if (unlikely(__pyx_t_3 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 74; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_length = __pyx_t_3;
 
-  /* "src/erlport/erlencode.pyx":75
+  /* "erlport/erlencode.pyx":75
  *         return "j"
  *     length = len(term)
  *     if length <= 65535:             # <<<<<<<<<<<<<<
@@ -2203,7 +2203,7 @@ static PyObject *__pyx_pf_7erlport_4encode_unicode(CYTHON_UNUSED PyObject *__pyx
   __pyx_t_2 = ((__pyx_v_length <= 65535) != 0);
   if (__pyx_t_2) {
 
-    /* "src/erlport/erlencode.pyx":76
+    /* "erlport/erlencode.pyx":76
  *     length = len(term)
  *     if length <= 65535:
  *         try:             # <<<<<<<<<<<<<<
@@ -2217,7 +2217,7 @@ static PyObject *__pyx_pf_7erlport_4encode_unicode(CYTHON_UNUSED PyObject *__pyx
       __Pyx_XGOTREF(__pyx_t_6);
       /*try:*/ {
 
-        /* "src/erlport/erlencode.pyx":77
+        /* "erlport/erlencode.pyx":77
  *     if length <= 65535:
  *         try:
  *             bytes = term.encode("latin1")             # <<<<<<<<<<<<<<
@@ -2234,7 +2234,7 @@ static PyObject *__pyx_pf_7erlport_4encode_unicode(CYTHON_UNUSED PyObject *__pyx
       }
       /*else:*/ {
 
-        /* "src/erlport/erlencode.pyx":81
+        /* "erlport/erlencode.pyx":81
  *             pass
  *         else:
  *             return pack(">BH", 107, length) + bytes             # <<<<<<<<<<<<<<
@@ -2287,7 +2287,7 @@ static PyObject *__pyx_pf_7erlport_4encode_unicode(CYTHON_UNUSED PyObject *__pyx
       __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
       __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-      /* "src/erlport/erlencode.pyx":78
+      /* "erlport/erlencode.pyx":78
  *         try:
  *             bytes = term.encode("latin1")
  *         except UnicodeEncodeError:             # <<<<<<<<<<<<<<
@@ -2322,7 +2322,7 @@ static PyObject *__pyx_pf_7erlport_4encode_unicode(CYTHON_UNUSED PyObject *__pyx
   }
   __pyx_L4:;
 
-  /* "src/erlport/erlencode.pyx":82
+  /* "erlport/erlencode.pyx":82
  *         else:
  *             return pack(">BH", 107, length) + bytes
  *     return encode_term([ord(i) for i in term])             # <<<<<<<<<<<<<<
@@ -2415,7 +2415,7 @@ static PyObject *__pyx_pf_7erlport_4encode_unicode(CYTHON_UNUSED PyObject *__pyx
   __pyx_t_7 = 0;
   goto __pyx_L0;
 
-  /* "src/erlport/erlencode.pyx":71
+  /* "erlport/erlencode.pyx":71
  * 
  * 
  * def encode_unicode(term):             # <<<<<<<<<<<<<<
@@ -2431,7 +2431,7 @@ static PyObject *__pyx_pf_7erlport_4encode_unicode(CYTHON_UNUSED PyObject *__pyx
   __Pyx_XDECREF(__pyx_t_10);
   __Pyx_XDECREF(__pyx_t_11);
   __Pyx_XDECREF(__pyx_t_14);
-  __Pyx_AddTraceback("erlport.encode_unicode", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("erlport.erlencode.encode_unicode", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_bytes);
@@ -2441,7 +2441,7 @@ static PyObject *__pyx_pf_7erlport_4encode_unicode(CYTHON_UNUSED PyObject *__pyx
   return __pyx_r;
 }
 
-/* "src/erlport/erlencode.pyx":85
+/* "erlport/erlencode.pyx":85
  * 
  * 
  * def encode_atom(term):             # <<<<<<<<<<<<<<
@@ -2450,20 +2450,20 @@ static PyObject *__pyx_pf_7erlport_4encode_unicode(CYTHON_UNUSED PyObject *__pyx
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7erlport_7encode_atom(PyObject *__pyx_self, PyObject *__pyx_v_term); /*proto*/
-static PyMethodDef __pyx_mdef_7erlport_7encode_atom = {"encode_atom", (PyCFunction)__pyx_pw_7erlport_7encode_atom, METH_O, 0};
-static PyObject *__pyx_pw_7erlport_7encode_atom(PyObject *__pyx_self, PyObject *__pyx_v_term) {
+static PyObject *__pyx_pw_7erlport_9erlencode_7encode_atom(PyObject *__pyx_self, PyObject *__pyx_v_term); /*proto*/
+static PyMethodDef __pyx_mdef_7erlport_9erlencode_7encode_atom = {"encode_atom", (PyCFunction)__pyx_pw_7erlport_9erlencode_7encode_atom, METH_O, 0};
+static PyObject *__pyx_pw_7erlport_9erlencode_7encode_atom(PyObject *__pyx_self, PyObject *__pyx_v_term) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("encode_atom (wrapper)", 0);
-  __pyx_r = __pyx_pf_7erlport_6encode_atom(__pyx_self, ((PyObject *)__pyx_v_term));
+  __pyx_r = __pyx_pf_7erlport_9erlencode_6encode_atom(__pyx_self, ((PyObject *)__pyx_v_term));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7erlport_6encode_atom(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term) {
+static PyObject *__pyx_pf_7erlport_9erlencode_6encode_atom(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -2477,7 +2477,7 @@ static PyObject *__pyx_pf_7erlport_6encode_atom(CYTHON_UNUSED PyObject *__pyx_se
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("encode_atom", 0);
 
-  /* "src/erlport/erlencode.pyx":86
+  /* "erlport/erlencode.pyx":86
  * 
  * def encode_atom(term):
  *     return pack(">BH", 100, len(term)) + term             # <<<<<<<<<<<<<<
@@ -2527,7 +2527,7 @@ static PyObject *__pyx_pf_7erlport_6encode_atom(CYTHON_UNUSED PyObject *__pyx_se
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "src/erlport/erlencode.pyx":85
+  /* "erlport/erlencode.pyx":85
  * 
  * 
  * def encode_atom(term):             # <<<<<<<<<<<<<<
@@ -2542,7 +2542,7 @@ static PyObject *__pyx_pf_7erlport_6encode_atom(CYTHON_UNUSED PyObject *__pyx_se
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_AddTraceback("erlport.encode_atom", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("erlport.erlencode.encode_atom", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2550,7 +2550,7 @@ static PyObject *__pyx_pf_7erlport_6encode_atom(CYTHON_UNUSED PyObject *__pyx_se
   return __pyx_r;
 }
 
-/* "src/erlport/erlencode.pyx":89
+/* "erlport/erlencode.pyx":89
  * 
  * 
  * def encode_bit_binary(term):             # <<<<<<<<<<<<<<
@@ -2559,20 +2559,20 @@ static PyObject *__pyx_pf_7erlport_6encode_atom(CYTHON_UNUSED PyObject *__pyx_se
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7erlport_9encode_bit_binary(PyObject *__pyx_self, PyObject *__pyx_v_term); /*proto*/
-static PyMethodDef __pyx_mdef_7erlport_9encode_bit_binary = {"encode_bit_binary", (PyCFunction)__pyx_pw_7erlport_9encode_bit_binary, METH_O, 0};
-static PyObject *__pyx_pw_7erlport_9encode_bit_binary(PyObject *__pyx_self, PyObject *__pyx_v_term) {
+static PyObject *__pyx_pw_7erlport_9erlencode_9encode_bit_binary(PyObject *__pyx_self, PyObject *__pyx_v_term); /*proto*/
+static PyMethodDef __pyx_mdef_7erlport_9erlencode_9encode_bit_binary = {"encode_bit_binary", (PyCFunction)__pyx_pw_7erlport_9erlencode_9encode_bit_binary, METH_O, 0};
+static PyObject *__pyx_pw_7erlport_9erlencode_9encode_bit_binary(PyObject *__pyx_self, PyObject *__pyx_v_term) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("encode_bit_binary (wrapper)", 0);
-  __pyx_r = __pyx_pf_7erlport_8encode_bit_binary(__pyx_self, ((PyObject *)__pyx_v_term));
+  __pyx_r = __pyx_pf_7erlport_9erlencode_8encode_bit_binary(__pyx_self, ((PyObject *)__pyx_v_term));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7erlport_8encode_bit_binary(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term) {
+static PyObject *__pyx_pf_7erlport_9erlencode_8encode_bit_binary(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -2587,7 +2587,7 @@ static PyObject *__pyx_pf_7erlport_8encode_bit_binary(CYTHON_UNUSED PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("encode_bit_binary", 0);
 
-  /* "src/erlport/erlencode.pyx":90
+  /* "erlport/erlencode.pyx":90
  * 
  * def encode_bit_binary(term):
  *     return pack(">BIB", 77, len(term), term.bits) + term             # <<<<<<<<<<<<<<
@@ -2642,7 +2642,7 @@ static PyObject *__pyx_pf_7erlport_8encode_bit_binary(CYTHON_UNUSED PyObject *__
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "src/erlport/erlencode.pyx":89
+  /* "erlport/erlencode.pyx":89
  * 
  * 
  * def encode_bit_binary(term):             # <<<<<<<<<<<<<<
@@ -2658,7 +2658,7 @@ static PyObject *__pyx_pf_7erlport_8encode_bit_binary(CYTHON_UNUSED PyObject *__
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("erlport.encode_bit_binary", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("erlport.erlencode.encode_bit_binary", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2666,7 +2666,7 @@ static PyObject *__pyx_pf_7erlport_8encode_bit_binary(CYTHON_UNUSED PyObject *__
   return __pyx_r;
 }
 
-/* "src/erlport/erlencode.pyx":93
+/* "erlport/erlencode.pyx":93
  * 
  * 
  * def encode_str(term):             # <<<<<<<<<<<<<<
@@ -2675,20 +2675,20 @@ static PyObject *__pyx_pf_7erlport_8encode_bit_binary(CYTHON_UNUSED PyObject *__
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7erlport_11encode_str(PyObject *__pyx_self, PyObject *__pyx_v_term); /*proto*/
-static PyMethodDef __pyx_mdef_7erlport_11encode_str = {"encode_str", (PyCFunction)__pyx_pw_7erlport_11encode_str, METH_O, 0};
-static PyObject *__pyx_pw_7erlport_11encode_str(PyObject *__pyx_self, PyObject *__pyx_v_term) {
+static PyObject *__pyx_pw_7erlport_9erlencode_11encode_str(PyObject *__pyx_self, PyObject *__pyx_v_term); /*proto*/
+static PyMethodDef __pyx_mdef_7erlport_9erlencode_11encode_str = {"encode_str", (PyCFunction)__pyx_pw_7erlport_9erlencode_11encode_str, METH_O, 0};
+static PyObject *__pyx_pw_7erlport_9erlencode_11encode_str(PyObject *__pyx_self, PyObject *__pyx_v_term) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("encode_str (wrapper)", 0);
-  __pyx_r = __pyx_pf_7erlport_10encode_str(__pyx_self, ((PyObject *)__pyx_v_term));
+  __pyx_r = __pyx_pf_7erlport_9erlencode_10encode_str(__pyx_self, ((PyObject *)__pyx_v_term));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7erlport_10encode_str(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term) {
+static PyObject *__pyx_pf_7erlport_9erlencode_10encode_str(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term) {
   Py_ssize_t __pyx_v_length;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -2704,7 +2704,7 @@ static PyObject *__pyx_pf_7erlport_10encode_str(CYTHON_UNUSED PyObject *__pyx_se
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("encode_str", 0);
 
-  /* "src/erlport/erlencode.pyx":94
+  /* "erlport/erlencode.pyx":94
  * 
  * def encode_str(term):
  *     length = len(term)             # <<<<<<<<<<<<<<
@@ -2714,7 +2714,7 @@ static PyObject *__pyx_pf_7erlport_10encode_str(CYTHON_UNUSED PyObject *__pyx_se
   __pyx_t_1 = PyObject_Length(__pyx_v_term); if (unlikely(__pyx_t_1 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 94; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_length = __pyx_t_1;
 
-  /* "src/erlport/erlencode.pyx":95
+  /* "erlport/erlencode.pyx":95
  * def encode_str(term):
  *     length = len(term)
  *     if length > 4294967295:             # <<<<<<<<<<<<<<
@@ -2729,7 +2729,7 @@ static PyObject *__pyx_pf_7erlport_10encode_str(CYTHON_UNUSED PyObject *__pyx_se
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   if (__pyx_t_4) {
 
-    /* "src/erlport/erlencode.pyx":96
+    /* "erlport/erlencode.pyx":96
  *     length = len(term)
  *     if length > 4294967295:
  *         raise ValueError("invalid binary length")             # <<<<<<<<<<<<<<
@@ -2743,7 +2743,7 @@ static PyObject *__pyx_pf_7erlport_10encode_str(CYTHON_UNUSED PyObject *__pyx_se
     {__pyx_filename = __pyx_f[0]; __pyx_lineno = 96; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
 
-  /* "src/erlport/erlencode.pyx":97
+  /* "erlport/erlencode.pyx":97
  *     if length > 4294967295:
  *         raise ValueError("invalid binary length")
  *     return pack(">BI", 109, length) + term             # <<<<<<<<<<<<<<
@@ -2792,7 +2792,7 @@ static PyObject *__pyx_pf_7erlport_10encode_str(CYTHON_UNUSED PyObject *__pyx_se
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "src/erlport/erlencode.pyx":93
+  /* "erlport/erlencode.pyx":93
  * 
  * 
  * def encode_str(term):             # <<<<<<<<<<<<<<
@@ -2807,7 +2807,7 @@ static PyObject *__pyx_pf_7erlport_10encode_str(CYTHON_UNUSED PyObject *__pyx_se
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("erlport.encode_str", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("erlport.erlencode.encode_str", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2815,7 +2815,7 @@ static PyObject *__pyx_pf_7erlport_10encode_str(CYTHON_UNUSED PyObject *__pyx_se
   return __pyx_r;
 }
 
-/* "src/erlport/erlencode.pyx":100
+/* "erlport/erlencode.pyx":100
  * 
  * 
  * def encode_bool(term):             # <<<<<<<<<<<<<<
@@ -2824,20 +2824,20 @@ static PyObject *__pyx_pf_7erlport_10encode_str(CYTHON_UNUSED PyObject *__pyx_se
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7erlport_13encode_bool(PyObject *__pyx_self, PyObject *__pyx_v_term); /*proto*/
-static PyMethodDef __pyx_mdef_7erlport_13encode_bool = {"encode_bool", (PyCFunction)__pyx_pw_7erlport_13encode_bool, METH_O, 0};
-static PyObject *__pyx_pw_7erlport_13encode_bool(PyObject *__pyx_self, PyObject *__pyx_v_term) {
+static PyObject *__pyx_pw_7erlport_9erlencode_13encode_bool(PyObject *__pyx_self, PyObject *__pyx_v_term); /*proto*/
+static PyMethodDef __pyx_mdef_7erlport_9erlencode_13encode_bool = {"encode_bool", (PyCFunction)__pyx_pw_7erlport_9erlencode_13encode_bool, METH_O, 0};
+static PyObject *__pyx_pw_7erlport_9erlencode_13encode_bool(PyObject *__pyx_self, PyObject *__pyx_v_term) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("encode_bool (wrapper)", 0);
-  __pyx_r = __pyx_pf_7erlport_12encode_bool(__pyx_self, ((PyObject *)__pyx_v_term));
+  __pyx_r = __pyx_pf_7erlport_9erlencode_12encode_bool(__pyx_self, ((PyObject *)__pyx_v_term));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7erlport_12encode_bool(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term) {
+static PyObject *__pyx_pf_7erlport_9erlencode_12encode_bool(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -2853,7 +2853,7 @@ static PyObject *__pyx_pf_7erlport_12encode_bool(CYTHON_UNUSED PyObject *__pyx_s
   __Pyx_RefNannySetupContext("encode_bool", 0);
   __Pyx_INCREF(__pyx_v_term);
 
-  /* "src/erlport/erlencode.pyx":101
+  /* "erlport/erlencode.pyx":101
  * 
  * def encode_bool(term):
  *     term = term and 'true' or 'false'             # <<<<<<<<<<<<<<
@@ -2879,7 +2879,7 @@ static PyObject *__pyx_pf_7erlport_12encode_bool(CYTHON_UNUSED PyObject *__pyx_s
   __Pyx_DECREF_SET(__pyx_v_term, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "src/erlport/erlencode.pyx":102
+  /* "erlport/erlencode.pyx":102
  * def encode_bool(term):
  *     term = term and 'true' or 'false'
  *     return pack(">BH", 100, len(term)) + term             # <<<<<<<<<<<<<<
@@ -2929,7 +2929,7 @@ static PyObject *__pyx_pf_7erlport_12encode_bool(CYTHON_UNUSED PyObject *__pyx_s
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "src/erlport/erlencode.pyx":100
+  /* "erlport/erlencode.pyx":100
  * 
  * 
  * def encode_bool(term):             # <<<<<<<<<<<<<<
@@ -2944,7 +2944,7 @@ static PyObject *__pyx_pf_7erlport_12encode_bool(CYTHON_UNUSED PyObject *__pyx_s
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("erlport.encode_bool", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("erlport.erlencode.encode_bool", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_term);
@@ -2953,7 +2953,7 @@ static PyObject *__pyx_pf_7erlport_12encode_bool(CYTHON_UNUSED PyObject *__pyx_s
   return __pyx_r;
 }
 
-/* "src/erlport/erlencode.pyx":105
+/* "erlport/erlencode.pyx":105
  * 
  * 
  * def encode_int(term):             # <<<<<<<<<<<<<<
@@ -2962,20 +2962,20 @@ static PyObject *__pyx_pf_7erlport_12encode_bool(CYTHON_UNUSED PyObject *__pyx_s
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7erlport_15encode_int(PyObject *__pyx_self, PyObject *__pyx_v_term); /*proto*/
-static PyMethodDef __pyx_mdef_7erlport_15encode_int = {"encode_int", (PyCFunction)__pyx_pw_7erlport_15encode_int, METH_O, 0};
-static PyObject *__pyx_pw_7erlport_15encode_int(PyObject *__pyx_self, PyObject *__pyx_v_term) {
+static PyObject *__pyx_pw_7erlport_9erlencode_15encode_int(PyObject *__pyx_self, PyObject *__pyx_v_term); /*proto*/
+static PyMethodDef __pyx_mdef_7erlport_9erlencode_15encode_int = {"encode_int", (PyCFunction)__pyx_pw_7erlport_9erlencode_15encode_int, METH_O, 0};
+static PyObject *__pyx_pw_7erlport_9erlencode_15encode_int(PyObject *__pyx_self, PyObject *__pyx_v_term) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("encode_int (wrapper)", 0);
-  __pyx_r = __pyx_pf_7erlport_14encode_int(__pyx_self, ((PyObject *)__pyx_v_term));
+  __pyx_r = __pyx_pf_7erlport_9erlencode_14encode_int(__pyx_self, ((PyObject *)__pyx_v_term));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7erlport_14encode_int(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term) {
+static PyObject *__pyx_pf_7erlport_9erlencode_14encode_int(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term) {
   long __pyx_v_sign;
   PyObject *__pyx_v_bytes = NULL;
   Py_ssize_t __pyx_v_length;
@@ -2996,7 +2996,7 @@ static PyObject *__pyx_pf_7erlport_14encode_int(CYTHON_UNUSED PyObject *__pyx_se
   __Pyx_RefNannySetupContext("encode_int", 0);
   __Pyx_INCREF(__pyx_v_term);
 
-  /* "src/erlport/erlencode.pyx":106
+  /* "erlport/erlencode.pyx":106
  * 
  * def encode_int(term):
  *     if 0 <= term <= 255:             # <<<<<<<<<<<<<<
@@ -3012,7 +3012,7 @@ static PyObject *__pyx_pf_7erlport_14encode_int(CYTHON_UNUSED PyObject *__pyx_se
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_2) {
 
-    /* "src/erlport/erlencode.pyx":107
+    /* "erlport/erlencode.pyx":107
  * def encode_int(term):
  *     if 0 <= term <= 255:
  *         return 'a%c' % term             # <<<<<<<<<<<<<<
@@ -3027,7 +3027,7 @@ static PyObject *__pyx_pf_7erlport_14encode_int(CYTHON_UNUSED PyObject *__pyx_se
     goto __pyx_L0;
   }
 
-  /* "src/erlport/erlencode.pyx":108
+  /* "erlport/erlencode.pyx":108
  *     if 0 <= term <= 255:
  *         return 'a%c' % term
  *     elif -2147483648 <= term <= 2147483647:             # <<<<<<<<<<<<<<
@@ -3043,7 +3043,7 @@ static PyObject *__pyx_pf_7erlport_14encode_int(CYTHON_UNUSED PyObject *__pyx_se
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_2) {
 
-    /* "src/erlport/erlencode.pyx":109
+    /* "erlport/erlencode.pyx":109
  *         return 'a%c' % term
  *     elif -2147483648 <= term <= 2147483647:
  *         return pack(">Bi", 98, term)             # <<<<<<<<<<<<<<
@@ -3088,7 +3088,7 @@ static PyObject *__pyx_pf_7erlport_14encode_int(CYTHON_UNUSED PyObject *__pyx_se
     goto __pyx_L0;
   }
 
-  /* "src/erlport/erlencode.pyx":111
+  /* "erlport/erlencode.pyx":111
  *         return pack(">Bi", 98, term)
  * 
  *     if term >= 0:             # <<<<<<<<<<<<<<
@@ -3100,7 +3100,7 @@ static PyObject *__pyx_pf_7erlport_14encode_int(CYTHON_UNUSED PyObject *__pyx_se
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_2) {
 
-    /* "src/erlport/erlencode.pyx":112
+    /* "erlport/erlencode.pyx":112
  * 
  *     if term >= 0:
  *         sign = 0             # <<<<<<<<<<<<<<
@@ -3112,7 +3112,7 @@ static PyObject *__pyx_pf_7erlport_14encode_int(CYTHON_UNUSED PyObject *__pyx_se
   }
   /*else*/ {
 
-    /* "src/erlport/erlencode.pyx":114
+    /* "erlport/erlencode.pyx":114
  *         sign = 0
  *     else:
  *         sign = 1             # <<<<<<<<<<<<<<
@@ -3121,7 +3121,7 @@ static PyObject *__pyx_pf_7erlport_14encode_int(CYTHON_UNUSED PyObject *__pyx_se
  */
     __pyx_v_sign = 1;
 
-    /* "src/erlport/erlencode.pyx":115
+    /* "erlport/erlencode.pyx":115
  *     else:
  *         sign = 1
  *         term = -term             # <<<<<<<<<<<<<<
@@ -3135,7 +3135,7 @@ static PyObject *__pyx_pf_7erlport_14encode_int(CYTHON_UNUSED PyObject *__pyx_se
   }
   __pyx_L4:;
 
-  /* "src/erlport/erlencode.pyx":117
+  /* "erlport/erlencode.pyx":117
  *         term = -term
  * 
  *     bytes = array('B')             # <<<<<<<<<<<<<<
@@ -3150,7 +3150,7 @@ static PyObject *__pyx_pf_7erlport_14encode_int(CYTHON_UNUSED PyObject *__pyx_se
   __pyx_v_bytes = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "src/erlport/erlencode.pyx":118
+  /* "erlport/erlencode.pyx":118
  * 
  *     bytes = array('B')
  *     while term > 0:             # <<<<<<<<<<<<<<
@@ -3163,7 +3163,7 @@ static PyObject *__pyx_pf_7erlport_14encode_int(CYTHON_UNUSED PyObject *__pyx_se
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     if (!__pyx_t_2) break;
 
-    /* "src/erlport/erlencode.pyx":119
+    /* "erlport/erlencode.pyx":119
  *     bytes = array('B')
  *     while term > 0:
  *         bytes.append(term & 0xff)             # <<<<<<<<<<<<<<
@@ -3175,7 +3175,7 @@ static PyObject *__pyx_pf_7erlport_14encode_int(CYTHON_UNUSED PyObject *__pyx_se
     __pyx_t_7 = __Pyx_PyObject_Append(__pyx_v_bytes, __pyx_t_3); if (unlikely(__pyx_t_7 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 119; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "src/erlport/erlencode.pyx":120
+    /* "erlport/erlencode.pyx":120
  *     while term > 0:
  *         bytes.append(term & 0xff)
  *         term >>= 8             # <<<<<<<<<<<<<<
@@ -3188,7 +3188,7 @@ static PyObject *__pyx_pf_7erlport_14encode_int(CYTHON_UNUSED PyObject *__pyx_se
     __pyx_t_3 = 0;
   }
 
-  /* "src/erlport/erlencode.pyx":122
+  /* "erlport/erlencode.pyx":122
  *         term >>= 8
  * 
  *     length = len(bytes)             # <<<<<<<<<<<<<<
@@ -3198,7 +3198,7 @@ static PyObject *__pyx_pf_7erlport_14encode_int(CYTHON_UNUSED PyObject *__pyx_se
   __pyx_t_5 = PyObject_Length(__pyx_v_bytes); if (unlikely(__pyx_t_5 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 122; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_length = __pyx_t_5;
 
-  /* "src/erlport/erlencode.pyx":123
+  /* "erlport/erlencode.pyx":123
  * 
  *     length = len(bytes)
  *     if length <= 255:             # <<<<<<<<<<<<<<
@@ -3208,7 +3208,7 @@ static PyObject *__pyx_pf_7erlport_14encode_int(CYTHON_UNUSED PyObject *__pyx_se
   __pyx_t_2 = ((__pyx_v_length <= 255) != 0);
   if (__pyx_t_2) {
 
-    /* "src/erlport/erlencode.pyx":124
+    /* "erlport/erlencode.pyx":124
  *     length = len(bytes)
  *     if length <= 255:
  *         return pack(">BBB", 110, length, sign) + bytes.tostring()             # <<<<<<<<<<<<<<
@@ -3284,7 +3284,7 @@ static PyObject *__pyx_pf_7erlport_14encode_int(CYTHON_UNUSED PyObject *__pyx_se
     goto __pyx_L0;
   }
 
-  /* "src/erlport/erlencode.pyx":125
+  /* "erlport/erlencode.pyx":125
  *     if length <= 255:
  *         return pack(">BBB", 110, length, sign) + bytes.tostring()
  *     elif length <= 4294967295:             # <<<<<<<<<<<<<<
@@ -3299,7 +3299,7 @@ static PyObject *__pyx_pf_7erlport_14encode_int(CYTHON_UNUSED PyObject *__pyx_se
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_2) {
 
-    /* "src/erlport/erlencode.pyx":126
+    /* "erlport/erlencode.pyx":126
  *         return pack(">BBB", 110, length, sign) + bytes.tostring()
  *     elif length <= 4294967295:
  *         return pack(">BIB", 111, length, sign) + bytes.tostring()             # <<<<<<<<<<<<<<
@@ -3375,7 +3375,7 @@ static PyObject *__pyx_pf_7erlport_14encode_int(CYTHON_UNUSED PyObject *__pyx_se
     goto __pyx_L0;
   }
 
-  /* "src/erlport/erlencode.pyx":127
+  /* "erlport/erlencode.pyx":127
  *     elif length <= 4294967295:
  *         return pack(">BIB", 111, length, sign) + bytes.tostring()
  *     raise ValueError("invalid integer value")             # <<<<<<<<<<<<<<
@@ -3388,7 +3388,7 @@ static PyObject *__pyx_pf_7erlport_14encode_int(CYTHON_UNUSED PyObject *__pyx_se
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   {__pyx_filename = __pyx_f[0]; __pyx_lineno = 127; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "src/erlport/erlencode.pyx":105
+  /* "erlport/erlencode.pyx":105
  * 
  * 
  * def encode_int(term):             # <<<<<<<<<<<<<<
@@ -3404,7 +3404,7 @@ static PyObject *__pyx_pf_7erlport_14encode_int(CYTHON_UNUSED PyObject *__pyx_se
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_8);
   __Pyx_XDECREF(__pyx_t_9);
-  __Pyx_AddTraceback("erlport.encode_int", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("erlport.erlencode.encode_int", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_bytes);
@@ -3414,7 +3414,7 @@ static PyObject *__pyx_pf_7erlport_14encode_int(CYTHON_UNUSED PyObject *__pyx_se
   return __pyx_r;
 }
 
-/* "src/erlport/erlencode.pyx":130
+/* "erlport/erlencode.pyx":130
  * 
  * 
  * def encode_float(term):             # <<<<<<<<<<<<<<
@@ -3423,20 +3423,20 @@ static PyObject *__pyx_pf_7erlport_14encode_int(CYTHON_UNUSED PyObject *__pyx_se
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7erlport_17encode_float(PyObject *__pyx_self, PyObject *__pyx_v_term); /*proto*/
-static PyMethodDef __pyx_mdef_7erlport_17encode_float = {"encode_float", (PyCFunction)__pyx_pw_7erlport_17encode_float, METH_O, 0};
-static PyObject *__pyx_pw_7erlport_17encode_float(PyObject *__pyx_self, PyObject *__pyx_v_term) {
+static PyObject *__pyx_pw_7erlport_9erlencode_17encode_float(PyObject *__pyx_self, PyObject *__pyx_v_term); /*proto*/
+static PyMethodDef __pyx_mdef_7erlport_9erlencode_17encode_float = {"encode_float", (PyCFunction)__pyx_pw_7erlport_9erlencode_17encode_float, METH_O, 0};
+static PyObject *__pyx_pw_7erlport_9erlencode_17encode_float(PyObject *__pyx_self, PyObject *__pyx_v_term) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("encode_float (wrapper)", 0);
-  __pyx_r = __pyx_pf_7erlport_16encode_float(__pyx_self, ((PyObject *)__pyx_v_term));
+  __pyx_r = __pyx_pf_7erlport_9erlencode_16encode_float(__pyx_self, ((PyObject *)__pyx_v_term));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7erlport_16encode_float(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term) {
+static PyObject *__pyx_pf_7erlport_9erlencode_16encode_float(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -3449,7 +3449,7 @@ static PyObject *__pyx_pf_7erlport_16encode_float(CYTHON_UNUSED PyObject *__pyx_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("encode_float", 0);
 
-  /* "src/erlport/erlencode.pyx":131
+  /* "erlport/erlencode.pyx":131
  * 
  * def encode_float(term):
  *     return pack(">Bd", 70, term)             # <<<<<<<<<<<<<<
@@ -3493,7 +3493,7 @@ static PyObject *__pyx_pf_7erlport_16encode_float(CYTHON_UNUSED PyObject *__pyx_
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "src/erlport/erlencode.pyx":130
+  /* "erlport/erlencode.pyx":130
  * 
  * 
  * def encode_float(term):             # <<<<<<<<<<<<<<
@@ -3507,7 +3507,7 @@ static PyObject *__pyx_pf_7erlport_16encode_float(CYTHON_UNUSED PyObject *__pyx_
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("erlport.encode_float", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("erlport.erlencode.encode_float", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -3515,7 +3515,7 @@ static PyObject *__pyx_pf_7erlport_16encode_float(CYTHON_UNUSED PyObject *__pyx_
   return __pyx_r;
 }
 
-/* "src/erlport/erlencode.pyx":134
+/* "erlport/erlencode.pyx":134
  * 
  * 
  * def encode_dict(term):             # <<<<<<<<<<<<<<
@@ -3524,20 +3524,20 @@ static PyObject *__pyx_pf_7erlport_16encode_float(CYTHON_UNUSED PyObject *__pyx_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7erlport_19encode_dict(PyObject *__pyx_self, PyObject *__pyx_v_term); /*proto*/
-static PyMethodDef __pyx_mdef_7erlport_19encode_dict = {"encode_dict", (PyCFunction)__pyx_pw_7erlport_19encode_dict, METH_O, 0};
-static PyObject *__pyx_pw_7erlport_19encode_dict(PyObject *__pyx_self, PyObject *__pyx_v_term) {
+static PyObject *__pyx_pw_7erlport_9erlencode_19encode_dict(PyObject *__pyx_self, PyObject *__pyx_v_term); /*proto*/
+static PyMethodDef __pyx_mdef_7erlport_9erlencode_19encode_dict = {"encode_dict", (PyCFunction)__pyx_pw_7erlport_9erlencode_19encode_dict, METH_O, 0};
+static PyObject *__pyx_pw_7erlport_9erlencode_19encode_dict(PyObject *__pyx_self, PyObject *__pyx_v_term) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("encode_dict (wrapper)", 0);
-  __pyx_r = __pyx_pf_7erlport_18encode_dict(__pyx_self, ((PyObject *)__pyx_v_term));
+  __pyx_r = __pyx_pf_7erlport_9erlencode_18encode_dict(__pyx_self, ((PyObject *)__pyx_v_term));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7erlport_18encode_dict(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term) {
+static PyObject *__pyx_pf_7erlport_9erlencode_18encode_dict(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -3552,7 +3552,7 @@ static PyObject *__pyx_pf_7erlport_18encode_dict(CYTHON_UNUSED PyObject *__pyx_s
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("encode_dict", 0);
 
-  /* "src/erlport/erlencode.pyx":135
+  /* "erlport/erlencode.pyx":135
  * 
  * def encode_dict(term):
  *     return encode_term(sorted(term.iteritems()))             # <<<<<<<<<<<<<<
@@ -3618,7 +3618,7 @@ static PyObject *__pyx_pf_7erlport_18encode_dict(CYTHON_UNUSED PyObject *__pyx_s
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "src/erlport/erlencode.pyx":134
+  /* "erlport/erlencode.pyx":134
  * 
  * 
  * def encode_dict(term):             # <<<<<<<<<<<<<<
@@ -3634,7 +3634,7 @@ static PyObject *__pyx_pf_7erlport_18encode_dict(CYTHON_UNUSED PyObject *__pyx_s
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_AddTraceback("erlport.encode_dict", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("erlport.erlencode.encode_dict", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -3642,7 +3642,7 @@ static PyObject *__pyx_pf_7erlport_18encode_dict(CYTHON_UNUSED PyObject *__pyx_s
   return __pyx_r;
 }
 
-/* "src/erlport/erlencode.pyx":138
+/* "erlport/erlencode.pyx":138
  * 
  * 
  * def encode_none(term):             # <<<<<<<<<<<<<<
@@ -3651,20 +3651,20 @@ static PyObject *__pyx_pf_7erlport_18encode_dict(CYTHON_UNUSED PyObject *__pyx_s
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7erlport_21encode_none(PyObject *__pyx_self, PyObject *__pyx_v_term); /*proto*/
-static PyMethodDef __pyx_mdef_7erlport_21encode_none = {"encode_none", (PyCFunction)__pyx_pw_7erlport_21encode_none, METH_O, 0};
-static PyObject *__pyx_pw_7erlport_21encode_none(PyObject *__pyx_self, PyObject *__pyx_v_term) {
+static PyObject *__pyx_pw_7erlport_9erlencode_21encode_none(PyObject *__pyx_self, PyObject *__pyx_v_term); /*proto*/
+static PyMethodDef __pyx_mdef_7erlport_9erlencode_21encode_none = {"encode_none", (PyCFunction)__pyx_pw_7erlport_9erlencode_21encode_none, METH_O, 0};
+static PyObject *__pyx_pw_7erlport_9erlencode_21encode_none(PyObject *__pyx_self, PyObject *__pyx_v_term) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("encode_none (wrapper)", 0);
-  __pyx_r = __pyx_pf_7erlport_20encode_none(__pyx_self, ((PyObject *)__pyx_v_term));
+  __pyx_r = __pyx_pf_7erlport_9erlencode_20encode_none(__pyx_self, ((PyObject *)__pyx_v_term));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7erlport_20encode_none(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_term) {
+static PyObject *__pyx_pf_7erlport_9erlencode_20encode_none(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_term) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -3674,7 +3674,7 @@ static PyObject *__pyx_pf_7erlport_20encode_none(CYTHON_UNUSED PyObject *__pyx_s
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("encode_none", 0);
 
-  /* "src/erlport/erlencode.pyx":139
+  /* "erlport/erlencode.pyx":139
  * 
  * def encode_none(term):
  *     return pack(">BH", 100, 4) + "none"             # <<<<<<<<<<<<<<
@@ -3694,7 +3694,7 @@ static PyObject *__pyx_pf_7erlport_20encode_none(CYTHON_UNUSED PyObject *__pyx_s
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "src/erlport/erlencode.pyx":138
+  /* "erlport/erlencode.pyx":138
  * 
  * 
  * def encode_none(term):             # <<<<<<<<<<<<<<
@@ -3706,7 +3706,7 @@ static PyObject *__pyx_pf_7erlport_20encode_none(CYTHON_UNUSED PyObject *__pyx_s
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("erlport.encode_none", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("erlport.erlencode.encode_none", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -3714,7 +3714,7 @@ static PyObject *__pyx_pf_7erlport_20encode_none(CYTHON_UNUSED PyObject *__pyx_s
   return __pyx_r;
 }
 
-/* "src/erlport/erlencode.pyx":142
+/* "erlport/erlencode.pyx":142
  * 
  * 
  * def encode_datetime(term):             # <<<<<<<<<<<<<<
@@ -3723,20 +3723,20 @@ static PyObject *__pyx_pf_7erlport_20encode_none(CYTHON_UNUSED PyObject *__pyx_s
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7erlport_23encode_datetime(PyObject *__pyx_self, PyObject *__pyx_v_term); /*proto*/
-static PyMethodDef __pyx_mdef_7erlport_23encode_datetime = {"encode_datetime", (PyCFunction)__pyx_pw_7erlport_23encode_datetime, METH_O, 0};
-static PyObject *__pyx_pw_7erlport_23encode_datetime(PyObject *__pyx_self, PyObject *__pyx_v_term) {
+static PyObject *__pyx_pw_7erlport_9erlencode_23encode_datetime(PyObject *__pyx_self, PyObject *__pyx_v_term); /*proto*/
+static PyMethodDef __pyx_mdef_7erlport_9erlencode_23encode_datetime = {"encode_datetime", (PyCFunction)__pyx_pw_7erlport_9erlencode_23encode_datetime, METH_O, 0};
+static PyObject *__pyx_pw_7erlport_9erlencode_23encode_datetime(PyObject *__pyx_self, PyObject *__pyx_v_term) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("encode_datetime (wrapper)", 0);
-  __pyx_r = __pyx_pf_7erlport_22encode_datetime(__pyx_self, ((PyObject *)__pyx_v_term));
+  __pyx_r = __pyx_pf_7erlport_9erlencode_22encode_datetime(__pyx_self, ((PyObject *)__pyx_v_term));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7erlport_22encode_datetime(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term) {
+static PyObject *__pyx_pf_7erlport_9erlencode_22encode_datetime(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -3751,7 +3751,7 @@ static PyObject *__pyx_pf_7erlport_22encode_datetime(CYTHON_UNUSED PyObject *__p
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("encode_datetime", 0);
 
-  /* "src/erlport/erlencode.pyx":143
+  /* "erlport/erlencode.pyx":143
  * 
  * def encode_datetime(term):
  *     return encode_term(((term.year, term.month, term.day),             # <<<<<<<<<<<<<<
@@ -3779,7 +3779,7 @@ static PyObject *__pyx_pf_7erlport_22encode_datetime(CYTHON_UNUSED PyObject *__p
   __pyx_t_4 = 0;
   __pyx_t_5 = 0;
 
-  /* "src/erlport/erlencode.pyx":144
+  /* "erlport/erlencode.pyx":144
  * def encode_datetime(term):
  *     return encode_term(((term.year, term.month, term.day),
  *                         (term.hour, term.minute, term.second)))             # <<<<<<<<<<<<<<
@@ -3804,7 +3804,7 @@ static PyObject *__pyx_pf_7erlport_22encode_datetime(CYTHON_UNUSED PyObject *__p
   __pyx_t_4 = 0;
   __pyx_t_3 = 0;
 
-  /* "src/erlport/erlencode.pyx":143
+  /* "erlport/erlencode.pyx":143
  * 
  * def encode_datetime(term):
  *     return encode_term(((term.year, term.month, term.day),             # <<<<<<<<<<<<<<
@@ -3849,7 +3849,7 @@ static PyObject *__pyx_pf_7erlport_22encode_datetime(CYTHON_UNUSED PyObject *__p
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "src/erlport/erlencode.pyx":142
+  /* "erlport/erlencode.pyx":142
  * 
  * 
  * def encode_datetime(term):             # <<<<<<<<<<<<<<
@@ -3866,7 +3866,7 @@ static PyObject *__pyx_pf_7erlport_22encode_datetime(CYTHON_UNUSED PyObject *__p
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("erlport.encode_datetime", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("erlport.erlencode.encode_datetime", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -3874,7 +3874,7 @@ static PyObject *__pyx_pf_7erlport_22encode_datetime(CYTHON_UNUSED PyObject *__p
   return __pyx_r;
 }
 
-/* "src/erlport/erlencode.pyx":164
+/* "erlport/erlencode.pyx":164
  * 
  * 
  * def encode(term, compressed=False):             # <<<<<<<<<<<<<<
@@ -3883,10 +3883,10 @@ static PyObject *__pyx_pf_7erlport_22encode_datetime(CYTHON_UNUSED PyObject *__p
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7erlport_25encode(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_7erlport_24encode[] = "Encode Erlang external term.";
-static PyMethodDef __pyx_mdef_7erlport_25encode = {"encode", (PyCFunction)__pyx_pw_7erlport_25encode, METH_VARARGS|METH_KEYWORDS, __pyx_doc_7erlport_24encode};
-static PyObject *__pyx_pw_7erlport_25encode(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_7erlport_9erlencode_25encode(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_7erlport_9erlencode_24encode[] = "Encode Erlang external term.";
+static PyMethodDef __pyx_mdef_7erlport_9erlencode_25encode = {"encode", (PyCFunction)__pyx_pw_7erlport_9erlencode_25encode, METH_VARARGS|METH_KEYWORDS, __pyx_doc_7erlport_9erlencode_24encode};
+static PyObject *__pyx_pw_7erlport_9erlencode_25encode(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_term = 0;
   PyObject *__pyx_v_compressed = 0;
   int __pyx_lineno = 0;
@@ -3937,18 +3937,18 @@ static PyObject *__pyx_pw_7erlport_25encode(PyObject *__pyx_self, PyObject *__py
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("encode", 0, 1, 2, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 164; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("erlport.encode", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("erlport.erlencode.encode", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_7erlport_24encode(__pyx_self, __pyx_v_term, __pyx_v_compressed);
+  __pyx_r = __pyx_pf_7erlport_9erlencode_24encode(__pyx_self, __pyx_v_term, __pyx_v_compressed);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7erlport_24encode(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term, PyObject *__pyx_v_compressed) {
+static PyObject *__pyx_pf_7erlport_9erlencode_24encode(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term, PyObject *__pyx_v_compressed) {
   PyObject *__pyx_v_encoded_term = NULL;
   PyObject *__pyx_v_zlib_term = NULL;
   PyObject *__pyx_r = NULL;
@@ -3968,7 +3968,7 @@ static PyObject *__pyx_pf_7erlport_24encode(CYTHON_UNUSED PyObject *__pyx_self, 
   __Pyx_RefNannySetupContext("encode", 0);
   __Pyx_INCREF(__pyx_v_compressed);
 
-  /* "src/erlport/erlencode.pyx":166
+  /* "erlport/erlencode.pyx":166
  * def encode(term, compressed=False):
  *     """Encode Erlang external term."""
  *     encoded_term = encode_term(term)             # <<<<<<<<<<<<<<
@@ -4005,7 +4005,7 @@ static PyObject *__pyx_pf_7erlport_24encode(CYTHON_UNUSED PyObject *__pyx_self, 
   __pyx_v_encoded_term = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "src/erlport/erlencode.pyx":168
+  /* "erlport/erlencode.pyx":168
  *     encoded_term = encode_term(term)
  *     # False and 0 do not attempt compression.
  *     if compressed:             # <<<<<<<<<<<<<<
@@ -4015,7 +4015,7 @@ static PyObject *__pyx_pf_7erlport_24encode(CYTHON_UNUSED PyObject *__pyx_self, 
   __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_v_compressed); if (unlikely(__pyx_t_5 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 168; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   if (__pyx_t_5) {
 
-    /* "src/erlport/erlencode.pyx":169
+    /* "erlport/erlencode.pyx":169
  *     # False and 0 do not attempt compression.
  *     if compressed:
  *         if compressed is True:             # <<<<<<<<<<<<<<
@@ -4026,7 +4026,7 @@ static PyObject *__pyx_pf_7erlport_24encode(CYTHON_UNUSED PyObject *__pyx_self, 
     __pyx_t_6 = (__pyx_t_5 != 0);
     if (__pyx_t_6) {
 
-      /* "src/erlport/erlencode.pyx":171
+      /* "erlport/erlencode.pyx":171
  *         if compressed is True:
  *             # default compression level of 6
  *             compressed = 6             # <<<<<<<<<<<<<<
@@ -4039,7 +4039,7 @@ static PyObject *__pyx_pf_7erlport_24encode(CYTHON_UNUSED PyObject *__pyx_self, 
     }
     __pyx_L4:;
 
-    /* "src/erlport/erlencode.pyx":172
+    /* "erlport/erlencode.pyx":172
  *             # default compression level of 6
  *             compressed = 6
  *         zlib_term = compress(encoded_term, compressed)             # <<<<<<<<<<<<<<
@@ -4078,7 +4078,7 @@ static PyObject *__pyx_pf_7erlport_24encode(CYTHON_UNUSED PyObject *__pyx_self, 
     __pyx_v_zlib_term = __pyx_t_1;
     __pyx_t_1 = 0;
 
-    /* "src/erlport/erlencode.pyx":173
+    /* "erlport/erlencode.pyx":173
  *             compressed = 6
  *         zlib_term = compress(encoded_term, compressed)
  *         if len(zlib_term) + 5 <= len(encoded_term):             # <<<<<<<<<<<<<<
@@ -4090,7 +4090,7 @@ static PyObject *__pyx_pf_7erlport_24encode(CYTHON_UNUSED PyObject *__pyx_self, 
     __pyx_t_6 = (((__pyx_t_7 + 5) <= __pyx_t_8) != 0);
     if (__pyx_t_6) {
 
-      /* "src/erlport/erlencode.pyx":175
+      /* "erlport/erlencode.pyx":175
  *         if len(zlib_term) + 5 <= len(encoded_term):
  *             # compressed term is smaller
  *             return '\x83\x50' + pack('>I', len(encoded_term)) + zlib_term             # <<<<<<<<<<<<<<
@@ -4144,7 +4144,7 @@ static PyObject *__pyx_pf_7erlport_24encode(CYTHON_UNUSED PyObject *__pyx_self, 
   }
   __pyx_L3:;
 
-  /* "src/erlport/erlencode.pyx":176
+  /* "erlport/erlencode.pyx":176
  *             # compressed term is smaller
  *             return '\x83\x50' + pack('>I', len(encoded_term)) + zlib_term
  *     return "\x83" + encoded_term             # <<<<<<<<<<<<<<
@@ -4158,7 +4158,7 @@ static PyObject *__pyx_pf_7erlport_24encode(CYTHON_UNUSED PyObject *__pyx_self, 
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "src/erlport/erlencode.pyx":164
+  /* "erlport/erlencode.pyx":164
  * 
  * 
  * def encode(term, compressed=False):             # <<<<<<<<<<<<<<
@@ -4173,7 +4173,7 @@ static PyObject *__pyx_pf_7erlport_24encode(CYTHON_UNUSED PyObject *__pyx_self, 
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_9);
-  __Pyx_AddTraceback("erlport.encode", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("erlport.erlencode.encode", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_encoded_term);
@@ -4184,7 +4184,7 @@ static PyObject *__pyx_pf_7erlport_24encode(CYTHON_UNUSED PyObject *__pyx_self, 
   return __pyx_r;
 }
 
-/* "src/erlport/erlencode.pyx":179
+/* "erlport/erlencode.pyx":179
  * 
  * 
  * def encode_term(term):             # <<<<<<<<<<<<<<
@@ -4193,20 +4193,20 @@ static PyObject *__pyx_pf_7erlport_24encode(CYTHON_UNUSED PyObject *__pyx_self, 
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7erlport_27encode_term(PyObject *__pyx_self, PyObject *__pyx_v_term); /*proto*/
-static PyMethodDef __pyx_mdef_7erlport_27encode_term = {"encode_term", (PyCFunction)__pyx_pw_7erlport_27encode_term, METH_O, 0};
-static PyObject *__pyx_pw_7erlport_27encode_term(PyObject *__pyx_self, PyObject *__pyx_v_term) {
+static PyObject *__pyx_pw_7erlport_9erlencode_27encode_term(PyObject *__pyx_self, PyObject *__pyx_v_term); /*proto*/
+static PyMethodDef __pyx_mdef_7erlport_9erlencode_27encode_term = {"encode_term", (PyCFunction)__pyx_pw_7erlport_9erlencode_27encode_term, METH_O, 0};
+static PyObject *__pyx_pw_7erlport_9erlencode_27encode_term(PyObject *__pyx_self, PyObject *__pyx_v_term) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("encode_term (wrapper)", 0);
-  __pyx_r = __pyx_pf_7erlport_26encode_term(__pyx_self, ((PyObject *)__pyx_v_term));
+  __pyx_r = __pyx_pf_7erlport_9erlencode_26encode_term(__pyx_self, ((PyObject *)__pyx_v_term));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7erlport_26encode_term(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term) {
+static PyObject *__pyx_pf_7erlport_9erlencode_26encode_term(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_term) {
   PyObject *__pyx_v_fun = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -4221,7 +4221,7 @@ static PyObject *__pyx_pf_7erlport_26encode_term(CYTHON_UNUSED PyObject *__pyx_s
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("encode_term", 0);
 
-  /* "src/erlport/erlencode.pyx":180
+  /* "erlport/erlencode.pyx":180
  * 
  * def encode_term(term):
  *     fun = ENCODE_MAP[type(term)]             # <<<<<<<<<<<<<<
@@ -4236,7 +4236,7 @@ static PyObject *__pyx_pf_7erlport_26encode_term(CYTHON_UNUSED PyObject *__pyx_s
   __pyx_v_fun = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "src/erlport/erlencode.pyx":181
+  /* "erlport/erlencode.pyx":181
  * def encode_term(term):
  *     fun = ENCODE_MAP[type(term)]
  *     if not fun:             # <<<<<<<<<<<<<<
@@ -4247,7 +4247,7 @@ static PyObject *__pyx_pf_7erlport_26encode_term(CYTHON_UNUSED PyObject *__pyx_s
   __pyx_t_4 = ((!__pyx_t_3) != 0);
   if (__pyx_t_4) {
 
-    /* "src/erlport/erlencode.pyx":182
+    /* "erlport/erlencode.pyx":182
  *     fun = ENCODE_MAP[type(term)]
  *     if not fun:
  *         raise ValueError("unsupported data type: %s" % type(term))             # <<<<<<<<<<<<<<
@@ -4268,7 +4268,7 @@ static PyObject *__pyx_pf_7erlport_26encode_term(CYTHON_UNUSED PyObject *__pyx_s
     {__pyx_filename = __pyx_f[0]; __pyx_lineno = 182; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
 
-  /* "src/erlport/erlencode.pyx":183
+  /* "erlport/erlencode.pyx":183
  *     if not fun:
  *         raise ValueError("unsupported data type: %s" % type(term))
  *     return fun(term)             # <<<<<<<<<<<<<<
@@ -4304,7 +4304,7 @@ static PyObject *__pyx_pf_7erlport_26encode_term(CYTHON_UNUSED PyObject *__pyx_s
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "src/erlport/erlencode.pyx":179
+  /* "erlport/erlencode.pyx":179
  * 
  * 
  * def encode_term(term):             # <<<<<<<<<<<<<<
@@ -4318,7 +4318,7 @@ static PyObject *__pyx_pf_7erlport_26encode_term(CYTHON_UNUSED PyObject *__pyx_s
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_AddTraceback("erlport.encode_term", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("erlport.erlencode.encode_term", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_fun);
@@ -4327,14 +4327,14 @@ static PyObject *__pyx_pf_7erlport_26encode_term(CYTHON_UNUSED PyObject *__pyx_s
   return __pyx_r;
 }
 
-static struct __pyx_obj_7erlport___pyx_scope_struct__encode_tuple *__pyx_freelist_7erlport___pyx_scope_struct__encode_tuple[8];
-static int __pyx_freecount_7erlport___pyx_scope_struct__encode_tuple = 0;
+static struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct__encode_tuple *__pyx_freelist_7erlport_9erlencode___pyx_scope_struct__encode_tuple[8];
+static int __pyx_freecount_7erlport_9erlencode___pyx_scope_struct__encode_tuple = 0;
 
-static PyObject *__pyx_tp_new_7erlport___pyx_scope_struct__encode_tuple(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
+static PyObject *__pyx_tp_new_7erlport_9erlencode___pyx_scope_struct__encode_tuple(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
   PyObject *o;
-  if (CYTHON_COMPILING_IN_CPYTHON && likely((__pyx_freecount_7erlport___pyx_scope_struct__encode_tuple > 0) & (t->tp_basicsize == sizeof(struct __pyx_obj_7erlport___pyx_scope_struct__encode_tuple)))) {
-    o = (PyObject*)__pyx_freelist_7erlport___pyx_scope_struct__encode_tuple[--__pyx_freecount_7erlport___pyx_scope_struct__encode_tuple];
-    memset(o, 0, sizeof(struct __pyx_obj_7erlport___pyx_scope_struct__encode_tuple));
+  if (CYTHON_COMPILING_IN_CPYTHON && likely((__pyx_freecount_7erlport_9erlencode___pyx_scope_struct__encode_tuple > 0) & (t->tp_basicsize == sizeof(struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct__encode_tuple)))) {
+    o = (PyObject*)__pyx_freelist_7erlport_9erlencode___pyx_scope_struct__encode_tuple[--__pyx_freecount_7erlport_9erlencode___pyx_scope_struct__encode_tuple];
+    memset(o, 0, sizeof(struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct__encode_tuple));
     (void) PyObject_INIT(o, t);
     PyObject_GC_Track(o);
   } else {
@@ -4344,21 +4344,21 @@ static PyObject *__pyx_tp_new_7erlport___pyx_scope_struct__encode_tuple(PyTypeOb
   return o;
 }
 
-static void __pyx_tp_dealloc_7erlport___pyx_scope_struct__encode_tuple(PyObject *o) {
-  struct __pyx_obj_7erlport___pyx_scope_struct__encode_tuple *p = (struct __pyx_obj_7erlport___pyx_scope_struct__encode_tuple *)o;
+static void __pyx_tp_dealloc_7erlport_9erlencode___pyx_scope_struct__encode_tuple(PyObject *o) {
+  struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct__encode_tuple *p = (struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct__encode_tuple *)o;
   PyObject_GC_UnTrack(o);
   Py_CLEAR(p->__pyx_v__encode_term);
   Py_CLEAR(p->__pyx_v_term);
-  if (CYTHON_COMPILING_IN_CPYTHON && ((__pyx_freecount_7erlport___pyx_scope_struct__encode_tuple < 8) & (Py_TYPE(o)->tp_basicsize == sizeof(struct __pyx_obj_7erlport___pyx_scope_struct__encode_tuple)))) {
-    __pyx_freelist_7erlport___pyx_scope_struct__encode_tuple[__pyx_freecount_7erlport___pyx_scope_struct__encode_tuple++] = ((struct __pyx_obj_7erlport___pyx_scope_struct__encode_tuple *)o);
+  if (CYTHON_COMPILING_IN_CPYTHON && ((__pyx_freecount_7erlport_9erlencode___pyx_scope_struct__encode_tuple < 8) & (Py_TYPE(o)->tp_basicsize == sizeof(struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct__encode_tuple)))) {
+    __pyx_freelist_7erlport_9erlencode___pyx_scope_struct__encode_tuple[__pyx_freecount_7erlport_9erlencode___pyx_scope_struct__encode_tuple++] = ((struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct__encode_tuple *)o);
   } else {
     (*Py_TYPE(o)->tp_free)(o);
   }
 }
 
-static int __pyx_tp_traverse_7erlport___pyx_scope_struct__encode_tuple(PyObject *o, visitproc v, void *a) {
+static int __pyx_tp_traverse_7erlport_9erlencode___pyx_scope_struct__encode_tuple(PyObject *o, visitproc v, void *a) {
   int e;
-  struct __pyx_obj_7erlport___pyx_scope_struct__encode_tuple *p = (struct __pyx_obj_7erlport___pyx_scope_struct__encode_tuple *)o;
+  struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct__encode_tuple *p = (struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct__encode_tuple *)o;
   if (p->__pyx_v__encode_term) {
     e = (*v)(p->__pyx_v__encode_term, a); if (e) return e;
   }
@@ -4368,9 +4368,9 @@ static int __pyx_tp_traverse_7erlport___pyx_scope_struct__encode_tuple(PyObject 
   return 0;
 }
 
-static int __pyx_tp_clear_7erlport___pyx_scope_struct__encode_tuple(PyObject *o) {
+static int __pyx_tp_clear_7erlport_9erlencode___pyx_scope_struct__encode_tuple(PyObject *o) {
   PyObject* tmp;
-  struct __pyx_obj_7erlport___pyx_scope_struct__encode_tuple *p = (struct __pyx_obj_7erlport___pyx_scope_struct__encode_tuple *)o;
+  struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct__encode_tuple *p = (struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct__encode_tuple *)o;
   tmp = ((PyObject*)p->__pyx_v__encode_term);
   p->__pyx_v__encode_term = Py_None; Py_INCREF(Py_None);
   Py_XDECREF(tmp);
@@ -4380,12 +4380,12 @@ static int __pyx_tp_clear_7erlport___pyx_scope_struct__encode_tuple(PyObject *o)
   return 0;
 }
 
-static PyTypeObject __pyx_type_7erlport___pyx_scope_struct__encode_tuple = {
+static PyTypeObject __pyx_type_7erlport_9erlencode___pyx_scope_struct__encode_tuple = {
   PyVarObject_HEAD_INIT(0, 0)
-  "erlport.__pyx_scope_struct__encode_tuple", /*tp_name*/
-  sizeof(struct __pyx_obj_7erlport___pyx_scope_struct__encode_tuple), /*tp_basicsize*/
+  "erlport.erlencode.__pyx_scope_struct__encode_tuple", /*tp_name*/
+  sizeof(struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct__encode_tuple), /*tp_basicsize*/
   0, /*tp_itemsize*/
-  __pyx_tp_dealloc_7erlport___pyx_scope_struct__encode_tuple, /*tp_dealloc*/
+  __pyx_tp_dealloc_7erlport_9erlencode___pyx_scope_struct__encode_tuple, /*tp_dealloc*/
   0, /*tp_print*/
   0, /*tp_getattr*/
   0, /*tp_setattr*/
@@ -4406,8 +4406,8 @@ static PyTypeObject __pyx_type_7erlport___pyx_scope_struct__encode_tuple = {
   0, /*tp_as_buffer*/
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_HAVE_GC, /*tp_flags*/
   0, /*tp_doc*/
-  __pyx_tp_traverse_7erlport___pyx_scope_struct__encode_tuple, /*tp_traverse*/
-  __pyx_tp_clear_7erlport___pyx_scope_struct__encode_tuple, /*tp_clear*/
+  __pyx_tp_traverse_7erlport_9erlencode___pyx_scope_struct__encode_tuple, /*tp_traverse*/
+  __pyx_tp_clear_7erlport_9erlencode___pyx_scope_struct__encode_tuple, /*tp_clear*/
   0, /*tp_richcompare*/
   0, /*tp_weaklistoffset*/
   0, /*tp_iter*/
@@ -4422,7 +4422,7 @@ static PyTypeObject __pyx_type_7erlport___pyx_scope_struct__encode_tuple = {
   0, /*tp_dictoffset*/
   0, /*tp_init*/
   0, /*tp_alloc*/
-  __pyx_tp_new_7erlport___pyx_scope_struct__encode_tuple, /*tp_new*/
+  __pyx_tp_new_7erlport_9erlencode___pyx_scope_struct__encode_tuple, /*tp_new*/
   0, /*tp_free*/
   0, /*tp_is_gc*/
   0, /*tp_bases*/
@@ -4437,14 +4437,14 @@ static PyTypeObject __pyx_type_7erlport___pyx_scope_struct__encode_tuple = {
   #endif
 };
 
-static struct __pyx_obj_7erlport___pyx_scope_struct_1_genexpr *__pyx_freelist_7erlport___pyx_scope_struct_1_genexpr[8];
-static int __pyx_freecount_7erlport___pyx_scope_struct_1_genexpr = 0;
+static struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_1_genexpr *__pyx_freelist_7erlport_9erlencode___pyx_scope_struct_1_genexpr[8];
+static int __pyx_freecount_7erlport_9erlencode___pyx_scope_struct_1_genexpr = 0;
 
-static PyObject *__pyx_tp_new_7erlport___pyx_scope_struct_1_genexpr(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
+static PyObject *__pyx_tp_new_7erlport_9erlencode___pyx_scope_struct_1_genexpr(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
   PyObject *o;
-  if (CYTHON_COMPILING_IN_CPYTHON && likely((__pyx_freecount_7erlport___pyx_scope_struct_1_genexpr > 0) & (t->tp_basicsize == sizeof(struct __pyx_obj_7erlport___pyx_scope_struct_1_genexpr)))) {
-    o = (PyObject*)__pyx_freelist_7erlport___pyx_scope_struct_1_genexpr[--__pyx_freecount_7erlport___pyx_scope_struct_1_genexpr];
-    memset(o, 0, sizeof(struct __pyx_obj_7erlport___pyx_scope_struct_1_genexpr));
+  if (CYTHON_COMPILING_IN_CPYTHON && likely((__pyx_freecount_7erlport_9erlencode___pyx_scope_struct_1_genexpr > 0) & (t->tp_basicsize == sizeof(struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_1_genexpr)))) {
+    o = (PyObject*)__pyx_freelist_7erlport_9erlencode___pyx_scope_struct_1_genexpr[--__pyx_freecount_7erlport_9erlencode___pyx_scope_struct_1_genexpr];
+    memset(o, 0, sizeof(struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_1_genexpr));
     (void) PyObject_INIT(o, t);
     PyObject_GC_Track(o);
   } else {
@@ -4454,22 +4454,22 @@ static PyObject *__pyx_tp_new_7erlport___pyx_scope_struct_1_genexpr(PyTypeObject
   return o;
 }
 
-static void __pyx_tp_dealloc_7erlport___pyx_scope_struct_1_genexpr(PyObject *o) {
-  struct __pyx_obj_7erlport___pyx_scope_struct_1_genexpr *p = (struct __pyx_obj_7erlport___pyx_scope_struct_1_genexpr *)o;
+static void __pyx_tp_dealloc_7erlport_9erlencode___pyx_scope_struct_1_genexpr(PyObject *o) {
+  struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_1_genexpr *p = (struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_1_genexpr *)o;
   PyObject_GC_UnTrack(o);
   Py_CLEAR(p->__pyx_outer_scope);
   Py_CLEAR(p->__pyx_v_t);
   Py_CLEAR(p->__pyx_t_0);
-  if (CYTHON_COMPILING_IN_CPYTHON && ((__pyx_freecount_7erlport___pyx_scope_struct_1_genexpr < 8) & (Py_TYPE(o)->tp_basicsize == sizeof(struct __pyx_obj_7erlport___pyx_scope_struct_1_genexpr)))) {
-    __pyx_freelist_7erlport___pyx_scope_struct_1_genexpr[__pyx_freecount_7erlport___pyx_scope_struct_1_genexpr++] = ((struct __pyx_obj_7erlport___pyx_scope_struct_1_genexpr *)o);
+  if (CYTHON_COMPILING_IN_CPYTHON && ((__pyx_freecount_7erlport_9erlencode___pyx_scope_struct_1_genexpr < 8) & (Py_TYPE(o)->tp_basicsize == sizeof(struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_1_genexpr)))) {
+    __pyx_freelist_7erlport_9erlencode___pyx_scope_struct_1_genexpr[__pyx_freecount_7erlport_9erlencode___pyx_scope_struct_1_genexpr++] = ((struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_1_genexpr *)o);
   } else {
     (*Py_TYPE(o)->tp_free)(o);
   }
 }
 
-static int __pyx_tp_traverse_7erlport___pyx_scope_struct_1_genexpr(PyObject *o, visitproc v, void *a) {
+static int __pyx_tp_traverse_7erlport_9erlencode___pyx_scope_struct_1_genexpr(PyObject *o, visitproc v, void *a) {
   int e;
-  struct __pyx_obj_7erlport___pyx_scope_struct_1_genexpr *p = (struct __pyx_obj_7erlport___pyx_scope_struct_1_genexpr *)o;
+  struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_1_genexpr *p = (struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_1_genexpr *)o;
   if (p->__pyx_outer_scope) {
     e = (*v)(((PyObject*)p->__pyx_outer_scope), a); if (e) return e;
   }
@@ -4482,11 +4482,11 @@ static int __pyx_tp_traverse_7erlport___pyx_scope_struct_1_genexpr(PyObject *o, 
   return 0;
 }
 
-static int __pyx_tp_clear_7erlport___pyx_scope_struct_1_genexpr(PyObject *o) {
+static int __pyx_tp_clear_7erlport_9erlencode___pyx_scope_struct_1_genexpr(PyObject *o) {
   PyObject* tmp;
-  struct __pyx_obj_7erlport___pyx_scope_struct_1_genexpr *p = (struct __pyx_obj_7erlport___pyx_scope_struct_1_genexpr *)o;
+  struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_1_genexpr *p = (struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_1_genexpr *)o;
   tmp = ((PyObject*)p->__pyx_outer_scope);
-  p->__pyx_outer_scope = ((struct __pyx_obj_7erlport___pyx_scope_struct__encode_tuple *)Py_None); Py_INCREF(Py_None);
+  p->__pyx_outer_scope = ((struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct__encode_tuple *)Py_None); Py_INCREF(Py_None);
   Py_XDECREF(tmp);
   tmp = ((PyObject*)p->__pyx_v_t);
   p->__pyx_v_t = Py_None; Py_INCREF(Py_None);
@@ -4497,12 +4497,12 @@ static int __pyx_tp_clear_7erlport___pyx_scope_struct_1_genexpr(PyObject *o) {
   return 0;
 }
 
-static PyTypeObject __pyx_type_7erlport___pyx_scope_struct_1_genexpr = {
+static PyTypeObject __pyx_type_7erlport_9erlencode___pyx_scope_struct_1_genexpr = {
   PyVarObject_HEAD_INIT(0, 0)
-  "erlport.__pyx_scope_struct_1_genexpr", /*tp_name*/
-  sizeof(struct __pyx_obj_7erlport___pyx_scope_struct_1_genexpr), /*tp_basicsize*/
+  "erlport.erlencode.__pyx_scope_struct_1_genexpr", /*tp_name*/
+  sizeof(struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_1_genexpr), /*tp_basicsize*/
   0, /*tp_itemsize*/
-  __pyx_tp_dealloc_7erlport___pyx_scope_struct_1_genexpr, /*tp_dealloc*/
+  __pyx_tp_dealloc_7erlport_9erlencode___pyx_scope_struct_1_genexpr, /*tp_dealloc*/
   0, /*tp_print*/
   0, /*tp_getattr*/
   0, /*tp_setattr*/
@@ -4523,8 +4523,8 @@ static PyTypeObject __pyx_type_7erlport___pyx_scope_struct_1_genexpr = {
   0, /*tp_as_buffer*/
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_HAVE_GC, /*tp_flags*/
   0, /*tp_doc*/
-  __pyx_tp_traverse_7erlport___pyx_scope_struct_1_genexpr, /*tp_traverse*/
-  __pyx_tp_clear_7erlport___pyx_scope_struct_1_genexpr, /*tp_clear*/
+  __pyx_tp_traverse_7erlport_9erlencode___pyx_scope_struct_1_genexpr, /*tp_traverse*/
+  __pyx_tp_clear_7erlport_9erlencode___pyx_scope_struct_1_genexpr, /*tp_clear*/
   0, /*tp_richcompare*/
   0, /*tp_weaklistoffset*/
   0, /*tp_iter*/
@@ -4539,7 +4539,7 @@ static PyTypeObject __pyx_type_7erlport___pyx_scope_struct_1_genexpr = {
   0, /*tp_dictoffset*/
   0, /*tp_init*/
   0, /*tp_alloc*/
-  __pyx_tp_new_7erlport___pyx_scope_struct_1_genexpr, /*tp_new*/
+  __pyx_tp_new_7erlport_9erlencode___pyx_scope_struct_1_genexpr, /*tp_new*/
   0, /*tp_free*/
   0, /*tp_is_gc*/
   0, /*tp_bases*/
@@ -4554,14 +4554,14 @@ static PyTypeObject __pyx_type_7erlport___pyx_scope_struct_1_genexpr = {
   #endif
 };
 
-static struct __pyx_obj_7erlport___pyx_scope_struct_2_encode_list *__pyx_freelist_7erlport___pyx_scope_struct_2_encode_list[8];
-static int __pyx_freecount_7erlport___pyx_scope_struct_2_encode_list = 0;
+static struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_2_encode_list *__pyx_freelist_7erlport_9erlencode___pyx_scope_struct_2_encode_list[8];
+static int __pyx_freecount_7erlport_9erlencode___pyx_scope_struct_2_encode_list = 0;
 
-static PyObject *__pyx_tp_new_7erlport___pyx_scope_struct_2_encode_list(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
+static PyObject *__pyx_tp_new_7erlport_9erlencode___pyx_scope_struct_2_encode_list(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
   PyObject *o;
-  if (CYTHON_COMPILING_IN_CPYTHON && likely((__pyx_freecount_7erlport___pyx_scope_struct_2_encode_list > 0) & (t->tp_basicsize == sizeof(struct __pyx_obj_7erlport___pyx_scope_struct_2_encode_list)))) {
-    o = (PyObject*)__pyx_freelist_7erlport___pyx_scope_struct_2_encode_list[--__pyx_freecount_7erlport___pyx_scope_struct_2_encode_list];
-    memset(o, 0, sizeof(struct __pyx_obj_7erlport___pyx_scope_struct_2_encode_list));
+  if (CYTHON_COMPILING_IN_CPYTHON && likely((__pyx_freecount_7erlport_9erlencode___pyx_scope_struct_2_encode_list > 0) & (t->tp_basicsize == sizeof(struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_2_encode_list)))) {
+    o = (PyObject*)__pyx_freelist_7erlport_9erlencode___pyx_scope_struct_2_encode_list[--__pyx_freecount_7erlport_9erlencode___pyx_scope_struct_2_encode_list];
+    memset(o, 0, sizeof(struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_2_encode_list));
     (void) PyObject_INIT(o, t);
     PyObject_GC_Track(o);
   } else {
@@ -4571,21 +4571,21 @@ static PyObject *__pyx_tp_new_7erlport___pyx_scope_struct_2_encode_list(PyTypeOb
   return o;
 }
 
-static void __pyx_tp_dealloc_7erlport___pyx_scope_struct_2_encode_list(PyObject *o) {
-  struct __pyx_obj_7erlport___pyx_scope_struct_2_encode_list *p = (struct __pyx_obj_7erlport___pyx_scope_struct_2_encode_list *)o;
+static void __pyx_tp_dealloc_7erlport_9erlencode___pyx_scope_struct_2_encode_list(PyObject *o) {
+  struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_2_encode_list *p = (struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_2_encode_list *)o;
   PyObject_GC_UnTrack(o);
   Py_CLEAR(p->__pyx_v__encode_term);
   Py_CLEAR(p->__pyx_v_term);
-  if (CYTHON_COMPILING_IN_CPYTHON && ((__pyx_freecount_7erlport___pyx_scope_struct_2_encode_list < 8) & (Py_TYPE(o)->tp_basicsize == sizeof(struct __pyx_obj_7erlport___pyx_scope_struct_2_encode_list)))) {
-    __pyx_freelist_7erlport___pyx_scope_struct_2_encode_list[__pyx_freecount_7erlport___pyx_scope_struct_2_encode_list++] = ((struct __pyx_obj_7erlport___pyx_scope_struct_2_encode_list *)o);
+  if (CYTHON_COMPILING_IN_CPYTHON && ((__pyx_freecount_7erlport_9erlencode___pyx_scope_struct_2_encode_list < 8) & (Py_TYPE(o)->tp_basicsize == sizeof(struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_2_encode_list)))) {
+    __pyx_freelist_7erlport_9erlencode___pyx_scope_struct_2_encode_list[__pyx_freecount_7erlport_9erlencode___pyx_scope_struct_2_encode_list++] = ((struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_2_encode_list *)o);
   } else {
     (*Py_TYPE(o)->tp_free)(o);
   }
 }
 
-static int __pyx_tp_traverse_7erlport___pyx_scope_struct_2_encode_list(PyObject *o, visitproc v, void *a) {
+static int __pyx_tp_traverse_7erlport_9erlencode___pyx_scope_struct_2_encode_list(PyObject *o, visitproc v, void *a) {
   int e;
-  struct __pyx_obj_7erlport___pyx_scope_struct_2_encode_list *p = (struct __pyx_obj_7erlport___pyx_scope_struct_2_encode_list *)o;
+  struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_2_encode_list *p = (struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_2_encode_list *)o;
   if (p->__pyx_v__encode_term) {
     e = (*v)(p->__pyx_v__encode_term, a); if (e) return e;
   }
@@ -4595,9 +4595,9 @@ static int __pyx_tp_traverse_7erlport___pyx_scope_struct_2_encode_list(PyObject 
   return 0;
 }
 
-static int __pyx_tp_clear_7erlport___pyx_scope_struct_2_encode_list(PyObject *o) {
+static int __pyx_tp_clear_7erlport_9erlencode___pyx_scope_struct_2_encode_list(PyObject *o) {
   PyObject* tmp;
-  struct __pyx_obj_7erlport___pyx_scope_struct_2_encode_list *p = (struct __pyx_obj_7erlport___pyx_scope_struct_2_encode_list *)o;
+  struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_2_encode_list *p = (struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_2_encode_list *)o;
   tmp = ((PyObject*)p->__pyx_v__encode_term);
   p->__pyx_v__encode_term = Py_None; Py_INCREF(Py_None);
   Py_XDECREF(tmp);
@@ -4607,12 +4607,12 @@ static int __pyx_tp_clear_7erlport___pyx_scope_struct_2_encode_list(PyObject *o)
   return 0;
 }
 
-static PyTypeObject __pyx_type_7erlport___pyx_scope_struct_2_encode_list = {
+static PyTypeObject __pyx_type_7erlport_9erlencode___pyx_scope_struct_2_encode_list = {
   PyVarObject_HEAD_INIT(0, 0)
-  "erlport.__pyx_scope_struct_2_encode_list", /*tp_name*/
-  sizeof(struct __pyx_obj_7erlport___pyx_scope_struct_2_encode_list), /*tp_basicsize*/
+  "erlport.erlencode.__pyx_scope_struct_2_encode_list", /*tp_name*/
+  sizeof(struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_2_encode_list), /*tp_basicsize*/
   0, /*tp_itemsize*/
-  __pyx_tp_dealloc_7erlport___pyx_scope_struct_2_encode_list, /*tp_dealloc*/
+  __pyx_tp_dealloc_7erlport_9erlencode___pyx_scope_struct_2_encode_list, /*tp_dealloc*/
   0, /*tp_print*/
   0, /*tp_getattr*/
   0, /*tp_setattr*/
@@ -4633,8 +4633,8 @@ static PyTypeObject __pyx_type_7erlport___pyx_scope_struct_2_encode_list = {
   0, /*tp_as_buffer*/
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_HAVE_GC, /*tp_flags*/
   0, /*tp_doc*/
-  __pyx_tp_traverse_7erlport___pyx_scope_struct_2_encode_list, /*tp_traverse*/
-  __pyx_tp_clear_7erlport___pyx_scope_struct_2_encode_list, /*tp_clear*/
+  __pyx_tp_traverse_7erlport_9erlencode___pyx_scope_struct_2_encode_list, /*tp_traverse*/
+  __pyx_tp_clear_7erlport_9erlencode___pyx_scope_struct_2_encode_list, /*tp_clear*/
   0, /*tp_richcompare*/
   0, /*tp_weaklistoffset*/
   0, /*tp_iter*/
@@ -4649,7 +4649,7 @@ static PyTypeObject __pyx_type_7erlport___pyx_scope_struct_2_encode_list = {
   0, /*tp_dictoffset*/
   0, /*tp_init*/
   0, /*tp_alloc*/
-  __pyx_tp_new_7erlport___pyx_scope_struct_2_encode_list, /*tp_new*/
+  __pyx_tp_new_7erlport_9erlencode___pyx_scope_struct_2_encode_list, /*tp_new*/
   0, /*tp_free*/
   0, /*tp_is_gc*/
   0, /*tp_bases*/
@@ -4664,14 +4664,14 @@ static PyTypeObject __pyx_type_7erlport___pyx_scope_struct_2_encode_list = {
   #endif
 };
 
-static struct __pyx_obj_7erlport___pyx_scope_struct_3_genexpr *__pyx_freelist_7erlport___pyx_scope_struct_3_genexpr[8];
-static int __pyx_freecount_7erlport___pyx_scope_struct_3_genexpr = 0;
+static struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_3_genexpr *__pyx_freelist_7erlport_9erlencode___pyx_scope_struct_3_genexpr[8];
+static int __pyx_freecount_7erlport_9erlencode___pyx_scope_struct_3_genexpr = 0;
 
-static PyObject *__pyx_tp_new_7erlport___pyx_scope_struct_3_genexpr(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
+static PyObject *__pyx_tp_new_7erlport_9erlencode___pyx_scope_struct_3_genexpr(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
   PyObject *o;
-  if (CYTHON_COMPILING_IN_CPYTHON && likely((__pyx_freecount_7erlport___pyx_scope_struct_3_genexpr > 0) & (t->tp_basicsize == sizeof(struct __pyx_obj_7erlport___pyx_scope_struct_3_genexpr)))) {
-    o = (PyObject*)__pyx_freelist_7erlport___pyx_scope_struct_3_genexpr[--__pyx_freecount_7erlport___pyx_scope_struct_3_genexpr];
-    memset(o, 0, sizeof(struct __pyx_obj_7erlport___pyx_scope_struct_3_genexpr));
+  if (CYTHON_COMPILING_IN_CPYTHON && likely((__pyx_freecount_7erlport_9erlencode___pyx_scope_struct_3_genexpr > 0) & (t->tp_basicsize == sizeof(struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_3_genexpr)))) {
+    o = (PyObject*)__pyx_freelist_7erlport_9erlencode___pyx_scope_struct_3_genexpr[--__pyx_freecount_7erlport_9erlencode___pyx_scope_struct_3_genexpr];
+    memset(o, 0, sizeof(struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_3_genexpr));
     (void) PyObject_INIT(o, t);
     PyObject_GC_Track(o);
   } else {
@@ -4681,22 +4681,22 @@ static PyObject *__pyx_tp_new_7erlport___pyx_scope_struct_3_genexpr(PyTypeObject
   return o;
 }
 
-static void __pyx_tp_dealloc_7erlport___pyx_scope_struct_3_genexpr(PyObject *o) {
-  struct __pyx_obj_7erlport___pyx_scope_struct_3_genexpr *p = (struct __pyx_obj_7erlport___pyx_scope_struct_3_genexpr *)o;
+static void __pyx_tp_dealloc_7erlport_9erlencode___pyx_scope_struct_3_genexpr(PyObject *o) {
+  struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_3_genexpr *p = (struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_3_genexpr *)o;
   PyObject_GC_UnTrack(o);
   Py_CLEAR(p->__pyx_outer_scope);
   Py_CLEAR(p->__pyx_v_t);
   Py_CLEAR(p->__pyx_t_0);
-  if (CYTHON_COMPILING_IN_CPYTHON && ((__pyx_freecount_7erlport___pyx_scope_struct_3_genexpr < 8) & (Py_TYPE(o)->tp_basicsize == sizeof(struct __pyx_obj_7erlport___pyx_scope_struct_3_genexpr)))) {
-    __pyx_freelist_7erlport___pyx_scope_struct_3_genexpr[__pyx_freecount_7erlport___pyx_scope_struct_3_genexpr++] = ((struct __pyx_obj_7erlport___pyx_scope_struct_3_genexpr *)o);
+  if (CYTHON_COMPILING_IN_CPYTHON && ((__pyx_freecount_7erlport_9erlencode___pyx_scope_struct_3_genexpr < 8) & (Py_TYPE(o)->tp_basicsize == sizeof(struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_3_genexpr)))) {
+    __pyx_freelist_7erlport_9erlencode___pyx_scope_struct_3_genexpr[__pyx_freecount_7erlport_9erlencode___pyx_scope_struct_3_genexpr++] = ((struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_3_genexpr *)o);
   } else {
     (*Py_TYPE(o)->tp_free)(o);
   }
 }
 
-static int __pyx_tp_traverse_7erlport___pyx_scope_struct_3_genexpr(PyObject *o, visitproc v, void *a) {
+static int __pyx_tp_traverse_7erlport_9erlencode___pyx_scope_struct_3_genexpr(PyObject *o, visitproc v, void *a) {
   int e;
-  struct __pyx_obj_7erlport___pyx_scope_struct_3_genexpr *p = (struct __pyx_obj_7erlport___pyx_scope_struct_3_genexpr *)o;
+  struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_3_genexpr *p = (struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_3_genexpr *)o;
   if (p->__pyx_outer_scope) {
     e = (*v)(((PyObject*)p->__pyx_outer_scope), a); if (e) return e;
   }
@@ -4709,11 +4709,11 @@ static int __pyx_tp_traverse_7erlport___pyx_scope_struct_3_genexpr(PyObject *o, 
   return 0;
 }
 
-static int __pyx_tp_clear_7erlport___pyx_scope_struct_3_genexpr(PyObject *o) {
+static int __pyx_tp_clear_7erlport_9erlencode___pyx_scope_struct_3_genexpr(PyObject *o) {
   PyObject* tmp;
-  struct __pyx_obj_7erlport___pyx_scope_struct_3_genexpr *p = (struct __pyx_obj_7erlport___pyx_scope_struct_3_genexpr *)o;
+  struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_3_genexpr *p = (struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_3_genexpr *)o;
   tmp = ((PyObject*)p->__pyx_outer_scope);
-  p->__pyx_outer_scope = ((struct __pyx_obj_7erlport___pyx_scope_struct_2_encode_list *)Py_None); Py_INCREF(Py_None);
+  p->__pyx_outer_scope = ((struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_2_encode_list *)Py_None); Py_INCREF(Py_None);
   Py_XDECREF(tmp);
   tmp = ((PyObject*)p->__pyx_v_t);
   p->__pyx_v_t = Py_None; Py_INCREF(Py_None);
@@ -4724,12 +4724,12 @@ static int __pyx_tp_clear_7erlport___pyx_scope_struct_3_genexpr(PyObject *o) {
   return 0;
 }
 
-static PyTypeObject __pyx_type_7erlport___pyx_scope_struct_3_genexpr = {
+static PyTypeObject __pyx_type_7erlport_9erlencode___pyx_scope_struct_3_genexpr = {
   PyVarObject_HEAD_INIT(0, 0)
-  "erlport.__pyx_scope_struct_3_genexpr", /*tp_name*/
-  sizeof(struct __pyx_obj_7erlport___pyx_scope_struct_3_genexpr), /*tp_basicsize*/
+  "erlport.erlencode.__pyx_scope_struct_3_genexpr", /*tp_name*/
+  sizeof(struct __pyx_obj_7erlport_9erlencode___pyx_scope_struct_3_genexpr), /*tp_basicsize*/
   0, /*tp_itemsize*/
-  __pyx_tp_dealloc_7erlport___pyx_scope_struct_3_genexpr, /*tp_dealloc*/
+  __pyx_tp_dealloc_7erlport_9erlencode___pyx_scope_struct_3_genexpr, /*tp_dealloc*/
   0, /*tp_print*/
   0, /*tp_getattr*/
   0, /*tp_setattr*/
@@ -4750,8 +4750,8 @@ static PyTypeObject __pyx_type_7erlport___pyx_scope_struct_3_genexpr = {
   0, /*tp_as_buffer*/
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_HAVE_GC, /*tp_flags*/
   0, /*tp_doc*/
-  __pyx_tp_traverse_7erlport___pyx_scope_struct_3_genexpr, /*tp_traverse*/
-  __pyx_tp_clear_7erlport___pyx_scope_struct_3_genexpr, /*tp_clear*/
+  __pyx_tp_traverse_7erlport_9erlencode___pyx_scope_struct_3_genexpr, /*tp_traverse*/
+  __pyx_tp_clear_7erlport_9erlencode___pyx_scope_struct_3_genexpr, /*tp_clear*/
   0, /*tp_richcompare*/
   0, /*tp_weaklistoffset*/
   0, /*tp_iter*/
@@ -4766,7 +4766,7 @@ static PyTypeObject __pyx_type_7erlport___pyx_scope_struct_3_genexpr = {
   0, /*tp_dictoffset*/
   0, /*tp_init*/
   0, /*tp_alloc*/
-  __pyx_tp_new_7erlport___pyx_scope_struct_3_genexpr, /*tp_new*/
+  __pyx_tp_new_7erlport_9erlencode___pyx_scope_struct_3_genexpr, /*tp_new*/
   0, /*tp_free*/
   0, /*tp_is_gc*/
   0, /*tp_bases*/
@@ -4792,7 +4792,7 @@ static struct PyModuleDef __pyx_moduledef = {
   #else
     PyModuleDef_HEAD_INIT,
   #endif
-    "erlport",
+    "erlencode",
     0, /* m_doc */
     -1, /* m_size */
     __pyx_methods /* m_methods */,
@@ -4861,7 +4861,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_encode_tuple_locals_genexpr, __pyx_k_encode_tuple_locals_genexpr, sizeof(__pyx_k_encode_tuple_locals_genexpr), 0, 0, 1, 1},
   {&__pyx_n_s_encode_unicode, __pyx_k_encode_unicode, sizeof(__pyx_k_encode_unicode), 0, 0, 1, 1},
   {&__pyx_n_s_encoded_term, __pyx_k_encoded_term, sizeof(__pyx_k_encoded_term), 0, 0, 1, 1},
-  {&__pyx_n_s_erlport, __pyx_k_erlport, sizeof(__pyx_k_erlport), 0, 0, 1, 1},
+  {&__pyx_n_s_erlport_erlencode, __pyx_k_erlport_erlencode, sizeof(__pyx_k_erlport_erlencode), 0, 0, 1, 1},
   {&__pyx_n_s_erlterms, __pyx_k_erlterms, sizeof(__pyx_k_erlterms), 0, 0, 1, 1},
   {&__pyx_n_s_false, __pyx_k_false, sizeof(__pyx_k_false), 0, 0, 1, 1},
   {&__pyx_n_s_fun, __pyx_k_fun, sizeof(__pyx_k_fun), 0, 0, 1, 1},
@@ -4917,7 +4917,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "src/erlport/erlencode.pyx":43
+  /* "erlport/erlencode.pyx":43
  *         header = pack(">BI", 105, arity)
  *     else:
  *         raise ValueError("invalid tuple arity")             # <<<<<<<<<<<<<<
@@ -4928,7 +4928,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
 
-  /* "src/erlport/erlencode.pyx":65
+  /* "erlport/erlencode.pyx":65
  *                 return pack(">BH", 107, length) + bytes
  *     elif length > 4294967295:
  *         raise ValueError("invalid list length")             # <<<<<<<<<<<<<<
@@ -4939,7 +4939,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
 
-  /* "src/erlport/erlencode.pyx":77
+  /* "erlport/erlencode.pyx":77
  *     if length <= 65535:
  *         try:
  *             bytes = term.encode("latin1")             # <<<<<<<<<<<<<<
@@ -4950,7 +4950,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
 
-  /* "src/erlport/erlencode.pyx":96
+  /* "erlport/erlencode.pyx":96
  *     length = len(term)
  *     if length > 4294967295:
  *         raise ValueError("invalid binary length")             # <<<<<<<<<<<<<<
@@ -4961,7 +4961,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__5);
   __Pyx_GIVEREF(__pyx_tuple__5);
 
-  /* "src/erlport/erlencode.pyx":117
+  /* "erlport/erlencode.pyx":117
  *         term = -term
  * 
  *     bytes = array('B')             # <<<<<<<<<<<<<<
@@ -4972,7 +4972,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__6);
   __Pyx_GIVEREF(__pyx_tuple__6);
 
-  /* "src/erlport/erlencode.pyx":127
+  /* "erlport/erlencode.pyx":127
  *     elif length <= 4294967295:
  *         return pack(">BIB", 111, length, sign) + bytes.tostring()
  *     raise ValueError("invalid integer value")             # <<<<<<<<<<<<<<
@@ -4983,7 +4983,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__7);
   __Pyx_GIVEREF(__pyx_tuple__7);
 
-  /* "src/erlport/erlencode.pyx":139
+  /* "erlport/erlencode.pyx":139
  * 
  * def encode_none(term):
  *     return pack(">BH", 100, 4) + "none"             # <<<<<<<<<<<<<<
@@ -4994,7 +4994,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__8);
   __Pyx_GIVEREF(__pyx_tuple__8);
 
-  /* "src/erlport/erlencode.pyx":36
+  /* "erlport/erlencode.pyx":36
  * 
  * 
  * def encode_tuple(term):             # <<<<<<<<<<<<<<
@@ -5006,7 +5006,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__11);
   __pyx_codeobj__12 = (PyObject*)__Pyx_PyCode_New(1, 0, 6, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__11, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_beaver_Documents_erlport, __pyx_n_s_encode_tuple, 36, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__12)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 36; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "src/erlport/erlencode.pyx":48
+  /* "erlport/erlencode.pyx":48
  * 
  * 
  * def encode_list(term):             # <<<<<<<<<<<<<<
@@ -5018,7 +5018,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__13);
   __pyx_codeobj__14 = (PyObject*)__Pyx_PyCode_New(1, 0, 8, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__13, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_beaver_Documents_erlport, __pyx_n_s_encode_list, 48, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__14)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 48; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "src/erlport/erlencode.pyx":71
+  /* "erlport/erlencode.pyx":71
  * 
  * 
  * def encode_unicode(term):             # <<<<<<<<<<<<<<
@@ -5030,7 +5030,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__15);
   __pyx_codeobj__16 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__15, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_beaver_Documents_erlport, __pyx_n_s_encode_unicode, 71, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__16)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 71; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "src/erlport/erlencode.pyx":85
+  /* "erlport/erlencode.pyx":85
  * 
  * 
  * def encode_atom(term):             # <<<<<<<<<<<<<<
@@ -5042,7 +5042,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__17);
   __pyx_codeobj__18 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__17, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_beaver_Documents_erlport, __pyx_n_s_encode_atom, 85, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__18)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 85; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "src/erlport/erlencode.pyx":89
+  /* "erlport/erlencode.pyx":89
  * 
  * 
  * def encode_bit_binary(term):             # <<<<<<<<<<<<<<
@@ -5054,7 +5054,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__19);
   __pyx_codeobj__20 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__19, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_beaver_Documents_erlport, __pyx_n_s_encode_bit_binary, 89, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__20)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 89; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "src/erlport/erlencode.pyx":93
+  /* "erlport/erlencode.pyx":93
  * 
  * 
  * def encode_str(term):             # <<<<<<<<<<<<<<
@@ -5066,7 +5066,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__21);
   __pyx_codeobj__22 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__21, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_beaver_Documents_erlport, __pyx_n_s_encode_str, 93, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__22)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 93; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "src/erlport/erlencode.pyx":100
+  /* "erlport/erlencode.pyx":100
  * 
  * 
  * def encode_bool(term):             # <<<<<<<<<<<<<<
@@ -5078,7 +5078,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__23);
   __pyx_codeobj__24 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__23, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_beaver_Documents_erlport, __pyx_n_s_encode_bool, 100, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__24)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 100; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "src/erlport/erlencode.pyx":105
+  /* "erlport/erlencode.pyx":105
  * 
  * 
  * def encode_int(term):             # <<<<<<<<<<<<<<
@@ -5090,7 +5090,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__25);
   __pyx_codeobj__26 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__25, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_beaver_Documents_erlport, __pyx_n_s_encode_int, 105, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__26)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 105; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "src/erlport/erlencode.pyx":130
+  /* "erlport/erlencode.pyx":130
  * 
  * 
  * def encode_float(term):             # <<<<<<<<<<<<<<
@@ -5102,7 +5102,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__27);
   __pyx_codeobj__28 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__27, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_beaver_Documents_erlport, __pyx_n_s_encode_float, 130, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__28)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 130; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "src/erlport/erlencode.pyx":134
+  /* "erlport/erlencode.pyx":134
  * 
  * 
  * def encode_dict(term):             # <<<<<<<<<<<<<<
@@ -5114,7 +5114,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__29);
   __pyx_codeobj__30 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__29, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_beaver_Documents_erlport, __pyx_n_s_encode_dict, 134, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__30)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 134; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "src/erlport/erlencode.pyx":138
+  /* "erlport/erlencode.pyx":138
  * 
  * 
  * def encode_none(term):             # <<<<<<<<<<<<<<
@@ -5126,7 +5126,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__31);
   __pyx_codeobj__32 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__31, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_beaver_Documents_erlport, __pyx_n_s_encode_none, 138, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__32)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 138; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "src/erlport/erlencode.pyx":142
+  /* "erlport/erlencode.pyx":142
  * 
  * 
  * def encode_datetime(term):             # <<<<<<<<<<<<<<
@@ -5138,7 +5138,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__33);
   __pyx_codeobj__34 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__33, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_beaver_Documents_erlport, __pyx_n_s_encode_datetime, 142, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__34)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 142; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "src/erlport/erlencode.pyx":164
+  /* "erlport/erlencode.pyx":164
  * 
  * 
  * def encode(term, compressed=False):             # <<<<<<<<<<<<<<
@@ -5150,7 +5150,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__35);
   __pyx_codeobj__36 = (PyObject*)__Pyx_PyCode_New(2, 0, 4, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__35, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_beaver_Documents_erlport, __pyx_n_s_encode, 164, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__36)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 164; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "src/erlport/erlencode.pyx":179
+  /* "erlport/erlencode.pyx":179
  * 
  * 
  * def encode_term(term):             # <<<<<<<<<<<<<<
@@ -5194,11 +5194,11 @@ static int __Pyx_InitGlobals(void) {
 }
 
 #if PY_MAJOR_VERSION < 3
-PyMODINIT_FUNC initerlport(void); /*proto*/
-PyMODINIT_FUNC initerlport(void)
+PyMODINIT_FUNC initerlencode(void); /*proto*/
+PyMODINIT_FUNC initerlencode(void)
 #else
-PyMODINIT_FUNC PyInit_erlport(void); /*proto*/
-PyMODINIT_FUNC PyInit_erlport(void)
+PyMODINIT_FUNC PyInit_erlencode(void); /*proto*/
+PyMODINIT_FUNC PyInit_erlencode(void)
 #endif
 {
   PyObject *__pyx_t_1 = NULL;
@@ -5217,7 +5217,7 @@ PyMODINIT_FUNC PyInit_erlport(void)
           Py_FatalError("failed to import 'refnanny' module");
   }
   #endif
-  __Pyx_RefNannySetupContext("PyMODINIT_FUNC PyInit_erlport(void)", 0);
+  __Pyx_RefNannySetupContext("PyMODINIT_FUNC PyInit_erlencode(void)", 0);
   if ( __Pyx_check_binary_version() < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_empty_tuple = PyTuple_New(0); if (unlikely(!__pyx_empty_tuple)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_empty_bytes = PyBytes_FromStringAndSize("", 0); if (unlikely(!__pyx_empty_bytes)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -5239,7 +5239,7 @@ PyMODINIT_FUNC PyInit_erlport(void)
   #endif
   /*--- Module creation code ---*/
   #if PY_MAJOR_VERSION < 3
-  __pyx_m = Py_InitModule4("erlport", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
+  __pyx_m = Py_InitModule4("erlencode", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
   #else
   __pyx_m = PyModule_Create(&__pyx_moduledef);
   #endif
@@ -5256,14 +5256,14 @@ PyMODINIT_FUNC PyInit_erlport(void)
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   #endif
-  if (__pyx_module_is_main_erlport) {
+  if (__pyx_module_is_main_erlport__erlencode) {
     if (PyObject_SetAttrString(__pyx_m, "__name__", __pyx_n_s_main) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    if (!PyDict_GetItemString(modules, "erlport")) {
-      if (unlikely(PyDict_SetItemString(modules, "erlport", __pyx_m) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    if (!PyDict_GetItemString(modules, "erlport.erlencode")) {
+      if (unlikely(PyDict_SetItemString(modules, "erlport.erlencode", __pyx_m) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     }
   }
   #endif
@@ -5275,24 +5275,24 @@ PyMODINIT_FUNC PyInit_erlport(void)
   /*--- Variable export code ---*/
   /*--- Function export code ---*/
   /*--- Type init code ---*/
-  if (PyType_Ready(&__pyx_type_7erlport___pyx_scope_struct__encode_tuple) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 36; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_type_7erlport___pyx_scope_struct__encode_tuple.tp_print = 0;
-  __pyx_ptype_7erlport___pyx_scope_struct__encode_tuple = &__pyx_type_7erlport___pyx_scope_struct__encode_tuple;
-  if (PyType_Ready(&__pyx_type_7erlport___pyx_scope_struct_1_genexpr) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 45; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_type_7erlport___pyx_scope_struct_1_genexpr.tp_print = 0;
-  __pyx_ptype_7erlport___pyx_scope_struct_1_genexpr = &__pyx_type_7erlport___pyx_scope_struct_1_genexpr;
-  if (PyType_Ready(&__pyx_type_7erlport___pyx_scope_struct_2_encode_list) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 48; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_type_7erlport___pyx_scope_struct_2_encode_list.tp_print = 0;
-  __pyx_ptype_7erlport___pyx_scope_struct_2_encode_list = &__pyx_type_7erlport___pyx_scope_struct_2_encode_list;
-  if (PyType_Ready(&__pyx_type_7erlport___pyx_scope_struct_3_genexpr) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 68; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_type_7erlport___pyx_scope_struct_3_genexpr.tp_print = 0;
-  __pyx_ptype_7erlport___pyx_scope_struct_3_genexpr = &__pyx_type_7erlport___pyx_scope_struct_3_genexpr;
+  if (PyType_Ready(&__pyx_type_7erlport_9erlencode___pyx_scope_struct__encode_tuple) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 36; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_type_7erlport_9erlencode___pyx_scope_struct__encode_tuple.tp_print = 0;
+  __pyx_ptype_7erlport_9erlencode___pyx_scope_struct__encode_tuple = &__pyx_type_7erlport_9erlencode___pyx_scope_struct__encode_tuple;
+  if (PyType_Ready(&__pyx_type_7erlport_9erlencode___pyx_scope_struct_1_genexpr) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 45; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_type_7erlport_9erlencode___pyx_scope_struct_1_genexpr.tp_print = 0;
+  __pyx_ptype_7erlport_9erlencode___pyx_scope_struct_1_genexpr = &__pyx_type_7erlport_9erlencode___pyx_scope_struct_1_genexpr;
+  if (PyType_Ready(&__pyx_type_7erlport_9erlencode___pyx_scope_struct_2_encode_list) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 48; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_type_7erlport_9erlencode___pyx_scope_struct_2_encode_list.tp_print = 0;
+  __pyx_ptype_7erlport_9erlencode___pyx_scope_struct_2_encode_list = &__pyx_type_7erlport_9erlencode___pyx_scope_struct_2_encode_list;
+  if (PyType_Ready(&__pyx_type_7erlport_9erlencode___pyx_scope_struct_3_genexpr) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 68; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_type_7erlport_9erlencode___pyx_scope_struct_3_genexpr.tp_print = 0;
+  __pyx_ptype_7erlport_9erlencode___pyx_scope_struct_3_genexpr = &__pyx_type_7erlport_9erlencode___pyx_scope_struct_3_genexpr;
   /*--- Type import code ---*/
   /*--- Variable import code ---*/
   /*--- Function import code ---*/
   /*--- Execution code ---*/
 
-  /* "src/erlport/erlencode.pyx":29
+  /* "erlport/erlencode.pyx":29
  * 
  * 
  * from erlterms import Atom, BitBinary             # <<<<<<<<<<<<<<
@@ -5320,7 +5320,7 @@ PyMODINIT_FUNC PyInit_erlport(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/erlport/erlencode.pyx":30
+  /* "erlport/erlencode.pyx":30
  * 
  * from erlterms import Atom, BitBinary
  * from struct import pack             # <<<<<<<<<<<<<<
@@ -5341,7 +5341,7 @@ PyMODINIT_FUNC PyInit_erlport(void)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/erlport/erlencode.pyx":31
+  /* "erlport/erlencode.pyx":31
  * from erlterms import Atom, BitBinary
  * from struct import pack
  * from zlib import compress             # <<<<<<<<<<<<<<
@@ -5362,7 +5362,7 @@ PyMODINIT_FUNC PyInit_erlport(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/erlport/erlencode.pyx":32
+  /* "erlport/erlencode.pyx":32
  * from struct import pack
  * from zlib import compress
  * from array import array             # <<<<<<<<<<<<<<
@@ -5383,7 +5383,7 @@ PyMODINIT_FUNC PyInit_erlport(void)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/erlport/erlencode.pyx":33
+  /* "erlport/erlencode.pyx":33
  * from zlib import compress
  * from array import array
  * from datetime import datetime             # <<<<<<<<<<<<<<
@@ -5404,151 +5404,151 @@ PyMODINIT_FUNC PyInit_erlport(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/erlport/erlencode.pyx":36
+  /* "erlport/erlencode.pyx":36
  * 
  * 
  * def encode_tuple(term):             # <<<<<<<<<<<<<<
  *     arity = len(term)
  *     if arity <= 255:
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_7erlport_1encode_tuple, NULL, __pyx_n_s_erlport); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 36; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_7erlport_9erlencode_1encode_tuple, NULL, __pyx_n_s_erlport_erlencode); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 36; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_encode_tuple, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 36; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/erlport/erlencode.pyx":48
+  /* "erlport/erlencode.pyx":48
  * 
  * 
  * def encode_list(term):             # <<<<<<<<<<<<<<
  *     if not term:
  *         return "j"
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_7erlport_3encode_list, NULL, __pyx_n_s_erlport); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 48; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_7erlport_9erlencode_3encode_list, NULL, __pyx_n_s_erlport_erlencode); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 48; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_encode_list, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 48; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/erlport/erlencode.pyx":71
+  /* "erlport/erlencode.pyx":71
  * 
  * 
  * def encode_unicode(term):             # <<<<<<<<<<<<<<
  *     if not term:
  *         return "j"
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_7erlport_5encode_unicode, NULL, __pyx_n_s_erlport); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 71; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_7erlport_9erlencode_5encode_unicode, NULL, __pyx_n_s_erlport_erlencode); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 71; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_encode_unicode, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 71; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/erlport/erlencode.pyx":85
+  /* "erlport/erlencode.pyx":85
  * 
  * 
  * def encode_atom(term):             # <<<<<<<<<<<<<<
  *     return pack(">BH", 100, len(term)) + term
  * 
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_7erlport_7encode_atom, NULL, __pyx_n_s_erlport); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 85; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_7erlport_9erlencode_7encode_atom, NULL, __pyx_n_s_erlport_erlencode); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 85; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_encode_atom, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 85; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/erlport/erlencode.pyx":89
+  /* "erlport/erlencode.pyx":89
  * 
  * 
  * def encode_bit_binary(term):             # <<<<<<<<<<<<<<
  *     return pack(">BIB", 77, len(term), term.bits) + term
  * 
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_7erlport_9encode_bit_binary, NULL, __pyx_n_s_erlport); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 89; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_7erlport_9erlencode_9encode_bit_binary, NULL, __pyx_n_s_erlport_erlencode); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 89; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_encode_bit_binary, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 89; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/erlport/erlencode.pyx":93
+  /* "erlport/erlencode.pyx":93
  * 
  * 
  * def encode_str(term):             # <<<<<<<<<<<<<<
  *     length = len(term)
  *     if length > 4294967295:
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_7erlport_11encode_str, NULL, __pyx_n_s_erlport); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 93; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_7erlport_9erlencode_11encode_str, NULL, __pyx_n_s_erlport_erlencode); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 93; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_encode_str, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 93; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/erlport/erlencode.pyx":100
+  /* "erlport/erlencode.pyx":100
  * 
  * 
  * def encode_bool(term):             # <<<<<<<<<<<<<<
  *     term = term and 'true' or 'false'
  *     return pack(">BH", 100, len(term)) + term
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_7erlport_13encode_bool, NULL, __pyx_n_s_erlport); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 100; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_7erlport_9erlencode_13encode_bool, NULL, __pyx_n_s_erlport_erlencode); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 100; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_encode_bool, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 100; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/erlport/erlencode.pyx":105
+  /* "erlport/erlencode.pyx":105
  * 
  * 
  * def encode_int(term):             # <<<<<<<<<<<<<<
  *     if 0 <= term <= 255:
  *         return 'a%c' % term
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_7erlport_15encode_int, NULL, __pyx_n_s_erlport); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 105; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_7erlport_9erlencode_15encode_int, NULL, __pyx_n_s_erlport_erlencode); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 105; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_encode_int, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 105; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/erlport/erlencode.pyx":130
+  /* "erlport/erlencode.pyx":130
  * 
  * 
  * def encode_float(term):             # <<<<<<<<<<<<<<
  *     return pack(">Bd", 70, term)
  * 
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_7erlport_17encode_float, NULL, __pyx_n_s_erlport); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 130; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_7erlport_9erlencode_17encode_float, NULL, __pyx_n_s_erlport_erlencode); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 130; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_encode_float, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 130; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/erlport/erlencode.pyx":134
+  /* "erlport/erlencode.pyx":134
  * 
  * 
  * def encode_dict(term):             # <<<<<<<<<<<<<<
  *     return encode_term(sorted(term.iteritems()))
  * 
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_7erlport_19encode_dict, NULL, __pyx_n_s_erlport); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 134; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_7erlport_9erlencode_19encode_dict, NULL, __pyx_n_s_erlport_erlencode); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 134; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_encode_dict, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 134; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/erlport/erlencode.pyx":138
+  /* "erlport/erlencode.pyx":138
  * 
  * 
  * def encode_none(term):             # <<<<<<<<<<<<<<
  *     return pack(">BH", 100, 4) + "none"
  * 
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_7erlport_21encode_none, NULL, __pyx_n_s_erlport); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 138; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_7erlport_9erlencode_21encode_none, NULL, __pyx_n_s_erlport_erlencode); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 138; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_encode_none, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 138; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/erlport/erlencode.pyx":142
+  /* "erlport/erlencode.pyx":142
  * 
  * 
  * def encode_datetime(term):             # <<<<<<<<<<<<<<
  *     return encode_term(((term.year, term.month, term.day),
  *                         (term.hour, term.minute, term.second)))
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_7erlport_23encode_datetime, NULL, __pyx_n_s_erlport); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 142; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_7erlport_9erlencode_23encode_datetime, NULL, __pyx_n_s_erlport_erlencode); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 142; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_encode_datetime, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 142; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/erlport/erlencode.pyx":147
+  /* "erlport/erlencode.pyx":147
  * 
  * 
  * ENCODE_MAP = {             # <<<<<<<<<<<<<<
@@ -5558,7 +5558,7 @@ PyMODINIT_FUNC PyInit_erlport(void)
   __pyx_t_2 = PyDict_New(); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 147; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "src/erlport/erlencode.pyx":148
+  /* "erlport/erlencode.pyx":148
  * 
  * ENCODE_MAP = {
  *     tuple:      encode_tuple,             # <<<<<<<<<<<<<<
@@ -5570,7 +5570,7 @@ PyMODINIT_FUNC PyInit_erlport(void)
   if (PyDict_SetItem(__pyx_t_2, ((PyObject *)((PyObject*)(&PyTuple_Type))), __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 147; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/erlport/erlencode.pyx":149
+  /* "erlport/erlencode.pyx":149
  * ENCODE_MAP = {
  *     tuple:      encode_tuple,
  *     list:       encode_list,             # <<<<<<<<<<<<<<
@@ -5582,7 +5582,7 @@ PyMODINIT_FUNC PyInit_erlport(void)
   if (PyDict_SetItem(__pyx_t_2, ((PyObject *)((PyObject*)(&PyList_Type))), __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 147; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/erlport/erlencode.pyx":150
+  /* "erlport/erlencode.pyx":150
  *     tuple:      encode_tuple,
  *     list:       encode_list,
  *     unicode:    encode_unicode,             # <<<<<<<<<<<<<<
@@ -5594,7 +5594,7 @@ PyMODINIT_FUNC PyInit_erlport(void)
   if (PyDict_SetItem(__pyx_t_2, ((PyObject *)((PyObject*)(&PyUnicode_Type))), __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 147; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/erlport/erlencode.pyx":151
+  /* "erlport/erlencode.pyx":151
  *     list:       encode_list,
  *     unicode:    encode_unicode,
  *     Atom:       encode_atom,             # <<<<<<<<<<<<<<
@@ -5609,7 +5609,7 @@ PyMODINIT_FUNC PyInit_erlport(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "src/erlport/erlencode.pyx":152
+  /* "erlport/erlencode.pyx":152
  *     unicode:    encode_unicode,
  *     Atom:       encode_atom,
  *     BitBinary:  encode_bit_binary,             # <<<<<<<<<<<<<<
@@ -5624,7 +5624,7 @@ PyMODINIT_FUNC PyInit_erlport(void)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/erlport/erlencode.pyx":153
+  /* "erlport/erlencode.pyx":153
  *     Atom:       encode_atom,
  *     BitBinary:  encode_bit_binary,
  *     str:        encode_str,             # <<<<<<<<<<<<<<
@@ -5636,7 +5636,7 @@ PyMODINIT_FUNC PyInit_erlport(void)
   if (PyDict_SetItem(__pyx_t_2, ((PyObject *)((PyObject*)(&PyString_Type))), __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 147; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/erlport/erlencode.pyx":154
+  /* "erlport/erlencode.pyx":154
  *     BitBinary:  encode_bit_binary,
  *     str:        encode_str,
  *     bool:       encode_bool,             # <<<<<<<<<<<<<<
@@ -5648,7 +5648,7 @@ PyMODINIT_FUNC PyInit_erlport(void)
   if (PyDict_SetItem(__pyx_t_2, ((PyObject*)&PyBool_Type), __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 147; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/erlport/erlencode.pyx":155
+  /* "erlport/erlencode.pyx":155
  *     str:        encode_str,
  *     bool:       encode_bool,
  *     int:        encode_int,             # <<<<<<<<<<<<<<
@@ -5660,7 +5660,7 @@ PyMODINIT_FUNC PyInit_erlport(void)
   if (PyDict_SetItem(__pyx_t_2, ((PyObject *)((PyObject*)(&PyInt_Type))), __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 147; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/erlport/erlencode.pyx":156
+  /* "erlport/erlencode.pyx":156
  *     bool:       encode_bool,
  *     int:        encode_int,
  *     long:       encode_int,             # <<<<<<<<<<<<<<
@@ -5672,7 +5672,7 @@ PyMODINIT_FUNC PyInit_erlport(void)
   if (PyDict_SetItem(__pyx_t_2, ((PyObject *)((PyObject*)(&PyLong_Type))), __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 147; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/erlport/erlencode.pyx":157
+  /* "erlport/erlencode.pyx":157
  *     int:        encode_int,
  *     long:       encode_int,
  *     float:      encode_float,             # <<<<<<<<<<<<<<
@@ -5684,7 +5684,7 @@ PyMODINIT_FUNC PyInit_erlport(void)
   if (PyDict_SetItem(__pyx_t_2, ((PyObject *)((PyObject*)(&PyFloat_Type))), __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 147; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/erlport/erlencode.pyx":158
+  /* "erlport/erlencode.pyx":158
  *     long:       encode_int,
  *     float:      encode_float,
  *     dict:       encode_dict,             # <<<<<<<<<<<<<<
@@ -5696,7 +5696,7 @@ PyMODINIT_FUNC PyInit_erlport(void)
   if (PyDict_SetItem(__pyx_t_2, ((PyObject *)((PyObject*)(&PyDict_Type))), __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 147; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/erlport/erlencode.pyx":159
+  /* "erlport/erlencode.pyx":159
  *     float:      encode_float,
  *     dict:       encode_dict,
  *     type(None): encode_none,             # <<<<<<<<<<<<<<
@@ -5708,7 +5708,7 @@ PyMODINIT_FUNC PyInit_erlport(void)
   if (PyDict_SetItem(__pyx_t_2, ((PyObject *)Py_TYPE(Py_None)), __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 147; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "src/erlport/erlencode.pyx":160
+  /* "erlport/erlencode.pyx":160
  *     dict:       encode_dict,
  *     type(None): encode_none,
  *     datetime:   encode_datetime             # <<<<<<<<<<<<<<
@@ -5718,7 +5718,7 @@ PyMODINIT_FUNC PyInit_erlport(void)
   __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_datetime); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 160; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
 
-  /* "src/erlport/erlencode.pyx":161
+  /* "erlport/erlencode.pyx":161
  *     type(None): encode_none,
  *     datetime:   encode_datetime
  *     }             # <<<<<<<<<<<<<<
@@ -5733,31 +5733,31 @@ PyMODINIT_FUNC PyInit_erlport(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_ENCODE_MAP, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 147; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/erlport/erlencode.pyx":164
+  /* "erlport/erlencode.pyx":164
  * 
  * 
  * def encode(term, compressed=False):             # <<<<<<<<<<<<<<
  *     """Encode Erlang external term."""
  *     encoded_term = encode_term(term)
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_7erlport_25encode, NULL, __pyx_n_s_erlport); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 164; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_7erlport_9erlencode_25encode, NULL, __pyx_n_s_erlport_erlencode); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 164; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_encode, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 164; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/erlport/erlencode.pyx":179
+  /* "erlport/erlencode.pyx":179
  * 
  * 
  * def encode_term(term):             # <<<<<<<<<<<<<<
  *     fun = ENCODE_MAP[type(term)]
  *     if not fun:
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_7erlport_27encode_term, NULL, __pyx_n_s_erlport); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 179; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_7erlport_9erlencode_27encode_term, NULL, __pyx_n_s_erlport_erlencode); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 179; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_encode_term, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 179; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "src/erlport/erlencode.pyx":1
+  /* "erlport/erlencode.pyx":1
  * # Copyright (c) 2009, 2010, Dmitry Vasiliev <dima@hlabs.org>             # <<<<<<<<<<<<<<
  * # All rights reserved.
  * #
@@ -5776,11 +5776,11 @@ PyMODINIT_FUNC PyInit_erlport(void)
   __Pyx_XDECREF(__pyx_t_3);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init erlport", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init erlport.erlencode", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     Py_DECREF(__pyx_m); __pyx_m = 0;
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init erlport");
+    PyErr_SetString(PyExc_ImportError, "init erlport.erlencode");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
