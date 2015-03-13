@@ -36,11 +36,11 @@ except ImportError:
     from distutils.command.build_ext import build_ext as _build_ext
 
 if have_cython:
-        erldecode = Extension('erldecode', ['src/erlport/erldecode.pyx'])
-        erlencode = Extension('erlencode', ['src/erlport/erlencode.pyx'])
+        erldecode = Extension('erlport.erldecode', ['src/erlport/erldecode.pyx'])
+        erlencode = Extension('erlport.erlencode', ['src/erlport/erlencode.pyx'])
 else:
-        erldecode = Extension('erldecode', ['src/erlport/erldecode.c'])
-        erlencode = Extension('erlencode', ['src/erlport/erlencode.c'])
+        erldecode = Extension('erlport.erldecode', ['src/erlport/erldecode.c'])
+        erlencode = Extension('erlport.erlencode', ['src/erlport/erlencode.c'])
 
 setup(
     name="erlport",
