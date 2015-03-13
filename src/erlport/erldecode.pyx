@@ -197,7 +197,7 @@ def decode(string):
             raise ValueError(
                 "invalid compressed tag, "
                 "%d bytes but got %d" % (uncompressed_size, len(term_string)))
-        return decode_term(term_string, 0)[0], d.unused_data
+        return decode_term(term_string, 0)[0]
     return decode_term(string[1:], 0)[0]
 
 
