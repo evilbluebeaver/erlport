@@ -170,8 +170,8 @@ DECODE_MAP = {
     100: decode_atom,
     104: decode_tuple,
     105: decode_tuple,
-    70:  decode_float,
-    99:  decode_new_float,
+    70:  decode_new_float,
+    99:  decode_float,
     110: decode_big,
     111: decode_big,
     77:  decode_bit_binary
