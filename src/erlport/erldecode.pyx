@@ -143,7 +143,7 @@ def decode_big(tag, string, pos):
     if len(string) - pos < length:
         raise ValueError("incomplete data: %r" % string)
     n = 0
-    for i in array('B', string[pos+length-1:pos:-1]):
+    for i in array('B', string[pos+length-1:pos-1:-1]):
         n = (n << 8) | i
     if sign:
         n = -n
