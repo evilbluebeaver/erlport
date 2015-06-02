@@ -28,9 +28,7 @@
 """Erlang port protocol."""
 
 import os
-import sys
 import errno
-import traceback
 from struct import pack, unpack
 from erlport.erlterms import Atom
 from erlport.erldecode import decode
@@ -47,40 +45,10 @@ class Protocol(object):
                 message = port.read()
             except EOFError:
                 break
-            port.write(self.handle(message))
+            port.write(self.handle(*message))
 
     def handle(self, message):
-        """Handle incoming message."""
-        if not (isinstance(message, Atom) or
-                isinstance(message, tuple) and len(message) > 0):
-            response = Atom("error"), Atom("badarg")
-        else:
-            if isinstance(message, Atom):
-                name = message
-                args = ()
-            else:
-                name = message[0]
-                args = message[1:]
-            if not isinstance(name, Atom):
-                response = Atom("error"), Atom("badarg")
-            else:
-                handler = getattr(self, "handle_%s" % name, None)
-                if handler is None:
-                    response = Atom("error"), Atom("undef")
-                else:
-                    try:
-                        response = handler(*args)
-                    except:
-                        response = self._handle_error(sys.exc_info())
-        return response
-
-    def _handle_error(self, exception):
-        t, val, tb = exception
-        exc = Atom("%s.%s" % (t.__module__, t.__name__))
-        exc_tb = traceback.extract_tb(tb)
-        exc_tb.reverse()
-        return Atom("error"), (Atom("exception"), (exc, unicode(val), exc_tb))
-
+        raise NotImplementedError("protocol must implement handle method")
 
 class Port(object):
     """Erlang port."""
