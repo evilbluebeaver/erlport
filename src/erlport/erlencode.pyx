@@ -132,7 +132,10 @@ def encode_float(term):
 
 
 def encode_dict(term):
-    return encode_term(sorted(term.iteritems()))
+    length = len(term)
+    header = pack(">BI", 116, length)
+    lst = [encode_term(k) + encode_term(v) for k, v in d.items()]
+    return header + "".join(lst)
 
 
 def encode_none(term):
