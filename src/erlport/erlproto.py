@@ -45,7 +45,7 @@ class Protocol(object):
                 message = port.read()
             except EOFError:
                 break
-            port.write(self.handle(*message))
+            port.write(self.handle(message))
 
     def handle(self, message):
         raise NotImplementedError("protocol must implement handle method")
