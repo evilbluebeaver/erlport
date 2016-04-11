@@ -83,7 +83,7 @@ def decode_maps(tag, maps, pos):
         value, pos = decode_term(maps, pos)
         d[key] = value
         length -= 1
-    return dict(lst), pos
+    return d, pos
 
 def decode_binary(tag, string, pos):
     if len(string) - pos < 4:
