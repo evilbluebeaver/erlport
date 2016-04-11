@@ -134,7 +134,7 @@ def encode_float(term):
 def encode_dict(term):
     length = len(term)
     header = pack(">BI", 116, length)
-    lst = [encode_term(k) + encode_term(v) for k, v in d.items()]
+    lst = [encode_term(k) + encode_term(v) for k, v in term.items()]
     return header + "".join(lst)
 
 
