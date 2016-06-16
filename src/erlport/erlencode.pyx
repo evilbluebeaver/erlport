@@ -40,7 +40,7 @@ def encode_tuple(term):
     elif arity <= 4294967295:
         header = pack(">BI", 105, arity)
     else:
-        raise ValueError("invalid tuple arity")
+        raise ValueError("Too large tuple arity")
     _encode_term = encode_term
     return header + "".join(_encode_term(t) for t in term)
 
@@ -62,7 +62,7 @@ def encode_list(term):
             if len(bytes) == length:
                 return pack(">BH", 107, length) + bytes
     elif length > 4294967295:
-        raise ValueError("invalid list length")
+        raise ValueError("Too large list lenght")
     header = pack(">BI", 108, length)
     _encode_term = encode_term
     return header + "".join(_encode_term(t) for t in term) + "j"
@@ -78,16 +78,17 @@ def encode_bit_binary(term):
 
 def encode_str(term):
     length = len(term)
-    if length <= 65535:
-        return pack(">BH", 107, length) + term
-    return encode_term([ord(i) for i in term])
+    if length > 65535:
+        raise ValueError("Too large string length. Use an unicode instead of an usual string")
+    return pack(">BH", 107, length) + term
+
 
 
 def encode_unicode(term):
     encoded = term.encode("utf-8")
     length = len(encoded)
     if length > 4294967295:
-        raise ValueError("invalid binary length")
+        raise ValueError("Too large unicode string length")
     return pack(">BI", 109, length) + encoded
 
 
@@ -118,7 +119,7 @@ def encode_int(term):
         return pack(">BBB", 110, length, sign) + bytes.tostring()
     elif length <= 4294967295:
         return pack(">BIB", 111, length, sign) + bytes.tostring()
-    raise ValueError("invalid integer value")
+    raise ValueError("Too large integer number")
 
 
 def encode_float(term):
@@ -177,5 +178,5 @@ def encode(term, compressed=False):
 def encode_term(term):
     fun = ENCODE_MAP[type(term)]
     if not fun:
-        raise ValueError("unsupported data type: %s" % type(term))
+        raise ValueError("Unsupported data type: %s" % type(term))
     return fun(term)

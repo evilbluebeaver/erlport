@@ -65,15 +65,11 @@ def decode_list(tag, string, pos):
     length, = unpack(">I", string[pos:pos + 4])
     pos += 4
     lst = []
-    is_string = True
     while length > 0:
         term, pos = decode_term(string, pos)
-        is_string = is_string and type(term) == int and 0 <= term <= 255
         lst.append(term)
         length -= 1
     ignored, pos = decode_term(string, pos)
-    if is_string:
-        return ''.join([chr(i) for i in lst]), pos + length
     return lst, pos
 
 def decode_maps(tag, maps, pos):
