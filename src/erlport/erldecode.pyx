@@ -74,8 +74,8 @@ def decode_list(tag, string, pos):
 
 def decode_maps(tag, maps, pos):
     if len(maps) - pos < 4:
-        raise ValueError("incomplete data: %r" % string)
-    length, = unpack(">I", string[pos:pos + 4])
+        raise ValueError("incomplete data: %r" % maps)
+    length, = unpack(">I", maps[pos:pos + 4])
     pos += 4
     d = {}
     while length > 0:
@@ -83,7 +83,7 @@ def decode_maps(tag, maps, pos):
         value, pos = decode_term(maps, pos)
         d[key] = value
         length -= 1
-    return dict(lst), pos
+    return d, pos
 
 def decode_binary(tag, string, pos):
     if len(string) - pos < 4:
