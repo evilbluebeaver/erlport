@@ -78,9 +78,17 @@ def encode_bit_binary(term):
 
 def encode_str(term):
     length = len(term)
+    if length <= 65535:
+        return pack(">BH", 107, length) + term
+    return encode_term([ord(i) for i in term])
+
+
+def encode_unicode(term):
+    encoded = term.encode("utf-8")
+    length = len(encoded)
     if length > 4294967295:
         raise ValueError("invalid binary length")
-    return pack(">BI", 109, length) + term
+    return pack(">BI", 109, length) + encoded
 
 
 def encode_bool(term):
@@ -137,7 +145,7 @@ def encode_datetime(term):
 ENCODE_MAP = {
     tuple:      encode_tuple,
     list:       encode_list,
-    unicode:    encode_str,
+    unicode:    encode_unicode,
     Atom:       encode_atom,
     BitBinary:  encode_bit_binary,
     str:        encode_str,

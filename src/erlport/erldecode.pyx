@@ -56,7 +56,7 @@ def decode_string(tag, string, pos):
     pos += 2
     if len(string) - pos < length:
         raise ValueError("incomplete data: %r" % string)
-    return [ord(i) for i in string[pos:pos+length]], pos + length
+    return string[pos:pos+length], pos + length
 
 
 def decode_list(tag, string, pos):
@@ -65,11 +65,15 @@ def decode_list(tag, string, pos):
     length, = unpack(">I", string[pos:pos + 4])
     pos += 4
     lst = []
+    is_string = True
     while length > 0:
         term, pos = decode_term(string, pos)
+        is_string = is_string and type(term) == int and 0 <= term <= 255
         lst.append(term)
         length -= 1
     ignored, pos = decode_term(string, pos)
+    if is_string:
+        return ''.join([chr(i) for i in lst]), pos + length
     return lst, pos
 
 def decode_maps(tag, maps, pos):
@@ -92,7 +96,7 @@ def decode_binary(tag, string, pos):
     pos += 4
     if len(string) - pos < length:
         raise ValueError("incomplete data: %r" % string)
-    return string[pos:pos+length], pos + length
+    return string[pos:pos+length].decode("utf-8"), pos + length
 
 
 def decode_atom(tag, string, pos):

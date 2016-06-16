@@ -44,22 +44,6 @@ class Atom(str):
         return "atom(%s)" % self
 
 
-class String(unicode):
-    """Erlang list/string wrapper."""
-
-    def __new__(cls, s):
-
-        if isinstance(s, list):
-            # Raise TypeError
-            s = u"".join(unichr(i) for i in s)
-        elif not isinstance(s, unicode):
-            raise TypeError("list or unicode object expected")
-        return super(String, cls).__new__(cls, s)
-
-    def __repr__(self):
-        return "string(%s)" % super(String, self).__repr__()
-
-
 class BitBinary(str):
     """Erlang bitstring whose length in bits is not a multiple of 8."""
 
