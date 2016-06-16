@@ -108,7 +108,7 @@ def decode_atom(tag, string, pos):
         return True, pos
     elif name == "false":
         return False, pos
-    elif name == "none":
+    elif name == "undefined":
         return None, pos
     return Atom(name), pos
 

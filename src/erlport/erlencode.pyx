@@ -68,20 +68,6 @@ def encode_list(term):
     return header + "".join(_encode_term(t) for t in term) + "j"
 
 
-def encode_unicode(term):
-    if not term:
-        return "j"
-    length = len(term)
-    if length <= 65535:
-        try:
-            bytes = term.encode("latin1")
-        except UnicodeEncodeError:
-            pass
-        else:
-            return pack(">BH", 107, length) + bytes
-    return encode_term([ord(i) for i in term])
-
-
 def encode_atom(term):
     return pack(">BH", 100, len(term)) + term
 
@@ -139,7 +125,8 @@ def encode_dict(term):
 
 
 def encode_none(term):
-    return pack(">BH", 100, 4) + "none"
+    term = 'undefined'
+    return pack(">BH", 100, len(term)) + term
 
 
 def encode_datetime(term):
@@ -150,7 +137,7 @@ def encode_datetime(term):
 ENCODE_MAP = {
     tuple:      encode_tuple,
     list:       encode_list,
-    unicode:    encode_unicode,
+    unicode:    encode_str,
     Atom:       encode_atom,
     BitBinary:  encode_bit_binary,
     str:        encode_str,
