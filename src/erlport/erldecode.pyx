@@ -26,7 +26,7 @@
 # POSSIBILITY OF SUCH DAMAGE.
 
 
-from erlterms import Atom, BitBinary
+from erlterms import Atom, BitBinary, Binary
 from struct import unpack
 from array import array
 from zlib import decompressobj
@@ -92,7 +92,12 @@ def decode_binary(tag, string, pos):
     pos += 4
     if len(string) - pos < length:
         raise ValueError("incomplete data: %r" % string)
-    return string[pos:pos+length].decode("utf-8"), pos + length
+    data = string[pos:pos+length]
+    try:
+        decoded = data.decode('utf-8')
+    except UnicodeDecodeError:
+        decoded = Binary(data)
+    return decoded, pos + length
 
 
 def decode_atom(tag, string, pos):

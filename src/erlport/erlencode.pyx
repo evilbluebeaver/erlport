@@ -26,7 +26,7 @@
 # POSSIBILITY OF SUCH DAMAGE.
 
 
-from erlterms import Atom, BitBinary
+from erlterms import Atom, BitBinary, Binary
 from struct import pack
 from zlib import compress
 from array import array
@@ -83,6 +83,11 @@ def encode_str(term):
     return pack(">BH", 107, length) + term
 
 
+def encode_binary(term):
+    length = len(term)
+    if length > 4294967295:
+        raise ValueError("Too large unicode string length")
+    return pack(">BI", 109, length) + term
 
 def encode_unicode(term):
     encoded = term.encode("utf-8")
@@ -147,6 +152,7 @@ ENCODE_MAP = {
     tuple:      encode_tuple,
     list:       encode_list,
     unicode:    encode_unicode,
+    Binary:     encode_binary,
     Atom:       encode_atom,
     BitBinary:  encode_bit_binary,
     str:        encode_str,

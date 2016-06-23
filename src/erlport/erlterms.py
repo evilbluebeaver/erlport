@@ -54,3 +54,13 @@ class BitBinary(str):
 
     def __repr__(self):
         return "bits(%s, %s)" % (self.bits, super(BitBinary, self).__repr__())
+
+class Binary(str):
+    """Erlang binary."""
+    def __new__(cls, s):
+        obj = super(Binary, cls).__new__(cls, s)
+        return obj
+
+    def __repr__(self):
+        return "binary(%s)"%(super(Binary, self).__repr__())
+
